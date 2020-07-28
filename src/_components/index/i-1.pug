@@ -1,17 +1,63 @@
 <!-- Thông điệp -->
-section.dnn-home1.section#dnn-home1
-	.container-fluid
-		.row
-			.col-xl-6.col-md-6.dnn-home1__left
-				.dnn-home1__left__img
-					img(src="./assets/images/home/home-1.png" alt="")
-			.col-xl-6.col-md-6.dnn-home1__right
-				.dnn-home1__right__content
-					.block-title
-						h1 Thông điệp CEO
-					.dnn-home1__right__content__desc
-						p Đúc Nam Ninh luôn trân trọng giá trị nền tảng cho sự phát triển, đó là cơ hội được hợp tác với Quý khách hàng. Và sẽ không có bất kỳ khó khăn nào có thể ngăn cản chúng tôi mang lại những sản phẩm chất lượng số một cho quí khách hàng. Chúng tôi tin tưởng rằng với tập thể đoàn kết, vững mạnh và sự ủng hộ của Quý khách hàng, chúng tôi chắc chắn sẽ gặt hái được nhiều thành công hơn nữa trong tương lai.
-
-					a.btn.btn__new(href="")
-						span xem thêm
-							em.ri-arrow-right-line
+section.hinohome1.section#dnn-home1
+	.container
+		.block-title.text-center
+			h1 Uy tín - Chất lượng - Chuyên nghiệp
+			.desc-title
+				p Công ty Đại Phát Tín luôn tiên phong trong việc ứng dụng khoa học kỹ thuật, đầu tư các trang thiết bị hiện đại vào sản xuất nhằm cung cấp cho khách hàng những sản phẩm tốt nhất về chất lượng, hoàn thiện về mẫu mã.
+		.hinohome1__slide
+			.swiper-container.hinohome1__slide__product
+				.swiper-wrapper
+					-for(i=1; i<4; i++)
+						.swiper-slide
+							.hinohome1__slide__product__img
+								img(src="./assets/images/home/home-"+i+".png", alt="")
+							.hinohome1__slide__product__name
+								a(href="") Hino 300 Series
+				.swiper-button-prev
+				.swiper-button-next
+		.hinohome1__product
+			.row
+				.hinohome1__product-sidebar.col-xl-3
+					ul
+						-for(i=1; i<12; i++)
+							li
+								a(href="") Xe thùng lửng
+				.hinohome1__product-list.col-xl-9
+					.row
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-1.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-2.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-3.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-1.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-2.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1
+						.col-xl-4
+							.hinohome1__product-list__item
+								.hinohome1__product-list__item__img
+									img(src="./assets/images/home/pro-3.png", alt="")
+								.hinohome1__product-list__item__name
+									a(href="") Xe đông lạnh 1

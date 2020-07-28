@@ -1,6 +1,5 @@
 import Loading from "./lib/Loading";
 import Cookie from "./lib/Cookie";
-import MoveElement from "./lib/MoveElement"
 
 //Toggle menu mobile
 const toggleMenuMobile = () => {
@@ -28,61 +27,36 @@ const activeHeaderWhenScroll = () => {
 	window.addEventListener("scroll", function() {
 		if (window.pageYOffset >= heightHeader) {
 			document.querySelector("header").classList.add("header-croll-down");
+			$('header').find('.logo').addClass('active')
 		} else {
 			document.querySelector("header").classList.remove("header-croll-down");
+			$('header').find('.logo').removeClass('active')
 		}
 	});
 };
 //Slide apply on site
 function dnnBannerSlide() {
 	// Home banner
-	var swiperhomebanner = new Swiper('.dnn-home-banner__slide', {
+	var swiperhomebanner = new Swiper('.hinohome-banner__slide', {
 		loop: true,
-		speed: 1500,
-		// autoplay: {
-		// 	delay: 3500,
-		// 	disableOnInteraction: false
-		// },
+		speed: 1000,
 		grabCursor: true,
 		watchSlidesProgress: true,
 		mousewheelControl: true,
 		keyboardControl: true,
-		navigation: {
-			nextEl: ".dnn-home-banner__slide .swiper-button-next",
-			prevEl: ".dnn-home-banner__slide .swiper-button-prev",
-			type: "bullets",
-			clickable: true
+		effect: 'fade',
+		autoplay: {
+			delay: 3500,
+			disableOnInteraction: false
 		},
-		on: {
-			progress: function() {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					var slideProgress = swiper.slides[i].progress;
-					var innerOffset = swiper.width * 0.5;
-					var innerTranslate = slideProgress * innerOffset;
-					swiper.slides[i].querySelector(".swiper-inner").style.transform =
-						"translate3d(" + innerTranslate + "px, 0, 0)";
-				}
-			},
-			touchStart: function() {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = "";
-				}
-			},
-			setTransition: function(speed) {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = speed + "ms";
-					swiper.slides[i].querySelector(".swiper-inner").style.transition =
-						speed + "ms";
-				}
-			}
+		navigation: {
+			nextEl: ".hinohome-banner__slide .swiper-button-next",
+			prevEl: ".hinohome-banner__slide .swiper-button-prev"
 		}
 
 	});
-	var swiperhomepro = new Swiper('.dnn-home-3__slide-home-pro .home-pro', {
-		slidesPerView: 4,
+	var swiperhomepro = new Swiper('.hinohome1__slide .hinohome1__slide__product', {
+		slidesPerView: 3,
 		spaceBetween: 30,
 		loop: true,
 		speed: 1000,
@@ -91,8 +65,8 @@ function dnnBannerSlide() {
 		// 	disableOnInteraction: false,
 		// },
 		navigation: {
-			nextEl: '.dnn-home-3__slide-home-pro .swiper-button-next',
-			prevEl: '.dnn-home-3__slide-home-pro .swiper-button-prev',
+			nextEl: '.hinohome1__slide .swiper-button-next',
+			prevEl: '.hinohome1__slide .swiper-button-prev',
 		},
 		breakpoints: {
 			1280: {
@@ -227,15 +201,15 @@ function dnnBannerSlide() {
 
 //Slide prodcut detail
 function detailThumbs() {
-	var galleryThumbs = new Swiper('.thumbs .dnn-detail1__content__slide__gallery-thumbs', {
+	var galleryThumbs = new Swiper('.hinohome2__thumbs .hinohome2__thumbs__slide', {
 		navigation: {
-			nextEl: '.thumbs .swiper-button-next',
-			prevEl: '.thumbs .swiper-button-prev',
+			nextEl: '.hinohome2__thumbs .swiper-button-next',
+			prevEl: '.hinohome2__thumbs .swiper-button-prev',
 		},
 		spaceBetween: 10,
-		slidesPerView: 5,
+		slidesPerView: 6,
 		loop: true,
-		loopedSlides: 5,
+		loopedSlides: 6,
 		slideToClickedSlide: true,
 		breakpoints: {
 			480: {
@@ -244,7 +218,7 @@ function detailThumbs() {
 			}
 		},
 	});
-	var galleryTop = new Swiper('.dnn-detail1__content__slide .dnn-detail1__content__slide__gallery-top', {
+	var galleryTop = new Swiper('.hinohome2__slide .hinohome2__slide__top', {
 		spaceBetween: 10,
 		loop: true,
 		thumbs: {
@@ -460,14 +434,12 @@ function productListSort() {
 		$('.dnn-list-pro2__content__left__title').on('click', function() {
 			$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').slideToggle('active');
 		})
-	}else{
+	} else {
 		$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').removeClass('active');
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Loading();
-	Cookie();
 	new WOW().init();
 	dnnBannerSlide();
 	activeHeaderWhenScroll();
@@ -496,5 +468,5 @@ $(window).resize(function() {
 		$('.language').appendTo('.nav-item #language-desktop');
 		$('.search').appendTo('.nav-item #search-desktop');
 	}
-	
+
 })

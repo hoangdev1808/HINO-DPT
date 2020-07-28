@@ -1,49 +1,71 @@
 header
 	.container
-		.header-container
-			<!-- Nút điều khiển menu mobile -->
-			.header-container__toggle-menu
-			<!-- Logo Đúc Nam Ninh -->
-			.header-container__logo
-				a(href="index.html")
-					img(src="./assets/logo.png")
-			<!-- Language mobile -->
-			#div-mobile
-			<!-- Main menu -->
-			.header-container__main-nav
-				ul.nav-list
-					li.nav-item
-						a.nav-link(href="index.html")
-							em.material-icons home
-					li.nav-item
-						a.nav-link(href="gioi-thieu.html") Giới thiệu
-					li.nav-item
-						a.nav-link(href="linh-vuc-hoat-dong.html") Lĩnh vực hoạt động
-					li.nav-item
-						a.nav-link(href="danh-sach-san-pham.html") Sản phẩm
-					li.nav-item
-						a.nav-link(href="danh-sach-du-an.html") Dự án
-					li.nav-item
-						a.nav-link(href="doi-tac.html") Đối tác khách hàng
-					li.nav-item
-						a.nav-link(href="danh-sach-tin-tuc.html") Tin tức
-					li.nav-item
-						a.nav-link(href="danh-sach-tuyen-dung.html") Tuyển dụng
-					li.nav-item
-						a.nav-link(href="lien-he.html") Liên hệ
-				#language-desktop
-					.language.dropdown
-						button#dropdownMenuButton.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-							a(href="")
-								img(src="./assets/icons/vn.gif", alt="")
-						.dropdown-menu(aria-labelledby='dropdownMenuButton')
-							a.dropdown-item(href='#')
-								img(src="./assets/icons/en.gif", alt="") 
-								span EN
-							a.dropdown-item(href="")
-								img(src="./assets/icons/vn.gif", alt="") 
-								span VN
+		.toggle-menu
+		.logo
+			a(href="index.html")
+				img(src="./assets/logo.png")
+		.logo-scroll
+			a(href="")
+				img(src="./assets/logo-scoll.png", alt="")
+		<!-- Language mobile -->
+		#div-mobile
+		.main-menu
+			<!--Top Menu-->
+			.top
+				.hotline
+					em.material-icons call
+					span +84 258 3624 964
 				#search__desktop
 					a.search.btn.btn__search(data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;")
 						em.material-icons search
+				#language-desktop
+					.language.dropdown
+						button#dropdownMenuButton.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+							a(href="")
+								img(src="./assets/icons/vn.gif" alt="")
+								span VN
+						.dropdown-menu(aria-labelledby='dropdownMenuButton')
+							a.dropdown-item(href='#')
+								img(src="./assets/icons/en.gif" alt="") 
+								span EN
+							a.dropdown-item(href="")
+								img(src="./assets/icons/vn.gif" alt="") 
+								span VN
 
+			<!-- Main menu -->
+			.main-nav
+				ul.nav-list
+					li.nav-item
+						a.nav-link(href="gioi-thieu.html") Giới thiệu
+					li.nav-item
+						a.nav-link(href="linh-vuc-hoat-dong.html") Xe tải nhỏ hino
+					li.nav-item
+						a.nav-link(href="danh-sach-san-pham.html") phụ tùng bảo dưỡng
+					li.nav-item
+						a.nav-link(href="danh-sach-du-an.html") dịch vụ
+					li.nav-item
+						a.nav-link(href="doi-tac.html") trung tâm dịch vụ
+					li.nav-item
+						a.nav-link(href="danh-sach-tin-tuc.html") hỗ trợ khách hàng
+					li.nav-item
+						a.nav-link(href="lien-he.html") Liên hệ
+					#scrolled.active
+						.hotline
+							em.material-icons call
+							span +84 258 3624 964
+						#search__desktop
+							a.search.btn.btn__search(data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;")
+								em.material-icons search
+						#language-desktop
+							.language.dropdown
+								button#dropdownMenuButton.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									a(href="")
+										img(src="./assets/icons/vn.gif" alt="")
+										span VN
+								.dropdown-menu(aria-labelledby='dropdownMenuButton')
+									a.dropdown-item(href='#')
+										img(src="./assets/icons/en.gif" alt="") 
+										span EN
+									a.dropdown-item(href="")
+										img(src="./assets/icons/vn.gif" alt="") 
+										span VN

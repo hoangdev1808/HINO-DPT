@@ -1,16 +1,38 @@
 <!-- Giới thiệu -->
-section.dnn-home2.section
-	.container-fluid
+section.hinohome2.section
+	.container
 		.row
-			.col-xl-6.col-md-6.dnn-home2__left
-				.dnn-home2__left__content
+			.col-xl-6
+				.hinohome2__slide
+					ul
+						li
+							a(href="") Video
+						li
+							a(href="") Hình ảnh
+					.swiper-container.hinohome2__slide__top
+						.swiper-wrapper
+							-for(i=1; i<7; i++)
+								.swiper-slide
+									.img
+										img(src="./assets/images/home/nl-"+i+".png" alt="")
+				.hinohome2__thumbs
+					.swiper-container-thumbs.hinohome2__thumbs__slide
+						.swiper-wrapper
+							-for(i=1; i<7; i++)
+								.swiper-slide
+									.img
+										img(src="./assets/images/home/nl-"+i+".png" alt="")
+			.col-xl-6
+				.hinohome2__content
 					.block-title
-						h1 Giới thiệu
-					.dnn-home2__left__content__desc
-						p Chất lượng sản phẩm” chính là tôn chỉ và tiêu chí để Công ty TNHH Đúc Nam Ninh phát triển. Trong thời gian sắp tới với nhiều thách thức và cơ hội, Công ty TNHH Đúc Nam Ninh sẽ không ngừng nâng cao chất lượng phục vụ khách hàng, nâng cao năng lực cạnh tranh, cải tiến qui trình quản lý theo phương châm “Không ngừng học hỏi, sáng tạo”.
-					a.btn.btn__new(href="")
-						span xem thêm
-							em.ri-arrow-right-line
-			.col-xl-6.col-md-6.dnn-home2__right
-				.dnn-home2__right__img
-					img(src="./assets/images/home/home-2.png", alt="")
+						h1 Năng lực sẳn xuất
+					ul
+						li
+							p Sản phẩm mang tính thẩm mỹ cao
+						li
+							p Xưởng đóng thùng xe tải, bảo ôn, đông lạnh uy tín, chất lượng, đươc nhiều khách hàng khắp cả nước lựa chọn
+						li
+							p Đa dạng chất liệu và kỹ thuật
+						li
+							p Trang thiết bị, máy móc, cơ sở, và đặc biệt là đội ngũ nhân viên kỹ thuật có tay nghề
+					a.btn.btn__new(href="") XEM THÊM
