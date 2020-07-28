@@ -1,0 +1,136 @@
+.dnn-project-detail4 {
+	padding-top: 45px;
+	width: 100%;
+
+	.block-title {
+		text-align: center;
+		margin-bottom: 30px;
+
+		h1 {
+			text-transform: uppercase;
+		}
+	}
+
+	&__list {
+		position: relative;
+
+		&__slide {
+			&__item {
+				width: 390px;
+				margin-bottom: 30px;
+
+				&__img {
+					overflow: hidden;
+					cursor: pointer;
+					position: relative;
+					height: 225px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						-webkit-transform: scale(1.2);
+						transform: scale(1.2);
+						-webkit-transition: .3s ease-in-out;
+						transition: .3s ease-in-out;
+					}
+				}
+
+				&__description {
+					cursor: pointer;
+					background-color: rgb(255, 255, 255);
+					box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.07);
+					height: 200px;
+					padding: 0 30px;
+					border: solid 1px #e0e0e0;
+
+					&__title {
+						padding: 30px 15px;
+						text-align: center;
+
+						a {
+							font-size: 18px;
+							font-family: "Montserrat";
+							color: rgb(51, 51, 51);
+							font-weight: bold;
+							transition: all ease-in-out .3s;
+						}
+						@media screen and ( max-width: 1024px){
+							padding: 15px;
+						}
+					}
+
+					&__content {
+						max-height: 75px;
+						overflow: hidden;
+						@media screen and ( max-width: 1024px){
+							max-height: 80px;
+							margin-bottom: 15px;
+						}
+					}
+
+					&__read-more {
+						display: flex;
+						justify-content: flex-end;
+
+						a {
+							font-size: 14px;
+							font-family: "Montserrat";
+							color: rgb(51, 51, 51);
+							line-height: 1.429;
+							position: absolute;
+
+							&::after {
+								position: absolute;
+								content: '\EA6C';
+								font-size: 14px;
+								font-family: "remixicon";
+								color: rgb(51, 51, 51);
+								right: -20px;
+								top: 50%;
+								transform: translateY(-50%);
+							}
+						}
+					}
+				}
+
+				&:hover {
+					.dnn-project-detail4__list__slide__item__img {
+						img {
+							-webkit-transform: scale(1.1);
+							transform: scale(1.1);
+						}
+					}
+
+					.dnn-project-detail4__list__slide__item__description__title {
+						a {
+							color: $main-color;
+							transition: all ease-in-out .3s;
+						}
+					}
+
+					.dnn-project-detail4__list__slide__item__description__read-more {
+						a {
+							color: $main-color;
+
+							&::after {
+								color: $main-color;
+							}
+						}
+					}
+				}
+
+				@media screen and (max-width: 1200px) {
+					width: 100%;
+					
+				}
+				@media screen and ( max-width: 1024px){
+					&__img{
+						height: 180px;
+					}
+				}
+			}
+
+		}
+	}
+}

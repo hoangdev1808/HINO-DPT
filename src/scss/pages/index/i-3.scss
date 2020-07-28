@@ -1,0 +1,139 @@
+.dnn-home-3 {
+	background-color: #f5f5f5;
+
+	.block-title {
+		text-align: center;
+	}
+
+	&__slide-home-pro {
+		position: relative;
+
+		.home-pro {
+			&__img {
+				position: relative;
+				width: 285px;
+				height: 220px;
+				background-color: $color-while;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all ease-in-out .3s;
+
+				.img {
+					width: 145px;
+					height: 145px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
+				}
+
+				&::after {
+					position: absolute;
+					background-color: rgba($color: $main-color, $alpha: .8);
+					width: 50px;
+					height: 50px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					content: url('../assets/icons/hover-img.png');
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					visibility: hidden;
+					opacity: 0;
+					transition: all ease-in-out .3s;
+				}
+				@media screen and ( max-width: 1024px){
+					width: 100%;
+					height: 180px;
+				}
+			}
+
+			&__name {
+				padding-top: 20px;
+				padding-bottom: 10px;
+				text-align: center;
+
+				p {
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: $color-main;
+					line-height: 1.25;
+					text-align: center;
+
+					.ri-arrow-right-line {
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
+
+			.swiper-slide {
+				cursor: pointer;
+
+				&:hover {
+					a {
+						color: $color-main;
+					}
+
+					.home-pro__img {
+						background-color: #a9a9a9;
+						transition: all ease-in-out .3s;
+
+						&::after {
+							visibility: visible;
+							opacity: 1;
+							transition: all ease-in-out .3s;
+						}
+					}
+
+					.home-pro__name {
+						p {
+							text-decoration: underline;
+						}
+
+						.ri-arrow-right-line {
+							color: $main-color;
+						}
+					}
+				}
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			position: absolute;
+			top: 35%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid #a9a9a9;
+			background-size: 27px 22px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.swiper-button-prev {
+			left: -75px;
+			background-image: url('../assets/icons/prev.png');
+		}
+
+		.swiper-button-next {
+			right: -75px;
+			background-image: url('../assets/icons/next.png');
+		}
+
+		&__btn {
+			display: flex;
+			justify-content: center;
+			margin-top: 37px;
+			@media screen and ( max-width: 1024px){
+				margin-top: 15px;
+			}
+		}
+	}
+}

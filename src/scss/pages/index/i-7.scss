@@ -1,0 +1,29 @@
+.dnn-home7{
+	width: 100%;
+	background-color: #f7f7f7;
+	padding-top: 0;
+	&__item{
+		width: 210px;
+		height: 130px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $color-while;
+		@media screen and ( max-width: 1200px){
+			width: 100%;
+		}
+	}
+	@media screen and ( max-width: 1199px){
+		.block-title{
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+		&__item{
+			margin-bottom: 30px;
+		}
+	}
+	@media screen and ( max-width: 1199px){
+		padding-bottom: 0;
+	}
+}

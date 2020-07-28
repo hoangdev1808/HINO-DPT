@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Dánh sách sản phẩm';
+	- let bodyClass = 'product-page';
+	- let titlePosition = ['San pham'];
+block banner,breadcrumb
+block main
+	include ./_components/san-pham/list-sp/list-1.pug
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/san-pham/list-sp/list-2.pug
+block scripts

@@ -1,0 +1,53 @@
+section.section.dnn-news2.wow.fadeInDown(data-wow-delay=".3s")
+	.container
+		.block-title.text-uppercase.text-center
+			h1 tin tức
+		.dnn-news2__list
+			ul
+				li.active
+					a(href="") Tin ngành nghề
+				li
+					a(href="") Tin hoạt động công ty
+				li
+					a(href="") Tin báo chí
+		.row
+			.col-xl-6.col-md-6.dnn-news2__item
+				.dnn-news2__item__img
+					a(href="chi-tiet-tin-tuc.html")
+						img(src="./assets/images/news/news-1.png" alt="")
+				.dnn-news2__item__desc
+					.dnn-news2__item__desc__date
+						span.material-icons event_note
+						.date 01.04.2020
+					.dnn-news2__item__desc__title.lcl.lcl-2
+						a(href="chi-tiet-tin-tuc.html") Ưu và nhược điểm công nghệ đúc trong khuôn kim loại
+			.col-xl-6.col-md-6.dnn-news2__item
+				.dnn-news2__item__img
+					a(href="chi-tiet-tin-tuc.html")
+						img(src="./assets/images/news/news-2.png" alt="")
+				.dnn-news2__item__desc
+					.dnn-news2__item__desc__date
+						span.material-icons event_note
+						.date 01.04.2020
+					.dnn-news2__item__desc__title.lcl.lcl-2
+						a(href="chi-tiet-tin-tuc.html") Ưu và nhược điểm công nghệ đúc trong khuôn kim loại
+			-for(i=3; i<9; i++)
+				.col-xl-4.col-12.dnn-news2__item#small-img
+					.dnn-news2__item__img
+						a(href="chi-tiet-tin-tuc.html")
+							img(src="./assets/images/news/news-"+i+".png" alt="")
+					.dnn-news2__item__desc
+						.dnn-news2__item__desc__date
+							span.material-icons event_note
+							.date 01.04.2020
+						.dnn-news2__item__desc__title.lcl.lcl-1
+							a(href="chi-tiet-tin-tuc.html") Tìm hiểu kỹ thuật đúc nhôm
+		.pages
+			.modulepager
+				ul.pagination
+					li.active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3

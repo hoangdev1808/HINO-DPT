@@ -1,0 +1,230 @@
+.dnn-hr-detail {
+	&__left {
+		.block-title {
+			margin-bottom: 20px;
+
+			h1 {
+				font-size: 24px;
+				font-family: "Montserrat";
+				color: rgb(51, 51, 51);
+				font-weight: bold;
+			}
+		}
+
+		&__timeline {
+			width: 100%;
+			padding: 0 0 10px 0;
+			display: flex;
+			align-items: center;
+			border-bottom: solid 1px rgb(241, 241, 241);
+
+			.time {
+				display: flex;
+				align-items: center;
+				flex: 1;
+				text-align: left;
+				font-size: 12px;
+				font-family: "Montserrat";
+				color: rgb(153, 153, 153);
+
+				.material-icons {
+					padding-right: 10px;
+					font-size: 12px;
+					font-family: "Material Icons";
+					color: rgb(153, 153, 153);
+				}
+			}
+
+			.icon-social {
+				flex: 1;
+
+				ul {
+					width: 100px;
+					display: flex;
+					align-items: center;
+					list-style: none;
+					justify-content: flex-end;
+					margin-left: auto;
+
+					li {
+						a {
+							color: #fff;
+							font-weight: 900;
+							font-size: 14px;
+						}
+
+						padding: 0 15px;
+
+						&:first-child {
+							margin-right: 10px;
+							background-color: #0099ff;
+						}
+
+						&:last-child {
+							background-color: #3a5b9e;
+						}
+					}
+				}
+			}
+
+			@media(max-width: 991.98px) {
+				.time {
+					p {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+
+		&__content {
+			padding-top: 25px;
+
+			table {
+				width: 735px;
+
+				tbody {
+					tr {
+						display: flex;
+
+						td {
+							padding: 15px 0;
+							flex: 1;
+							span {
+								font-size: 16px;
+								font-family: "Montserrat";
+								color: rgb(51, 51, 51);
+								font-weight: bold;
+							}
+
+							i {
+								padding-right: 7px;
+								color: $main-color;
+								font-size: 24px;
+							}
+
+							p {
+								font-size: 14px;
+								font-family: "Montserrat";
+								color: rgb(51, 51, 51);
+							}
+
+							&:nth-child(2) {
+								padding-left: 100px;
+							}
+						}
+					}
+				}
+			}
+			&__list{
+				margin-bottom: 50px;
+				p{
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: rgb(51, 51, 51);
+					font-weight: bold;
+				}
+				ul{
+					padding-top: 25px;
+					padding-left: 0;
+					list-style: none;
+					li{
+						position: relative;
+						padding-bottom: 25px;
+						padding-left: 20px;
+						p{
+							font-size: 16px;
+							font-family: "Montserrat";
+							color: rgb(51, 51, 51);
+							line-height: 1.5;
+							font-weight: 400;
+						}
+						&::before{
+							content: 'navigate_next';
+							position: absolute;
+							top: 0;
+							left: 0;
+							font-family: 'Material Icons';
+							font-size: 16px;
+							color: rgb(51, 51, 51);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__right{
+		width: 100%;
+		&__btn{
+			.btn__apply{
+				background-color: rgb(233, 0, 6);
+				width: 100%;
+				height: 40px;
+				border-radius: 0;
+				color: #fff;
+				font-size: 16px;
+				font-family: "Montserrat";
+				line-height: 3.125;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+			.btn__down{
+				width: 100%;
+				height: 40px;
+				border-radius: 0;
+				color: $main-color;
+				font-size: 16px;
+				font-family: "Montserrat";
+				line-height: 3.125;
+				text-transform: uppercase;
+				border: solid 1px $main-color
+			}
+		}
+		&__content{
+			padding-top: 60px;
+			.block-title{
+				margin-bottom: 0;
+				width: 100px;
+				h1{
+					font-size: 18px;
+					font-family: "Montserrat";
+					color: rgb(51, 51, 51);
+					font-weight: bold;
+					padding-bottom: 10px;
+					border-bottom: solid 3px $main-color;
+				}
+			}
+			&__list{
+				padding-left: 0;
+				list-style: none;
+				&__item{
+					padding: 20px 0;
+					border-bottom: solid 1px #f1f1f1;
+					.date{
+						display: flex;
+						align-items: center;
+						font-size: 14px;
+						font-family: "Montserrat";
+						color: rgb(153, 153, 153);
+						line-height: 20px;
+						padding-bottom: 15px;
+						.material-icons{
+							font-size: 16px;
+							color: rgb(153, 153, 153);
+						}
+					}
+					h2{
+						font-size: 14px;
+						font-family: "Montserrat";
+						color: rgb(51, 51, 51);
+						font-weight: bold;
+					}
+					&:hover{
+						h2{
+							color: $main-color
+						}
+					}
+				}
+			}
+		}
+	}
+}

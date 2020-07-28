@@ -1,0 +1,52 @@
+section.dnn-list-pro2.section
+	.container
+		.block-title
+			h1 Sản phẩm
+		.dnn-list-pro2__content
+			.row
+				.col-xl-3.col-md-4.dnn-list-pro2__content__left
+					.dnn-list-pro2__content__left__title
+						h2 Danh sách sản phẩm
+						span.ri-arrow-down-line
+					.dnn-list-pro2__content__left__list
+						ul
+							li.active
+								a(href="") Bếp gas
+							li
+								a(href="") Bi nghiền
+							li
+								a(href="") Nắp hố gas
+							li
+								a(href="") Máy công trình
+							li
+								a(href="") Bích nối
+							li
+								a(href="") Khuôn cát nhựa
+							li
+								a(href="") Xây dung
+							li
+								a(href="") Thiết bị kiểm tra
+							li
+								a(href="") Sản phẩm khác
+				.col-xl-9.col-md-8.dnn-list-pro2__content__right
+					.col-md-8.dnn-list-pro2__content__right__title
+						h2 Bếp gas
+					.row
+						-for(i=1; i<10; i++)
+							.col-xl-4.col-md-6.col-sm-6.dnn-list-pro2__content__right__item
+								a(href="chi-tiet-san-pham.html")
+									.dnn-list-pro2__content__right__item__img
+										.img
+											img(src="./assets/images/product/pro-"+i+".png" alt="")
+									.dnn-list-pro2__content__right__item__desc
+										p Sản phẩm bếp gas
+										em.ri-arrow-right-line
+					.pages
+						.modulepager
+							ul.pagination
+								li.active
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") 3

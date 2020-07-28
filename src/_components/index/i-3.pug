@@ -1,0 +1,23 @@
+<!-- Sản phẩm -->
+section.dnn-home-3.section
+	.container
+		.block-title
+			h1 Sản phẩm
+		.dnn-home-3__slide-home-pro
+			.swiper-container.home-pro
+				.swiper-wrapper
+					-for(i=1; i<5; i++)
+						.swiper-slide
+							a(href="")
+								.home-pro__img
+									.img
+										img(src="./assets/images/home/pro-home-"+i+".png" alt="")
+								.home-pro__name
+									p Sản phẩm công trình số 1
+									em.ri-arrow-right-line
+			.swiper-button-prev
+			.swiper-button-next
+			.dnn-home-3__slide-home-pro__btn
+				a.btn.btn__new(href="")
+					span xem thêm
+						em.ri-arrow-right-line

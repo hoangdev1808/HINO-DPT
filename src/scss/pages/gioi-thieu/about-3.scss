@@ -1,0 +1,81 @@
+.dnn-about3 {
+	background-image: url('../assets/images/about/ab-2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__content {
+		.block-title {
+			text-align: center;
+
+			h1 {
+				color: $color-while;
+			}
+		}
+
+		&__item {
+			background-color: $color-while;
+			width: 285px;
+			height: 300px;
+			padding-top: 30px;
+
+			&__img {
+				position: relative;
+				width: 100%;
+				padding-bottom: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				justify-items: center;
+
+				&::after {
+					position: absolute;
+					width: 80px;
+					height: 1px;
+					background-color: $main-color;
+					content: '';
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+
+			&__desc {
+				width: 100%;
+				padding-top: 20px;
+				padding-left: 55px;
+				padding-right: 55px;
+				text-align: center;
+
+				p {
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: $color-main;
+					line-height: 1.2;
+					text-align: center;
+				}
+			}
+
+			@media screen and (max-width: 1199px) {
+				width: 100%;
+			}
+		}
+
+		.col-xl-3 {
+			@media screen and (max-width: 1199px) {
+
+				&:nth-child(1),
+				&:nth-child(2)
+				{
+					margin-bottom: 30px;
+				}
+			}
+			@media screen and ( max-width: 767px){
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3){
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}

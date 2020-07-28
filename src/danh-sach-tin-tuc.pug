@@ -1,0 +1,13 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Tin tức';
+	- let bodyClass = 'news-page';
+	- let titlePosition = ['Tin tuc'];
+block banner,breadcrumb
+
+block main
+	include ./_components/tin-tuc/list-tt/list-news-1.pug
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/tin-tuc/list-tt/list-news-2.pug
+block scripts

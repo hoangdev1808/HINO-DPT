@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Danh sách dự án';
+	- let bodyClass = 'list-project-page';
+	- let titlePosition = ['danh sach du an'];
+block banner,breadcrumb
+block main
+	include ./_components/du-an/list-du-an/project-banner.pug
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/du-an/list-du-an/project-list.pug
+block scripts

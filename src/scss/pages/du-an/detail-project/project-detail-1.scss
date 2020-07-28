@@ -1,0 +1,100 @@
+.dnn-project-detail1{
+	padding-top: 50px;
+	padding-bottom: 0;
+	.block-title{
+		margin-bottom: 25px;
+	}
+	&__content{
+		width: 100%;
+		&__description{
+			p{
+				padding-bottom: 30px;
+				font-size: 16px;
+				font-family: "Montserrat";
+				color: rgb(51, 51, 51);
+				line-height: 1.5;
+				@media screen and ( max-width: 1024px){
+					padding-bottom: 15px;
+				}
+			}
+		}
+		&__slide{
+			width: 100%;
+			margin-bottom: 20px;
+			overflow: hidden;
+			&__gallery-top{
+				width: 100%;
+				&__img{
+					width: 100%;
+					height: 700px;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					@media screen and ( max-width: 991px){
+						height: unset;
+					}
+				}
+			}
+		}
+		&__thumbs{
+			position: relative;
+			padding-bottom: 30px;
+			border-bottom: 1px solid $main-color;
+			&__gallery-thumbs{
+				overflow: hidden;
+				width: 100%;
+				&__img{
+					height: 150px;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					@media screen and ( max-width: 991px){
+						height: unset;
+					}
+				}
+			}
+			.swiper-button-next{
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+				background-image: none;
+				right: -20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&::after{
+					content: 'arrow_forward_ios';
+					font-family: 'Material Icons';
+					font-size: 18px;
+					font-weight: 400;
+					color: $color-main;
+				}
+			}
+			.swiper-button-prev{
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+				background-image: none;
+				left: -20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&::after{
+					content: 'arrow_back_ios';
+					font-family: 'Material Icons';
+					font-size: 18px;
+					font-weight: 400;
+					color: $color-main;
+				}
+			}
+		}
+	}
+}
