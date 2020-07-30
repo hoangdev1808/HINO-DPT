@@ -3,7 +3,117 @@
 	background-image: url('../assets/images/home/bg-home-2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	&__thumbs{
-		overflow: hidden;
+	&__slide{
+		width: 100%;
+		ul{
+			padding-left: 0;
+			list-style: none;
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+			li{
+				width: 200px;
+				min-height: 40px;
+				line-height: 40px;
+				border: solid 1px #fff;
+				text-align: center;
+				transition: all ease-in-out .2s;
+				cursor: pointer;
+				&:nth-child(2){
+					margin-left: 20px;
+				}
+				a{
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: rgb(255, 255, 255);
+					line-height: 3;
+				}
+				&:hover{
+					transition: all ease-in-out .2s;
+					background-color: #fff;
+					a{
+						color: #333333;
+					}
+				}
+				&.active{
+					transition: all ease-in-out .2s;
+					background-color: #fff;
+					a{
+						color: #333333;
+					}
+				}
+			}
+		}
+		&__top{
+			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			.img{
+				cursor: pointer;
+				position: relative;
+				width: 100%;
+				height: 400px;
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		&__thumbs{
+			overflow: hidden;
+			&__video{
+				.img{
+					cursor: pointer;
+					position: relative;
+					height: 75px;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					.icon-control{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 38px;
+						height: 38px;
+					}
+				}
+			}
+		}
+	}
+	&__content{
+		padding-top: 80px;
+		padding-left: 75px;
+		.block-title{
+			h1{
+				color: #fff;
+			}
+		}
+		ul{
+			width: 462px;
+			padding-left: 0;
+			list-style: none;
+			li{
+				position: relative;
+				padding-bottom: 30px;
+				p{
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: rgb(255, 255, 255);
+					line-height: 1.375;
+					text-align: left;
+					padding-left: 40px;
+				}
+				&::before{
+					position: absolute;
+					content: url('../assets/icons/check-list.png');
+					top: 0;
+					left: 0;
+				}
+			}
+		}
 	}
 }

@@ -1,53 +1,172 @@
-section.section.dnn-news2.wow.fadeInDown(data-wow-delay=".3s")
+section.section.hino-news2
 	.container
-		.block-title.text-uppercase.text-center
+		.block-title.border__bottom
 			h1 tin tức
-		.dnn-news2__list
-			ul
-				li.active
-					a(href="") Tin ngành nghề
-				li
-					a(href="") Tin hoạt động công ty
-				li
-					a(href="") Tin báo chí
-		.row
-			.col-xl-6.col-md-6.dnn-news2__item
-				.dnn-news2__item__img
-					a(href="chi-tiet-tin-tuc.html")
-						img(src="./assets/images/news/news-1.png" alt="")
-				.dnn-news2__item__desc
-					.dnn-news2__item__desc__date
-						span.material-icons event_note
-						.date 01.04.2020
-					.dnn-news2__item__desc__title.lcl.lcl-2
-						a(href="chi-tiet-tin-tuc.html") Ưu và nhược điểm công nghệ đúc trong khuôn kim loại
-			.col-xl-6.col-md-6.dnn-news2__item
-				.dnn-news2__item__img
-					a(href="chi-tiet-tin-tuc.html")
-						img(src="./assets/images/news/news-2.png" alt="")
-				.dnn-news2__item__desc
-					.dnn-news2__item__desc__date
-						span.material-icons event_note
-						.date 01.04.2020
-					.dnn-news2__item__desc__title.lcl.lcl-2
-						a(href="chi-tiet-tin-tuc.html") Ưu và nhược điểm công nghệ đúc trong khuôn kim loại
-			-for(i=3; i<9; i++)
-				.col-xl-4.col-12.dnn-news2__item#small-img
-					.dnn-news2__item__img
-						a(href="chi-tiet-tin-tuc.html")
-							img(src="./assets/images/news/news-"+i+".png" alt="")
-					.dnn-news2__item__desc
-						.dnn-news2__item__desc__date
-							span.material-icons event_note
+			ul.tabs-news
+				li.active(rel="news") Tin tức
+				li(rel="images") Hình ảnh
+				li(rel="video") Video
+		.panel.active#news.hino-news2__news
+			.row
+				.col-xl-6.col-md-12.hino-news2__news__left
+					.hino-news2__news__left__img
+						img(src="./assets/images/home/news-1.png" alt="")
+					.hino-news2__news__left__content
+						.item__date
+							span.lnr.lnr-calendar-full
 							.date 01.04.2020
-						.dnn-news2__item__desc__title.lcl.lcl-1
-							a(href="chi-tiet-tin-tuc.html") Tìm hiểu kỹ thuật đúc nhôm
-		.pages
-			.modulepager
-				ul.pagination
-					li.active
-						a(href="#") 1
-					li
-						a(href="#") 2
-					li
-						a(href="#") 3
+						.hino-news2__news__left__content__title.lcl.lcl-1
+							a(href="") NHỮNG DÒNG XE TẢI HINO ĐẠI PHÁT TÍN BÁN CHẠY NHẤT 2019
+						.hino-news2__news__left__content__desc
+							p Thị trường xe tải hiện nay đang có rất nhiều biến động và cạnh tranh cao, bởi việc vận chuyển hàng hóa nặng ngày càng tăng nên nhu cầu về xe tải cũng tăng theo
+				.col-xl-6.col-md-12.hino-news2__news__right
+					.row
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hinohome7__slide__news__right__item__img
+									img(src="./assets/images/home/news-2.png" alt="")
+								.hinohome7__slide__news__right__item__content
+									.item__date
+										span.lnr.lnr-calendar-full
+										.date 01.04.2020
+									.hinohome7__slide__news__right__item__content__title
+										a(href="") “LÃO TƯỚNG” HINO - 20 NĂM CHUYÊN TRỊ ĐƯỜNG DÀI TRÊN XA LỘ
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-3.png" alt="")
+								.hino-news2__news__right__item__content
+									.item__date
+										span.lnr.lnr-calendar-full
+										.date 01.04.2020
+									.hino-news2__news__right__item__content__title
+										a(href="") XE TẢI THÙNG KÍN 500 SERIES NGƯỜI BẠN ĐƯỜNG ĐÁNG TIN CẬY!
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-4.png" alt="")
+								.hino-news2__news__right__item__content
+									.item__date
+										span.lnr.lnr-calendar-full
+										.date 01.04.2020
+									.hino-news2__news__right__item__content__title
+										a(href="") NHỮNG TÂM SỰ VUI, BUỒN CỦA NGHỀ TÀI XẾ
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-5.png" alt="")
+								.hino-news2__news__right__item__content
+									.item__date
+										span.lnr.lnr-calendar-full
+										.date 01.04.2020
+									.hino-news2__news__right__item__content__title
+										a(href="") KINH NGHIỆM BẢO QUẢN XE TẢI VÀO MÙA MƯA
+			.pages
+				.modulepager
+					ul.pagination
+						li.active
+							a(href="#") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3
+		.panel#images.hino-news2__news
+			.row
+				.col-xl-6.col-md-12.hino-news2__news__left
+					.hino-news2__news__left__img
+						img(src="./assets/images/home/news-1.png" alt="")
+				.col-xl-6.col-md-12.hino-news2__news__right
+					.row
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-2.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-3.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-4.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-5.png" alt="")
+				.col-xl-6.col-md-12.hino-news2__news__right
+					.row
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-2.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-3.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-4.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-5.png" alt="")
+				.col-xl-6.col-md-12.hino-news2__news__left
+					.hino-news2__news__left__img
+						img(src="./assets/images/home/news-1.png" alt="")
+			.pages
+				.modulepager
+					ul.pagination
+						li.active
+							a(href="#") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3
+		.panel#video.hino-news2__news
+			.row
+				.col-xl-6.col-md-12.hino-news2__news__left
+					.hino-news2__news__left__img
+						img(src="./assets/images/home/news-1.png" alt="")
+						.icon-control
+							a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+								img(src="./assets/icons/play-button.png" alt="")
+				.col-xl-6.col-md-12.hino-news2__news__right
+					.row
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-2.png" alt="")
+									.icon-control
+										a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+											img(src="./assets/icons/play-button.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-3.png" alt="")
+									.icon-control
+										a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+											img(src="./assets/icons/play-button.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-4.png" alt="")
+									.icon-control
+										a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+											img(src="./assets/icons/play-button.png" alt="")
+						.col-xl-6.col-md-6
+							.hino-news2__news__right__item
+								.hino-news2__news__right__item__img
+									img(src="./assets/images/home/news-5.png" alt="")
+									.icon-control
+										a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+											img(src="./assets/icons/play-button.png" alt="")
+			.pages
+				.modulepager
+					ul.pagination
+						li.active
+							a(href="#") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3

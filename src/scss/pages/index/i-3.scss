@@ -7,6 +7,9 @@
 		margin-left: -105px;
 		margin-right: -105px;
 		padding: 0 105px;
+		min-height: 600px;
+		display: flex;
+		align-items: center;
 		.block-title{
 			margin-bottom: 30px;
 			p{
@@ -21,6 +24,7 @@
 			}
 		}
 		&__desc{
+			margin-bottom: 35px;
 			p{
 				font-size: 18px;
 				font-family: "Montserrat";

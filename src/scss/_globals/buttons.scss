@@ -6,41 +6,25 @@ button{
 	}
 }
 .btn {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 	border: 0;
 	padding: 0;
 	&:focus{
 		outline: none;
 		box-shadow: none;
 	}
-
 	&.btn__new {
-		width: 160px;
-		height: 40px;
 		font-size: 14px;
-		font-family: "Barlow";
-		color: rgb(102, 102, 102);
+		font-family: "Montserrat";
+		color: rgb(255, 255, 255);
 		font-weight: bold;
+		text-decoration: underline;
 		text-transform: uppercase;
-		text-align: center;
-		border: solid 1px rgb(102, 102, 102);
-		border-radius: 5px;
-		transform: skewX(-20deg);
+		line-height: 2;
+		text-align: left;
 		transition: .3s all ease-in-out;
-		display: flex;
-		align-items: center;
-		&:hover {
-			background-color: $main-color;
-			color: #fff;
-			border: none;
-			transform: none;
-			border-radius: 0;
-			span{
-				transform: none;
-			}
-		}
+		// &:hover {
+		// 	text-decoration: underline $main-color;
+		// }
 		span{
 			transform: skewX(20deg);
 			.ri-arrow-right-line{

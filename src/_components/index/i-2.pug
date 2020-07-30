@@ -5,7 +5,7 @@ section.hinohome2.section
 			.col-xl-6
 				.hinohome2__slide
 					ul
-						li
+						li.active
 							a(href="") Video
 						li
 							a(href="") Hình ảnh
@@ -15,13 +15,18 @@ section.hinohome2.section
 								.swiper-slide
 									.img
 										img(src="./assets/images/home/nl-"+i+".png" alt="")
-				.hinohome2__thumbs
-					.swiper-container-thumbs.hinohome2__thumbs__slide
-						.swiper-wrapper
-							-for(i=1; i<7; i++)
-								.swiper-slide
-									.img
-										img(src="./assets/images/home/nl-"+i+".png" alt="")
+										.icon-control
+											a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+												img(src="./assets/icons/play-button.png", alt="")
+					.hinohome2__slide__thumbs
+						.swiper-container-thumbs.hinohome2__slide__thumbs__video
+							.swiper-wrapper
+								-for(i=1; i<7; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/images/home/nl-"+i+".png" alt="")
+											.icon-control
+												img(src="./assets/icons/play-button.png", alt="")
 			.col-xl-6
 				.hinohome2__content
 					.block-title

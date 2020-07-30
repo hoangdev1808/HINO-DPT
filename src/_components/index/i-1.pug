@@ -1,7 +1,7 @@
 <!-- Thông điệp -->
 section.hinohome1.section#dnn-home1
 	.container
-		.block-title.text-center
+		.block-title
 			h1 Uy tín - Chất lượng - Chuyên nghiệp
 			.desc-title
 				p Công ty Đại Phát Tín luôn tiên phong trong việc ứng dụng khoa học kỹ thuật, đầu tư các trang thiết bị hiện đại vào sản xuất nhằm cung cấp cho khách hàng những sản phẩm tốt nhất về chất lượng, hoàn thiện về mẫu mã.
@@ -10,54 +10,63 @@ section.hinohome1.section#dnn-home1
 				.swiper-wrapper
 					-for(i=1; i<4; i++)
 						.swiper-slide
-							.hinohome1__slide__product__img
-								img(src="./assets/images/home/home-"+i+".png", alt="")
-							.hinohome1__slide__product__name
-								a(href="") Hino 300 Series
-				.swiper-button-prev
-				.swiper-button-next
+							a(href="")
+								.hinohome1__slide__product__img
+									img(src="./assets/images/home/home-"+i+".png", alt="")
+								.hinohome1__slide__product__name
+									p Hino 300 Series
+			.swiper-button-prev
+			.swiper-button-next
 		.hinohome1__product
 			.row
-				.hinohome1__product-sidebar.col-xl-3
-					ul
-						-for(i=1; i<12; i++)
-							li
-								a(href="") Xe thùng lửng
-				.hinohome1__product-list.col-xl-9
-					.row
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-1.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-2.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-3.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-1.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-2.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
-						.col-xl-4
-							.hinohome1__product-list__item
-								.hinohome1__product-list__item__img
-									img(src="./assets/images/home/pro-3.png", alt="")
-								.hinohome1__product-list__item__name
-									a(href="") Xe đông lạnh 1
+				.col-xl-3
+					.hinohome1__product__sidebar
+						ul
+							-for(i=1; i<12; i++)
+								li
+									a(href="") Xe thùng lửng
+				.col-xl-9
+					.hinohome1__product__list
+						.row
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="") 
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-1.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="")
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-2.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="")
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-3.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="")
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-1.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="")
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-2.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1
+							.col-xl-4
+								.hinohome1__product__list__item.box-shadow
+									a(href="")
+										.hinohome1__product__list__item__img
+											img(src="./assets/images/home/pro-3.png", alt="")
+										.hinohome1__product__list__item__name
+											p Xe đông lạnh 1

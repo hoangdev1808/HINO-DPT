@@ -1,0 +1,37 @@
+.hino-about-menu{
+	width: 100%;
+	background-color: #0b3155;
+	ul{
+		display: flex;
+		align-items: center;
+		list-style: none;
+		padding-left: 0;
+		max-width: 840px;
+		min-height: 40px;
+		line-height: 40px;
+		margin: 0 auto;
+		li{
+			margin-left: auto;
+			&:first-child{
+				margin-left: 0;
+			}
+			a{
+				text-transform: uppercase;
+				font-size: 14px;
+				font-family: "Montserrat";
+				color: #aaaaaa;
+				font-weight: bold;
+			}
+			&.active{
+				a{
+					color: #fff;
+				}
+			}
+		}
+	}
+	&.active-menu{
+		position: fixed;
+		z-index: 999;
+		transition: all ease-in-out .3s;
+	}
+}

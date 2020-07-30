@@ -1,53 +1,61 @@
-.dnn-about4{
-	width: 100%;
-	&__right{
-		&__img{
-			cursor: pointer;
-			height: 100%;
-			img{
-				width: 100%;
-				height: 100%;
+.hino-about4 {
+	&__item {
+		&__content {
+			height: 420px;
+			padding: 30px;
+			text-align: center;
+			&__img {
+				width: 76px;
+				height: 76px;
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
 			}
-		}
-	}
-	&__left{
-		min-height: 400px;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		&__content{
-			width: 505px;
-			margin: 0 auto;
-			.block-title{
-				margin-bottom: 20px;
+
+			&__title {
+				padding: 25px 0;
+
+				h2 {
+					font-size: 20px;
+					font-family: "Montserrat";
+					color: rgb(255, 255, 255);
+					font-weight: 700;
+				}
 			}
-			&__desc{
-				max-height: 255px;
-				overflow: hidden;
-				p{
+
+			&__desc {
+				p {
 					font-size: 16px;
 					font-family: "Montserrat";
-					color: $color-main;
-					line-height: 24px;
-					text-align: left;
-						
-				}
-			}
-			.btn__new{
-				margin-top: 20px;
-			}
-		}
-		@media screen and ( max-width: 1024px){
-			min-height: unset;
-			&__content{
-				width: 100%;
-				&__desc{
-					max-height: 300px;
+					color: rgb(255, 255, 255);
+					line-height: 1.625;
+					text-align: center;
+					line-height: 26px;
 				}
 			}
 		}
-		@media screen and ( max-width: 767px){
-			margin-bottom: 15px;
+
+		&:nth-child(1) {
+			.hino-about4__item__content {
+				background-color: #39a1e5;
+			}
+
+		}
+
+		&:nth-child(2) {
+			.hino-about4__item__content {
+				background-color: #3361ae;
+			}
+		}
+
+		&:nth-child(3) {
+			.hino-about4__item__content {
+				background-color: #0b3155;
+			}
 		}
 	}
 }
