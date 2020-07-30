@@ -434,93 +434,22 @@ textarea {
 
 	.acc__card {
 		position: relative;
-		border: solid 1px rgb(235, 235, 235);
-		background-color: rgb(255, 255, 255);
 	}
 
 	.acc__title {
-		a {
-			font-size: 18px;
-			font-family: "Barlow";
-			color: rgb(51, 51, 51);
-			text-decoration: none;
-		}
-
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		padding: .3rem 1.875rem;
-		position: relative;
-
-		&::after {
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: '';
-			height: 0;
-			width: 5px;
-			background-color: $main-color;
-			transition: .3s all ease-in-out;
-		}
-
-		span {
-			margin-left: auto;
-			transform: rotate(0deg);
-			transition: all 0.2s ease-in-out;
-			padding: 5px 0;
-
-			&.active {
-				color: $main-color;
-				transform: rotate(-180deg);
-				transition: all 0.2s ease-in-out;
-			}
-		}
-
 		&.active {
-			a {
-				color: $main-color;
-			}
-
-			p {
-				color: $main-color;
-			}
-
-			&::after {
-				height: 100%;
-				opacity: 1;
-				transition: all 0.3s ease-in-out;
+			h2{
+				.material-icons{
+					transform: rotate(180deg);
+					transition: all ease-in-out .3s;
+				}
 			}
 		}
 	}
 
 	.acc__panel {
-		background: #fff;
 		display: none;
 		margin: 0;
-		padding: .95rem 0;
-		text-align: left;
-
-		ul {
-			list-style: none;
-
-			li {
-				padding-bottom: 20px;
-
-				a {
-					font-size: 16px;
-					color: rgb(102, 102, 102);
-					text-decoration: none;
-					text-transform: uppercase;
-
-					@media(min-width: 1025px) {
-						&:hover {
-							color: $main-color;
-						}
-					}
-				}
-			}
-		}
 	}
 }
 

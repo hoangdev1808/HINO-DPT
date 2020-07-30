@@ -236,6 +236,11 @@ header {
 					&:first-child {
 						margin-left: 0;
 					}
+					&:hover{
+						.nav-link{
+							color: #3361ae;
+						}
+					}
 				}
 				#scrolled{
 					display: none;
