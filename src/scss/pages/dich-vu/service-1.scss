@@ -1,0 +1,64 @@
+.hino-service1{
+	&__content{
+		cursor: pointer;
+		margin-bottom: 50px;
+		background-color: #f3f3f3;
+		&__img{
+			width: 100%;
+			height: 400px;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+				transform: scale(1);
+				transition: all ease-in-out .3s;
+			}
+			@media screen and ( max-width: 1024px){
+				height: unset;
+			}
+		}
+		&__title{
+			padding-top: 60px;
+			h2{
+				font-size: 24px;
+				font-family: "Montserrat";
+				color: rgb(51, 51, 51);
+				font-weight: bold;
+			}
+		}
+		&__desc{
+			padding: 40px 0;
+			p{
+				font-size: 16px;
+				font-family: "Montserrat";
+				color: rgb(51, 51, 51);
+				text-align: left;
+			}
+			@media screen and ( max-width: 1199px){
+				padding: 15px 0;
+				h2{
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&:nth-child(2){
+			.content{
+				padding-left: 30px;
+				padding-right: 60px;
+			}
+		}
+		&:nth-child(3){
+			.content{
+				padding-left: 60px;
+				padding-right: 40px;
+			}
+		}
+		&:last-child{
+			margin-bottom: 0;
+			.content{
+				padding-left: 30px;
+				padding-right: 60px;
+			}
+		}
+	}
+}

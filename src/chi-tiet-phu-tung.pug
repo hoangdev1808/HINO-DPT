@@ -1,0 +1,14 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Chi tiết phụ tùng';
+	- let bodyClass = 'detail-project-page';
+	- let titlePosition = ['danh sach phu tung'];
+block banner,breadcrumb
+block main
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/phu-tung/detail/detail-1.pug
+	include ./_components/phu-tung/detail/detail-2.pug
+	include ./_components/phu-tung/detail/detail-3.pug
+	include ./_components/phu-tung/detail/detail-4.pug
+block scripts

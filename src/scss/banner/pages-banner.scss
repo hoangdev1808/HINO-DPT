@@ -1,16 +1,44 @@
 .hino-banner {
 	width: 100%;
-
 	&__pages {
 		width: 100%;
 		height: 56.7599vh;
+		display: flex;
+		align-items: center;
 
-		img {
-			width: 100%;
+		&__content {
+			width: 865px;
 			height: 100%;
-			object-fit: cover;
+			.desc{
+				h1{
+					font-size: 30px;
+					font-family: "Montserrat";
+					color: rgb(11, 49, 85);
+					font-weight: bold;
+					text-transform: uppercase;
+					text-align: left;
+				}
+				p{
+					font-size: 24px;
+					font-family: "Montserrat";
+					color: rgb(11, 49, 85);
+					text-align: left;
+					padding: 25px 0;
+				}
+				.btn__banner{
+					background-color: rgb(237, 28, 36);
+					width: 191px;
+					height: 40px;
+					border-radius: 20px;
+					font-size: 15px;
+					font-family: "Montserrat";
+					color: rgb(255, 255, 255);
+					line-height: 40px;
+				}
+			}
 		}
-		@media screen and ( max-width: 1024px){
+
+		@media screen and (max-width: 1024px) {
 			height: 30vh;
 		}
 	}

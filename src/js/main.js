@@ -1,5 +1,4 @@
 import Loading from "./lib/Loading";
-import Cookie from "./lib/Cookie";
 
 //Toggle menu mobile
 const toggleMenuMobile = () => {
@@ -405,6 +404,8 @@ const checkLayoutBanner = () => {
 			"background-color": "#fff"
 		});
 		breadcrumb.css("padding-top", heightHeader);
+	}else{
+		pagesBanner.css('padding-top', heightHeader)
 	}
 };
 

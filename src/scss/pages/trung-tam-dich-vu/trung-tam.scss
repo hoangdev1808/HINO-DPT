@@ -1,0 +1,13 @@
+.hino-servicecenter{
+	padding: 0;
+	
+	&__map{
+		height: 785px;
+		#map{
+			height: 100%;
+		}
+	}
+	.active{
+		background-color: #3361ae;
+	}
+}

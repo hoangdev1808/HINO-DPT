@@ -1,0 +1,12 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Trung tâm dịch vụ';
+	- let bodyClass = 'service-center-page';
+	- let titlePosition = ['Trung tâm dịch vụ'];
+block banner,breadcrumb
+
+block main
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/trung-tam-dich-vu/trung-tam-1.pug
+block scripts

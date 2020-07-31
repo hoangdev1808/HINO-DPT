@@ -1,0 +1,13 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Hỗ trợ khách hàng';
+	- let bodyClass = 'helper-page';
+	- let titlePosition = ['Trung tâm dịch vụ'];
+block banner,breadcrumb
+
+block main
+	include ./_components/ho-tro-khach-hang/helper-banner.pug
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/ho-tro-khach-hang/ho-tro-khach-hang.pug
+block scripts

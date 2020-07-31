@@ -1,0 +1,14 @@
+extends _components/_layout/_layout.pug
+
+block var
+	- let title = 'Dịch vụ';
+	- let bodyClass = 'service';
+	- let titlePosition = ['Dich vu'];
+block banner,breadcrumb
+block main
+	include ./_components/dich-vu/service-banner.pug
+	include ./_components/_layout/_breadcrumb.pug
+	include ./_components/dich-vu/service-1.pug
+	include ./_components/dich-vu/service-2.pug
+	include ./_components/dich-vu/service-3.pug
+block scripts
