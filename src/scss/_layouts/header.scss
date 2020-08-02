@@ -8,7 +8,6 @@ header {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
-	background-color: rgb(255, 255, 255);
 
 	.logo {
 		float: left;
@@ -337,7 +336,7 @@ header {
 		display: flex;
 		align-items: center;
 		transition: ease-in-out all .3s;
-		background-color: $main-color;
+		background-color: $main-color !important;
 		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 
 		.logo-scroll {
@@ -366,10 +365,16 @@ header {
 
 			.nav-list {
 				.nav-item {
+					position: relative;
 					.nav-link {
 						font-size: 14px;
 						font-family: "Montserrat";
 						color: rgb(255, 255, 255);
+					}
+					&:hover{
+						.nav-link{
+							color: rgb(255, 255, 255);
+						}
 					}
 				}
 
