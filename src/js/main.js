@@ -22,9 +22,8 @@ function moveNav() {
 
 //Header when scroll
 const activeHeaderWhenScroll = () => {
-	const heightHeader = document.querySelector("header").offsetHeight;
 	window.addEventListener("scroll", function() {
-		if (window.pageYOffset >= heightHeader) {
+		if (window.pageYOffset > 0) {
 			document.querySelector("header").classList.add("header-croll-down");
 			$('header').find('.logo').addClass('active')
 		} else {

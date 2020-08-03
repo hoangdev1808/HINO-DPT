@@ -28,7 +28,8 @@ header {
 			display: none;
 		}
 	}
-	.logo-scroll{
+
+	.logo-scroll {
 		display: none;
 	}
 
@@ -87,6 +88,7 @@ header {
 
 	.main-menu {
 		margin-left: auto;
+
 		.top {
 			display: flex;
 			align-items: center;
@@ -163,6 +165,9 @@ header {
 				border: solid 1px $main-color;
 
 				.search {
+					display: flex;
+					align-items: center;
+
 					.material-icons {
 						color: $main-color;
 						font-size: 18px;
@@ -191,6 +196,7 @@ header {
 				.nav-item {
 					position: relative;
 					margin-left: auto;
+					cursor: pointer;
 
 					.nav-link {
 						font-size: 14px;
@@ -205,6 +211,47 @@ header {
 						&.active {
 							color: $main-color;
 							font-weight: 700;
+						}
+					}
+
+					.dropdown-menu {
+						display: block;
+						border: none;
+						border-radius: 0;
+						padding: 0;
+						top: 300%;
+						opacity: 0;
+						visibility: hidden;
+						transition: all ease-in-out .3s;
+
+						.dropdown-item {
+							background-color: #0b3155;
+							padding: 15px;
+							border-bottom: solid 1px #fff;
+							display: flex;
+							align-items: center;
+
+							a {
+								font-size: 12px;
+								font-family: "Montserrat";
+								color: rgb(255, 255, 255);
+								font-weight: bold;
+								text-transform: uppercase;
+							}
+							.lnr{
+								margin-left: auto;
+								color: #fff;
+								font-size: 12px;
+								padding-left: 20px;
+							}
+
+							&:last-child {
+								border-bottom: none;
+							}
+
+							&:hover {
+								background-color: #3361ae;
+							}
 						}
 					}
 
@@ -235,13 +282,36 @@ header {
 					&:first-child {
 						margin-left: 0;
 					}
-					&:hover{
-						.nav-link{
+
+					&:hover {
+						.nav-link {
 							color: #3361ae;
 						}
+						.dropdown-menu{
+							opacity: 1;
+							visibility: visible;
+							top: 160%;
+							transition: all ease-in-out .3s;
+						}
+					}
+					&:nth-child(7){
+						.dropdown-menu{
+							position: absolute;
+							right: 0;
+							left: unset;
+						}
+					}
+					&::after{
+						position: absolute;
+						content: '';
+						bottom: -100%;
+						left: 0;
+						width: 100%;
+						height: 25px;
 					}
 				}
-				#scrolled{
+
+				#scrolled {
 					display: none;
 				}
 			}
@@ -351,7 +421,8 @@ header {
 				width: 100%;
 				height: 100%;
 			}
-			&.active{
+
+			&.active {
 				display: flex;
 			}
 		}
@@ -366,13 +437,15 @@ header {
 			.nav-list {
 				.nav-item {
 					position: relative;
+
 					.nav-link {
 						font-size: 14px;
 						font-family: "Montserrat";
 						color: rgb(255, 255, 255);
 					}
-					&:hover{
-						.nav-link{
+
+					&:hover {
+						.nav-link {
 							color: rgb(255, 255, 255);
 						}
 					}
@@ -411,6 +484,9 @@ header {
 						background-color: $color-while;
 
 						.search {
+							display: flex;
+							align-items: center;
+
 							.material-icons {
 								color: $main-color;
 								font-size: 18px;

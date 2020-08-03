@@ -17,28 +17,9 @@
 			display: flex;
 			align-items: center;
 			border-bottom: solid 1px rgb(241, 241, 241);
-
-			.time {
-				display: flex;
-				align-items: center;
-				flex: 1;
-				text-align: left;
-				font-size: 12px;
-				font-family: "Montserrat";
-				color: rgb(153, 153, 153);
-
-				.material-icons {
-					padding-right: 10px;
-					font-size: 12px;
-					font-family: "Material Icons";
-					color: rgb(153, 153, 153);
-				}
-			}
-
 			.icon-social {
-				flex: 1;
-
 				ul {
+					padding-left: 0;
 					width: 100px;
 					display: flex;
 					align-items: center;
@@ -47,8 +28,8 @@
 					margin-left: auto;
 
 					li {
+						padding: 0;
 						a {
-							color: #fff;
 							font-weight: 900;
 							font-size: 14px;
 						}
@@ -56,12 +37,17 @@
 						padding: 0 15px;
 
 						&:first-child {
-							margin-right: 10px;
-							background-color: #0099ff;
+							margin-right: 20px;
+							a{
+								color: #3a5b9e;
+							}
+							
 						}
 
 						&:last-child {
-							background-color: #3a5b9e;
+							a{
+								color: #0099ff;
+							}
 						}
 					}
 				}

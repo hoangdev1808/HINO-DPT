@@ -1,0 +1,111 @@
+.hino-helper2 {
+    &__left {
+        width: 100%;
+
+        &__content {
+            width: 100%;
+            background-color: #0b3155;
+            padding: 30px;
+            border-bottom: solid 1px rgba($color: #fff, $alpha: .3);
+
+            &__title {
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 20px;
+                    font-family: "Montserrat";
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__desc {
+                display: flex;
+                align-items: flex-start;
+
+                .material-icons {
+                    font-size: 16px;
+                    font-family: "Material Icons";
+                    color: rgb(255, 255, 255);
+                    padding-right: 20px;
+                    padding-top: 5px;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-family: "Montserrat";
+                    color: rgb(255, 255, 255);
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+
+        &__form {
+            .box-form {
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+
+                    label {
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                        font-family: "Montserrat";
+                        color: rgb(102, 102, 102);
+                        line-height: 1.2;
+                        text-align: left;
+                    }
+
+                    input {
+                        width: 390px;
+                        height: 40px;
+                        border: solid 1px #e1e1e1;
+                        background-color: #f1f1f1;
+                        padding-left: 20px;
+                    }
+
+                    textarea {
+                        height: 120px;
+                        border: solid 1px #e1e1e1;
+                        background-color: #f1f1f1;
+                    }
+                }
+
+                .frm-btnwrap {
+					margin-top: 30px;
+					margin-left: auto;
+
+                    .frm-btn {
+                        .btn__news2 {
+                            width: 190px;
+							height: 40px;
+							padding-left: 0;
+                            border-radius: 20px;
+                            background-color: #0b3155;
+                            line-height: 40px;
+                            text-align: center;
+                            color: #fff;
+                            font-size: 15px;
+                            font-family: "Montserrat";
+							display: flex;
+							align-items: center;
+							justify-content: center;
+                            &:hover {
+                                background-color: #3361ae;
+                                color: #fff;
+							}
+							.ri-arrow-right-line{
+								padding-left: 20px;
+							}
+						}
+                    }
+                }
+            }
+        }
+    }
+}
