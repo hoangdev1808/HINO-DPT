@@ -32,6 +32,7 @@ const activeHeaderWhenScroll = () => {
 		}
 	});
 };
+
 //Slide apply on site
 function dnnBannerSlide() {
 	// Home banner
@@ -397,6 +398,7 @@ const checkLayoutBanner = () => {
 	const pagesBanner = $("#page-banner");
 	const breadcrumb = $('.global-breadcrumb');
 	const heightHeader = $("header").outerHeight();
+	const mainBanner = $("#home-banner");
 	if (pagesBanner.length < 1) {
 		$("header").css({
 			"margin-top": "0",
@@ -405,6 +407,9 @@ const checkLayoutBanner = () => {
 		breadcrumb.css("padding-top", heightHeader);
 	}else{
 		pagesBanner.css('padding-top', heightHeader)
+	}
+	if ((mainBanner.length < 1) && (pagesBanner.length < 1)) {
+		$('main').css('padding-top', heightHeader)
 	}
 };
 

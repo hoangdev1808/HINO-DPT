@@ -50,25 +50,7 @@
 								</div>
 							</div><!-- Main menu -->
 							<div class="main-nav">
-								<ul class="nav-list">
-									<li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
-									<li class="nav-item"><a class="nav-link" href="danh-sach-san-pham.html">Xe tải nhỏ hino</a></li>
-									<li class="nav-item"><a class="nav-link" href="phu-tung.html">phụ tùng bảo dưỡng</a></li>
-									<li class="nav-item"><a class="nav-link" href="dich-vu.html">dịch vụ</a></li>
-									<li class="nav-item"><a class="nav-link" href="trung-tam-dich-vu.html">trung tâm dịch vụ</a></li>
-									<li class="nav-item"><a class="nav-link" href="ho-tro-khach-hang.html">hỗ trợ khách hàng</a></li>
-									<li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
-									<div class="active" id="scrolled">
-										<div class="hotline"><em class="material-icons">call</em><span>+84 258 3624 964</span></div>
-										<div id="search__desktop"><a class="search btn btn__search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a></div>
-										<div id="language-desktop">
-											<div class="language dropdown">
-												<button class="dropdown-toggle" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href=""><img src="./assets/icons/vn.gif" alt=""><span>VN</span></a></button>
-												<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#"><img src="./assets/icons/en.gif" alt=""><span>EN</span></a><a class="dropdown-item" href=""><img src="./assets/icons/vn.gif" alt=""><span>VN</span></a></div>
-											</div>
-										</div>
-									</div>
-								</ul>
+								<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
 							</div>
 						</div>
 					</div>

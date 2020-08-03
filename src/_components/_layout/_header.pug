@@ -1,15 +1,15 @@
 header
 	.container
-		.toggle-menu
-		.logo
-			a(href="index.html")
-				img(src="./assets/logo.png")
-		.logo-scroll
-			a(href="")
-				img(src="./assets/logo-scoll.png", alt="")
-		<!-- Language mobile -->
-		#div-mobile
 		.main-menu
+			.toggle-menu
+			.logo
+				a(href="index.html")
+					img(src="./assets/logo.png")
+			.logo-scroll
+				a(href="")
+					img(src="./assets/logo-scoll.png", alt="")
+			<!-- Language mobile -->
+			#div-mobile
 			<!--Top Menu-->
 			.top
 				.hotline
@@ -35,32 +35,82 @@ header
 			<!-- Main menu -->
 			.main-nav
 				ul.nav-list
-					li.nav-item
+					li.nav-item.active
 						a.nav-link(href="") Giới thiệu
 						ul.dropdown-menu
 							li.dropdown-item
 								a(href="gioi-thieu.html") hino đại tín phát
 							li.dropdown-item
 								a(href="tin-tuc.html") tin tức
-					li.nav-item
+					li.nav-item.drop-mega
 						a.nav-link(href="danh-sach-san-pham.html") Xe tải nhỏ hino
-					li.nav-item
-						a.nav-link(href="phu-tung.html") phụ tùng bảo dưỡng
-					li.nav-item
-						a.nav-link(href="") dịch vụ
-						ul.dropdown-menu
-							li.dropdown-item
-								a(href="dich-vu.html") phụ tùng (chính sách bảo hành)
-								em.lnr.lnr-chevron-right
-							li.dropdown-item
-								a(href="dich-vu.html") hỗ trợ kỹ thuật
-								em.lnr.lnr-chevron-right
-							li.dropdown-item
-								a(href="dich-vu.html") dịch vụ đóng thùng (nlsx)
-								em.lnr.lnr-chevron-right
-							li.dropdown-item
-								a(href="dich-vu.html") dịch vụ bảo trì - bảo dưỡng - bảo hành
-								em.lnr.lnr-chevron-right
+						.drop-mega-menu
+							.row
+								.col-xl-2
+									.mega-left
+										ul
+											li.active
+												a(href="") xe tải hino
+												em.lnr.lnr-chevron-right
+											li
+												a(href="") xe thùng
+												em.lnr.lnr-chevron-right
+								.col-xl-10
+									.mega-right
+										.row
+											.col-xl-3
+												h2 hino 300 series
+												ul
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+											.col-xl-3
+												h2 hino 500 series
+												ul
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+											.col-xl-3
+												h2 hino 700 series
+												ul
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+											.col-xl-3
+												h2 Hino dutro 300
+												ul
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+													li
+														a(href="") Series XZU 650 - Xe tải 1,9 tấn
+						li.nav-item
+							a.nav-link(href="phu-tung.html") phụ tùng bảo dưỡng
+						li.nav-item
+							a.nav-link(href="") dịch vụ
+							ul.dropdown-menu
+								li.dropdown-item
+									a(href="dich-vu.html") phụ tùng (chính sách bảo hành)
+									em.lnr.lnr-chevron-right
+								li.dropdown-item
+									a(href="dich-vu.html") hỗ trợ kỹ thuật
+									em.lnr.lnr-chevron-right
+								li.dropdown-item
+									a(href="dich-vu.html") dịch vụ đóng thùng (nlsx)
+									em.lnr.lnr-chevron-right
+								li.dropdown-item
+									a(href="dich-vu.html") dịch vụ bảo trì - bảo dưỡng - bảo hành
+									em.lnr.lnr-chevron-right
 					li.nav-item
 						a.nav-link(href="trung-tam-dich-vu.html") trung tâm dịch vụ
 					li.nav-item
@@ -92,3 +142,4 @@ header
 									a.dropdown-item(href="")
 										img(src="./assets/icons/vn.gif" alt="") 
 										span VN
+

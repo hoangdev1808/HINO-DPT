@@ -9,84 +9,85 @@ header {
 	align-items: center;
 	margin-left: auto;
 
-	.logo {
-		float: left;
-		width: 198px;
-		height: 66px;
-		display: flex;
-		align-items: center;
-		margin-right: 69px;
-
-		img {
-			width: 100%;
-			height: 100%;
-		}
-
-		&.active {
-			opacity: 0;
-			visibility: hidden;
-			display: none;
-		}
-	}
-
-	.logo-scroll {
-		display: none;
-	}
-
-	.toggle-menu {
-		cursor: pointer;
-		position: relative;
-		width: 40px;
-		height: 40px;
-		padding: 20px;
-		background: $main-color;
-		border-radius: 5px;
-		display: none;
-
-		&:before,
-		&:after {
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 18px;
-			height: 2px;
-			background-color: #fff;
-			content: "";
-			transition: .3s all linear;
-		}
-
-		&:before {
-			top: 23px;
-		}
-
-		&:after {
-			top: 15px;
-		}
-
-		&.active {
-
-			&:before,
-			&:after {
-				top: 50%;
-				left: 50%;
-			}
-
-			&:before {
-				transform: translate(-50%, -50%) rotate(45deg);
-			}
-
-			&:after {
-				transform: translate(-50%, -50%) rotate(-45deg);
-			}
-		}
-	}
-
 	.relative,
 	.Module {
 		width: 100%;
 	}
 
 	.main-menu {
+		.toggle-menu {
+			cursor: pointer;
+			position: relative;
+			width: 40px;
+			height: 40px;
+			padding: 20px;
+			background: $main-color;
+			border-radius: 5px;
+			display: none;
+
+			&:before,
+			&:after {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 18px;
+				height: 2px;
+				background-color: #fff;
+				content: "";
+				transition: .3s all linear;
+			}
+
+			&:before {
+				top: 23px;
+			}
+
+			&:after {
+				top: 15px;
+			}
+
+			&.active {
+
+				&:before,
+				&:after {
+					top: 50%;
+					left: 50%;
+				}
+
+				&:before {
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+
+				&:after {
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+			}
+		}
+
+		.logo {
+			float: left;
+			width: 198px;
+			height: 66px;
+			display: flex;
+			align-items: center;
+			margin-right: 69px;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			&.active {
+				opacity: 0;
+				visibility: hidden;
+				display: none;
+			}
+		}
+
+		.logo-scroll {
+			display: none;
+		}
+
+		position: relative;
 		margin-left: auto;
 
 		.top {
@@ -238,7 +239,8 @@ header {
 								font-weight: bold;
 								text-transform: uppercase;
 							}
-							.lnr{
+
+							.lnr {
 								margin-left: auto;
 								color: #fff;
 								font-size: 12px;
@@ -264,47 +266,166 @@ header {
 						}
 					}
 
-					&.active {
-						&::after {
-							content: '';
-							position: absolute;
-							bottom: -70%;
-							left: 50%;
-							transform: translateX(-50%);
-							width: 0;
-							visibility: hidden;
-							transition: ease-in-out all .3s;
-							height: 3px;
-							background-color: $main-color;
-						}
-					}
-
 					&:first-child {
 						margin-left: 0;
+					}
+
+					&:nth-child(2) {
+						&.drop-mega {
+							position: static;
+
+							&::after {
+								position: absolute;
+								content: '';
+								bottom: -20px;
+								width: 10%;
+								height: 25px;
+								left: 30%;
+							}
+						}
+
+						.drop-mega-menu {
+							position: absolute;
+							width: 100%;
+							top: 200%;
+							left: 0;
+							opacity: 0;
+							visibility: hidden;
+							transition: all ease-in-out .3s;
+							background-color: #fff;
+
+							.mega-left {
+								background-color: #0b3155;
+								padding: 0;
+								margin-right: -30px;
+								height: 100%;
+
+								ul {
+									padding-left: 0;
+									list-style: none;
+
+									li {
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										padding: 15px 20px;
+										border-bottom: solid 1px #fff;
+
+										a {
+											font-size: 12px;
+											font-family: "Montserrat";
+											color: rgb(255, 255, 255);
+											font-weight: bold;
+											text-transform: uppercase;
+											text-align: left;
+										}
+
+										.lnr {
+											font-size: 12px;
+											color: rgb(255, 255, 255);
+											text-align: left;
+										}
+
+										&.active {
+											background-color: #3361ae;
+										}
+
+										&:hover {
+											background-color: #3361ae;
+										}
+									}
+								}
+							}
+
+							.mega-right {
+								padding-left: 30px;
+								padding-top: 20px;
+								padding-bottom: 40px;
+								padding-right: 45px;
+								border-top: solid 1px #333333;
+
+								h2 {
+									font-size: 16px;
+									font-family: "Montserrat";
+									color: rgb(51, 97, 174);
+									font-weight: bold;
+									text-transform: uppercase;
+									margin-bottom: 30px;
+								}
+
+								ul {
+									padding-left: 0;
+									list-style: none;
+
+									li {
+										position: relative;
+										padding-left: 20px;
+
+										a {
+											font-size: 14px;
+											font-family: "Montserrat";
+											color: #333333;
+										}
+
+										&:hover {
+											a {
+												color: #3361ae;
+											}
+
+											&::before {
+												color: #3361ae;
+											}
+										}
+
+										&::before {
+											position: absolute;
+											content: '\e876';
+											top: 0;
+											left: 0;
+											font-family: 'Linearicons-Free';
+											color: #999999;
+											font-size: 14px;
+										}
+									}
+								}
+							}
+						}
+
+						&:hover {
+							.drop-mega-menu {
+								display: block;
+								top: 120%;
+								opacity: 1;
+								visibility: visible;
+							}
+						}
 					}
 
 					&:hover {
 						.nav-link {
 							color: #3361ae;
 						}
-						.dropdown-menu{
+
+						.dropdown-menu {
 							opacity: 1;
 							visibility: visible;
 							top: 160%;
 							transition: all ease-in-out .3s;
 						}
 					}
-					&:nth-child(7){
-						.dropdown-menu{
+
+					&:nth-child(7) {
+						.dropdown-menu {
 							position: absolute;
 							right: 0;
 							left: unset;
 						}
 					}
-					&::after{
+
+					&::after {
 						position: absolute;
 						content: '';
-						bottom: -100%;
+						bottom: -20px;
 						left: 0;
 						width: 100%;
 						height: 25px;
@@ -447,6 +568,10 @@ header {
 					&:hover {
 						.nav-link {
 							color: rgb(255, 255, 255);
+						}
+
+						.dropdown-menu {
+							top: 130%;
 						}
 					}
 				}
