@@ -45,7 +45,7 @@
         <li class="dropdown-item">
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
+                    <xsl:text>dropdown-item active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <a>

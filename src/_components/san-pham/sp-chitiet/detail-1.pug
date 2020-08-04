@@ -1,58 +1,28 @@
-section.dnn-detail1.section.wow.fadeInDown(data-wow-delay=".3s")
+section.hino-detail1.section.wow.fadeInDown(data-wow-delay=".3s")
 	.container
-		.dnn-detail1__content
+		.hino-detail1__content
 			.row
-				.col-md-7
-					.dnn-detail1__content__slide
-						.swiper-container.dnn-detail1__content__slide__gallery-top
-							.swiper-wrapper
-								-for(i=1; i<4; i++)
-									.swiper-slide
-										.img
-											img(src="./assets/images/product/detail-"+i+".png", alt="")
-					.thumbs
-						.swiper-container-thumbs.dnn-detail1__content__slide__gallery-thumbs
-							.swiper-wrapper
-								-for(i=1; i<4; i++)
-									.swiper-slide
-										.img
-											img(src="./assets/images/product/detail-"+i+".png", alt="")
-						.swiper-button-next
-						.swiper-button-prev
-				.col-md-5.dnn-detail1__content__product-detail
-					.block-title
-						h1 Bi nghiền B - 310
-					.table-responsive
-						table.table
-							tbody
-								tr
-									th(scope='row') Mã sản phẩm
-									td B - 310
-								tr
-									th(scope='row') Màu sắc
-									td Xám
-								tr
-									th(scope='row') Chất liệu
-									td Sắt
-								tr
-									th(scope='row') Kích thước
-									td 0.5cm - 2cm
-								tr
-									th(scope='row') Độ cứng
-									td 58 - 64 (HRc)
-								tr
-									th(scope='row') Trọng lượng bình quân
-									td 0.050kg/viên
-								tr
-									th(scope='row') Tình trạng
-									td Hàng có sẵn
-					.dnn-detail1__content__product-detail__contact
-						a.btn.btn__contact(href="") Liên hệ
+				.col-xl-6
+					.hino-detail1__content__left
+						.block-title
+							h1 Hino 300 series XZU 650 - Xe tải 1,9 tấn
 						ul
 							li
-								a(href="")
-									i.fa.fa-twitter
+								p Giá
+							li
+								a.btn.btn__new2(href="")
+									em.material-icons call
+									sapn Liên hệ
 							li
 								a(href="")
-									i.fa.fa-facebook-f
+									em.fab.fa-facebook-f
+							li
+								a(href="")
+									em.fab.fa-linkedin-in
+						.hino-detail1__content__left__desc
+							p Xe tải Hino 300 Series mới được thiết kế chất lượng cao cả về hình dáng bên ngoài lẫn nội thất bên trong với một loạt các tính năng ưu việt: phong cách giản dị nhưng đầy ấn tượng độ bền cao, cabin thoáng và rộng, tiện ích trong sử dụng.
+				.col-xl-6
+					.hino-detail1__content__right
+						.img
+							img(src="./assets/images/product/pro-2.png", alt="")
 

@@ -31,7 +31,26 @@ const activeHeaderWhenScroll = () => {
 			$('header').find('.logo').removeClass('active')
 		}
 	});
-};
+}
+
+function megaMenu() {
+	$('.tab-mega > li').on('click', function() {
+		var $panel = $(this).closest('.drop-mega-menu');
+		$panel.find('li.active').removeClass('active');
+		$(this).addClass('active');
+		var panelToShow = $(this).attr('rel');
+		$panel.find('.panel.active').fadeOut(500, showNextPanel);
+
+		function showNextPanel() {
+			$(this).removeClass('active');
+			$('#' + panelToShow).fadeIn(500, function() {
+				$(this).addClass('active').fadeIn(500);
+			});
+		};
+
+	});
+
+}
 
 //Slide apply on site
 function dnnBannerSlide() {
@@ -134,7 +153,7 @@ function dnnBannerSlide() {
 			}
 		},
 	});
-	var otherproduct = new Swiper('.dnn-detail__list__other .dnn-detail__list__other__slide', {
+	var otherproduct = new Swiper('.hino-detail4__other .hino-detail4__other__slide', {
 		slidesPerView: 4,
 		spaceBetween: 30,
 		loop: true,
@@ -144,8 +163,8 @@ function dnnBannerSlide() {
 		// 	disableOnInteraction: false,
 		// },
 		navigation: {
-			nextEl: '.dnn-detail__list__other .swiper-button-next',
-			prevEl: '.dnn-detail__list__other .swiper-button-prev',
+			nextEl: '.hino-detail4__other .swiper-button-next',
+			prevEl: '.hino-detail4__other .swiper-button-prev',
 		},
 		breakpoints: {
 			1280: {
@@ -244,7 +263,6 @@ function detailThumbs() {
 		spaceBetween: 10,
 		slidesPerView: 5,
 		loop: true,
-		loopedSlides: 5,
 		slideToClickedSlide: true,
 		breakpoints: {
 			480: {
@@ -266,25 +284,48 @@ function detailThumbs() {
 	galleryThumbs.params.control = galleryTop
 }
 
+function phutungThumbs() {
+	var galleryThumbs = new Swiper('.hino-pt1__slide .hino-pt1__slide__thumb', {
+		direction: 'vertical',
+		slidesPerView: 4,
+		spaceBetween: 20,
+		loop: true,
+		slideToClickedSlide: true,
+		navigation: {
+			nextEl: '.hino-pt1__slide .swiper-button-next',
+			prevEl: '.hino-pt1__slide .swiper-button-prev',
+		},
+	});
+	var galleryTop = new Swiper('.hino-pt1__slide .hino-pt1__slide__top', {
+		spaceBetween: 10,
+		loop: true,
+		thumbs: {
+			swiper: galleryThumbs,
+		},
+	});
+	galleryTop.params.control = galleryThumbs
+	galleryThumbs.params.control = galleryTop
+}
+
 //Slide project detail
 function detailProjectThumbs() {
-	var galleryThumbs = new Swiper('.dnn-project-detail1__content__thumbs .dnn-project-detail1__content__thumbs__gallery-thumbs', {
-		navigation: {
-			nextEl: '.dnn-project-detail1__content__thumbs .swiper-button-next',
-			prevEl: '.dnn-project-detail1__content__thumbs .swiper-button-prev',
-		},
+	var galleryThumbs = new Swiper('.hino-detail3__slide .hino-detail3__slide__thumb', {
 		spaceBetween: 10,
-		slidesPerView: 5,
+		slidesPerView: 6,
 		loop: true,
 		slideToClickedSlide: true
 	});
-	var galleryTop = new Swiper('.dnn-project-detail1__content__slide .dnn-project-detail1__content__slide__gallery-top', {
+	var galleryTop = new Swiper('.hino-detail3__slide .hino-detail3__slide__top', {
 		spaceBetween: 10,
 		loop: true,
 		speed: 2500,
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: '.hino-detail3__slide .swiper-button-next',
+			prevEl: '.hino-detail3__slide .swiper-button-prev',
 		},
 		thumbs: {
 			swiper: galleryThumbs,
@@ -335,15 +376,14 @@ function tabsDescription() {
 		$panel.find('li.active').removeClass('active');
 		$(this).addClass('active');
 		var panelToShow = $(this).attr('rel');
-		$panel.find('.panel.active').slideUp(300, showNextPanel);
+		$panel.find('.panel.active').fadeOut(300, showNextPanel);
 
 		function showNextPanel() {
 			$(this).removeClass('active');
-			$('#' + panelToShow).slideDown(300, function() {
-				$(this).addClass('active');
+			$('#' + panelToShow).fadeIn(300, function() {
+				$(this).addClass('active').fadeIn(300);
 			});
 		};
-
 	});
 
 }
@@ -399,18 +439,9 @@ const checkLayoutBanner = () => {
 	const breadcrumb = $('.global-breadcrumb');
 	const heightHeader = $("header").outerHeight();
 	const mainBanner = $("#home-banner");
-	if (pagesBanner.length < 1) {
-		$("header").css({
-			"margin-top": "0",
-			"background-color": "#fff"
-		});
-		breadcrumb.css("padding-top", heightHeader);
-	}else{
-		pagesBanner.css('padding-top', heightHeader)
-	}
-	if ((mainBanner.length < 1) && (pagesBanner.length < 1)) {
+	if ((mainBanner.length < 1) || (pagesBanner.length < 1)) {
 		$('main').css('padding-top', heightHeader)
-	}
+	}$('main').css('padding-top', heightHeader)
 };
 
 function listFilter() {
@@ -505,7 +536,6 @@ function tabsNews() {
 				$(this).addClass('active').fadeIn(1000);
 			});
 		};
-
 	});
 
 }
@@ -533,6 +563,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	history();
 	aboutMenu();
 	tabsNews();
+	megaMenu();
+	phutungThumbs();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {

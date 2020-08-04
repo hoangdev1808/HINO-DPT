@@ -254,7 +254,11 @@ header {
 							&:hover {
 								background-color: #3361ae;
 							}
+							&.active{
+								background-color: #3361ae;
+							}
 						}
+
 					}
 
 					@media screen and (min-width: 1025px) {
@@ -293,7 +297,7 @@ header {
 							visibility: hidden;
 							transition: all ease-in-out .3s;
 							background-color: #fff;
-
+							z-index: 1000;
 							.mega-left {
 								background-color: #0b3155;
 								padding: 0;
@@ -310,15 +314,12 @@ header {
 										align-items: center;
 										padding: 15px 20px;
 										border-bottom: solid 1px #fff;
-
-										a {
-											font-size: 12px;
-											font-family: "Montserrat";
-											color: rgb(255, 255, 255);
-											font-weight: bold;
-											text-transform: uppercase;
-											text-align: left;
-										}
+										font-size: 12px;
+										font-family: "Montserrat";
+										color: rgb(255, 255, 255);
+										font-weight: bold;
+										text-transform: uppercase;
+										text-align: left;
 
 										.lnr {
 											font-size: 12px;
@@ -388,6 +389,9 @@ header {
 										}
 									}
 								}
+								&:last-child{
+									display: none;
+								}
 							}
 						}
 
@@ -413,7 +417,9 @@ header {
 							transition: all ease-in-out .3s;
 						}
 					}
-
+					&.active{
+						border-bottom: solid 2px #0b3155;
+					}
 					&:nth-child(7) {
 						.dropdown-menu {
 							position: absolute;
@@ -573,6 +579,10 @@ header {
 						.dropdown-menu {
 							top: 130%;
 						}
+					}
+					&.active{
+						color: #fff;
+						border-bottom: solid 2px #fff;
 					}
 				}
 

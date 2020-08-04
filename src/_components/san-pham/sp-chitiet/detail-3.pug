@@ -1,17 +1,19 @@
-section.section.dnn-detail.wow.fadeInDown(data-wow-delay=".3s")
+section.section.hino-detail3.wow.fadeInDown(data-wow-delay=".3s")
 	.container
 		.block-title
-			h1 Sản phẩm cùng loại
-		.dnn-detail__list
-			.swiper-container.dnn-detail__list__slide
+			h1 Hình ảnh
+		.hino-detail3__slide
+			.swiper-container.hino-detail3__slide__top
 				.swiper-wrapper
-					-for(i=7; i<12; i++)
+					-for(i=1; i<7; i++)
 						.swiper-slide
-							a(href="")
-								.dnn-detail__list__slide__img
-										img(src="./assets/images/product/detail-"+i+".png" alt="")
-								.dnn-detail__list__slide__name
-									p Sản phẩm công trình số 1
-									em.ri-arrow-right-line
+							.img
+								img(src="./assets/images/product/slide-"+i+".png" alt="")
 			.swiper-button-next
 			.swiper-button-prev
+			.swiper-container-thumbs.hino-detail3__slide__thumb
+				.swiper-wrapper
+					-for(i=1; i<7; i++)
+						.swiper-slide
+							.img
+								img(src="./assets/images/product/slide-"+i+".png" alt="")

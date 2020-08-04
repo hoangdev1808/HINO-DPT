@@ -1,28 +1,56 @@
-section.dnn-project-detail1.section.wow.fadeInDown(data-wow-delay=".3s")
+section.hino-pt1.section.wow.fadeInDown(data-wow-delay=".3s")
 	.container
-		.block-title
-			h1 Khu đô thị Phú Lương
-		.dnn-project-detail1__content
-			.dnn-project-detail1__content__description
-				p Đúc Nam Ninh vinh hạnh được chủ đầu tư khu đô thị Phú Lương ký kết hợp đồng cung cấp toàn bộ nắp hố ga cho dự án, với quy mô 36,03 ha, thuộc phạm vi các phường Phú Lương, Kiến Hưng, phường Phú La thành phố Hà Đông. Với phương châm chất lượng sản phẩm chính là tiêu chí hàng đầu, Công ty TNHH Đúc Nam Ninh đã đáp ứng được toàn bộ hạng mục cho dự án.
-
-				p Với định hướng trở thành khu đô thị đáng sống bậc nhất quận Hà Đông nói riêng và Hà Nội nói chung, dự án Phú Lương được quy hoạch tập trung và phát triển đồng bộ hạ tầng, tạo môi trường sống đẳng cấp, tiện nghi cho cư dân tương lai của KĐT mới Phú Lương
-
-			.dnn-project-detail1__content__slide
-				.swiper-container.dnn-project-detail1__content__slide__gallery-top
-					.swiper-wrapper
-						-for(i=1; i<6; i++)
-							.swiper-slide
-								.dnn-project-detail1__content__slide__gallery-top__img
-									img(src="./assets/images/project/project-detail/project-detail-"+i+".png", alt="")
-			.dnn-project-detail1__content__thumbs
-				.swiper-container-thumbs.dnn-project-detail1__content__thumbs__gallery-thumbs
-					.swiper-wrapper
-						-for(i=1; i<6; i++)
-							.swiper-slide
-								.dnn-project-detail1__content__thumbs__gallery-thumbs__img
-									img(src="./assets/images/project/project-detail/project-detail-"+i+".png", alt="")
-				.swiper-button-next
-				.swiper-button-prev
+		.row
+			.col-xl-6
+				.hino-pt1__slide
+					.swiper-container-thumbs.hino-pt1__slide__thumb
+						.swiper-wrapper
+							-for(i=1; i<7; i++)
+								.swiper-slide
+									.img
+										img(src="./assets/images/product/phutung-1.png" alt="")
+					.swiper-container.hino-pt1__slide__top
+						.swiper-wrapper
+							-for(i=1; i<7; i++)
+								.swiper-slide
+									.img
+										img(src="./assets/images/product/phutung-1.png" alt="")
+					.swiper-button-next
+					.swiper-button-prev
+			.col-xl-6
+				.hino-pt1__product-detail
 					.block-title
+						h1 Ắc nhíp
+					.desc
+						p
+							|Nhíp là bộ phận giảm xóc cho xe gồm các tấm thép được ghép lại. Toàn bộ tải trọng phần trên của xe được đặt lên khung nhờ các nhíp này
+					.table-responsive
+						table.table
+							tbody
+								tr
+									th(scope='row') Mã hàng
+									td 866
+								tr
+									th(scope='row') Tình trạng
+									td CÒn hàng
+								tr
+									th(scope='row') Xuất sứ
+									td Nhật Bản
+								tr
+									th(scope='row') Thương hiệu
+									td Hino
+					.hino-pt1__content__product-detail__contact
+						ul
+							li
+								p Giá
+							li
+								a.btn.btn__new2(href="")
+									em.material-icons call
+									sapn Liên hệ
+							li
+								a(href="")
+									em.fab.fa-facebook-f
+							li
+								a(href="")
+									em.fab.fa-linkedin-in
 

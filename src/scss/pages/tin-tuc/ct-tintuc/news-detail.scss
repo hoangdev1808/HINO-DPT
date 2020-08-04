@@ -1,11 +1,10 @@
-.dnn-news-detail {
+.hino-news-detail {
 	padding-top: 60px;
 
 	.block-title {
 		margin-bottom: 20px;
-
+		line-height: 44px;
 		h1 {
-			font-size: 24px;
 			font-family: "Montserrat";
 			color: rgb(51, 51, 51);
 			font-weight: bold;
@@ -26,17 +25,17 @@
 			flex: 1;
 			text-align: left;
 
-			.material-icons {
+			.lnr {
 				font-size: 12px;
-				font-family: "Material Icons";
-				color: rgb(153, 153, 153);
+				font-family: "Linearicons-Free";
+				color: #333333;
 				padding-right: 10px;
 			}
 
 			.date {
 				font-size: 12px;
 				font-family: "Montserrat";
-				color: rgb(153, 153, 153);
+				color: #333333;
 			}
 		}
 
@@ -44,7 +43,6 @@
 			flex: 1;
 
 			ul {
-				width: 100px;
 				display: flex;
 				align-items: center;
 				list-style: none;
@@ -53,20 +51,20 @@
 
 				li {
 					a {
-						color: #fff;
 						font-weight: 900;
 						font-size: 14px;
 					}
-
-					padding: 0 15px;
-
 					&:first-child {
 						margin-right: 10px;
-						background-color: #0099ff;
+						a{
+							color: #3a5b9e;
+						}
+						
 					}
-
 					&:last-child {
-						background-color: #3a5b9e;
+						a{
+							color: #0099ff;
+						}
 					}
 				}
 			}
@@ -129,18 +127,16 @@
 	}
 
 	&__other {
-		background-color: rgb(255, 255, 255);
-		box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
-		padding: 30px 15px;
+		padding: 0 15px;
 
 		.block-title {
 			padding-bottom: 15px;
 			margin-bottom: 20px;
-			border-bottom: solid 3px $main-color;
-
 			h1 {
 				font-size: 20px;
 				font-weight: bold;
+				color: $main-color;
+				text-transform: uppercase;
 			}
 		}
 		&__list{
@@ -151,8 +147,6 @@
 				position: relative;
 				width: 100%;
 				display: flex;
-				max-height: 70px;
-				overflow: hidden;
 				margin-bottom: 20px;
 				padding-bottom: 20px;
 				&::after{
@@ -162,40 +156,45 @@
 					left: 0;
 				}
 				&__img{
-					width: 50%;
+					width: 105px;
 					float: left;
-					height: 70px;
+					height: 75px;
 					overflow: hidden;
 					img{
 						width: 100%;
 						height: 100%;
+						object-fit: cover;
 					}
 				}
 				&__desc{
 					width: 50%;
+					max-height: 67px;
+					overflow: hidden;
 					float: left;
 					padding-top: 7px;
 					padding-left: 10px;
 					.date{
 						display: flex;
 						align-items: center;
-						.material-icons{
-							font-size: 12px;
-							color: rgb(153, 153, 153);
-						}
 						font-size: 12px;
 						font-family: "Montserrat";
-						color: rgb(153, 153, 153);
+						color: #333333;
+						.lnr{
+							font-size: 12px;
+							font-family: "Linearicons-Free";
+							color: #333333;
+							padding-right: 10px;
+						}
 					}
 					p{
 						font-size: 14px;
 						font-family: "Montserrat";
 						color: rgb(51, 51, 51);
-						font-weight: bold;
+						font-weight: 400;
 					}
 				}
 				&:hover{
-					.dnn-news-detail__other__list__item__desc{
+					.hino-news-detail__other__list__item__desc{
 						p{
 							color: $main-color
 						}

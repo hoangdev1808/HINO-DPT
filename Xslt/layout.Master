@@ -30,20 +30,20 @@
 			<div class="ov-h" id="wrapper">
 				<header>
 					<div class="container">
-						<div class="toggle-menu"></div>
-						<div class="logo">
-                            <portal:modulewrapper id="mdl206" runat="server" configuremoduleid="206" />
-                        </div>
-						<div class="logo-scroll">
-                            <portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
-                        </div><!-- Language mobile -->
-						<div id="div-mobile"></div>
 						<div class="main-menu">
+							<div class="toggle-menu"></div>
+							<div class="logo">
+								<portal:modulewrapper id="mdl206" runat="server" configuremoduleid="206" />
+							</div>
+							<div class="logo-scroll">
+								<portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
+							</div><!-- Language mobile -->
+							<div id="div-mobile"></div>
 							<!--Top Menu-->
 							<div class="top">
 								<div class="hotline">
-                                    <portal:modulewrapper id="mdl208" runat="server" configuremoduleid="208" />
-                                </div>
+									<portal:modulewrapper id="mdl208" runat="server" configuremoduleid="208" />
+								</div>
 								<div id="search__desktop"><a class="search btn btn__search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a></div>
 								<div id="language-desktop">
 									<portal:modulewrapper id="mdl209" runat="server" configuremoduleid="209" />
@@ -313,9 +313,9 @@
 					</div>
 				</portal:AutoHidePanel>
 				<portal:Woopra ID="woopra11" runat="server" />
-        </form>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer=""></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		</form>
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer=""></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
 	</body>
