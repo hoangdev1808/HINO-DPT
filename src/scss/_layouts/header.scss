@@ -100,7 +100,12 @@ header {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-
+				div,
+				div{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 				.material-icons {
 					color: $color-while;
 					font-size: 18px;

@@ -180,6 +180,34 @@ function dnnBannerSlide() {
 			}
 		},
 	});
+
+	var otherphutung = new Swiper('.hino-pt3__slide .hino-pt3__slide__other', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
+		navigation: {
+			nextEl: '.hino-pt3__slide .swiper-button-next',
+			prevEl: '.hino-pt3__slide .swiper-button-prev',
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			480: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
+		},
+	});
 	var swiper = new Swiper('.hinohome7__slide .hinohome7__slide__news', {
 		slidesPerView: 1,
 		loop: true,
