@@ -1,4 +1,10 @@
+.hino-helper1{
+    .hino-service3__content{
+        padding-bottom: 30px;
+    }
+}
 .hino-helper2 {
+    padding-top: 0;
     &__left {
         width: 100%;
 
@@ -21,23 +27,32 @@
             }
 
             &__desc {
-                display: flex;
-                align-items: flex-start;
-
-                .material-icons {
-                    font-size: 16px;
-                    font-family: "Material Icons";
-                    color: rgb(255, 255, 255);
-                    padding-right: 20px;
-                    padding-top: 5px;
+                ul{
+                    padding-left: 0;
+                    list-style: none;
+                    li{
+                        display: flex;
+                        .material-icons {
+                            font-size: 16px;
+                            font-family: "Material Icons";
+                            color: rgb(255, 255, 255);
+                            padding-right: 20px;
+                            padding-top: 5px;
+                        }
+                        p {
+                            font-size: 15px;
+                            font-family: "Montserrat";
+                            color: rgb(255, 255, 255);
+                            line-height: 1.6;
+                        }
+                        &:nth-child(3){
+                            padding-left: 36px;
+                        }
+                    }
                 }
-
-                p {
-                    font-size: 15px;
-                    font-family: "Montserrat";
-                    color: rgb(255, 255, 255);
-                    line-height: 1.6;
-                }
+            }
+            &.active{
+                background-color: #3361ae;
             }
         }
     }
@@ -46,64 +61,143 @@
         width: 100%;
 
         &__form {
-            .box-form {
-                .form-group {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 20px;
-
-                    label {
-                        margin-bottom: 20px;
-                        font-size: 14px;
+            .wrap-form>div {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+        
+                span {
+                    color: red;
+                    font-size: 13px;
+                    font-family: 'Barlow';
+                    font-weight: normal;
+        
+                    &::before {
+                        content: '';
+                    }
+                }
+            }
+            &.box-form {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                .desc{
+                    width: 100%;
+                    text-align: center;
+                    h2 {
+                        font-size: 16px;
                         font-family: "Montserrat";
-                        color: rgb(102, 102, 102);
-                        line-height: 1.2;
-                        text-align: left;
+                        color: rgb(51, 51, 51);
+                        padding-bottom: 30px;
                     }
-
-                    input {
-                        width: 390px;
-                        height: 40px;
-                        border: solid 1px #e1e1e1;
-                        background-color: #f1f1f1;
-                        padding-left: 20px;
+                }
+                .form-group {
+                    margin-bottom: 30px;
+                    @media(max-width: 1024px) {
+                        margin-bottom: 15px;
                     }
-
+                }
+        
+                .form-group input {
+                    border: solid 1px rgb(245, 245, 245);
+                    width: 100%;
+                    height: 50px;
+                    padding-left: 15px;
+                    background-color: #f1f1f1;
+        
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+                }
+        
+                .form-title {
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+                }
+        
+                .qparagraph {
+                    flex: 0 0 100%;
+                    height: 100px;
+                    margin-bottom: 30px;
+        
+                    @media(max-width: 1024px) {
+                        margin-bottom: 15px;
+                    }
+        
                     textarea {
-                        height: 120px;
-                        border: solid 1px #e1e1e1;
+                        border: 1px solid #f5f5f5;
+                        width: 100%;
+                        height: 100%;
+                        color: #333;
+                        caret-color: #064975;
+                        font-size: 15px;
+                        padding-left: 15px;
                         background-color: #f1f1f1;
                     }
                 }
-
+        
                 .frm-btnwrap {
-					margin-top: 30px;
-					margin-left: auto;
-
-                    .frm-btn {
-                        .btn__news2 {
-                            width: 190px;
-							height: 40px;
-							padding-left: 0;
-                            border-radius: 20px;
-                            background-color: #0b3155;
-                            line-height: 40px;
-                            text-align: center;
-                            color: #fff;
-                            font-size: 15px;
-                            font-family: "Montserrat";
-							display: flex;
-							align-items: center;
-							justify-content: center;
-                            &:hover {
-                                background-color: #3361ae;
-                                color: #fff;
-							}
-							.ri-arrow-right-line{
-								padding-left: 20px;
-							}
-						}
+                    margin-left: auto;
+                    margin-bottom: 0;
+                    flex: none;
+                    padding: 0;
+                    float: right;
+                    width: 170px;
+        
+                    label {
+                        display: none;
                     }
+        
+                    .frm-btn {
+                        margin-top: 30px;
+                        position: relative;
+        
+                        input {
+                            background-color: $main-color;
+                            width: 191px;
+                            height: 40px;
+                            border-radius: 20px;
+                            border: none;
+                            text-align: center;
+                            padding-left: 0;
+                            font-size: 16px;
+                            font-family: "Montserrat";
+                            color: rgb(255, 255, 255);
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+        
+                        .ri-arrow-right-line {
+                            position: absolute;
+                            right: 30px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 18px;
+                            font-family: "remixicon";
+                            color: rgb(255, 255, 255);
+                        }
+        
+                        @media(max-width: 991.98px) {
+                            width: 120px;
+                            font-size: 14px;
+                        }
+                    }
+        
+                    @media(max-width: 1024px) {
+                        width: unset;
+                        margin-top: 15px;
+                        float: left;
+                    }
+        
+                    .frm-btn-reset {
+                        display: none;
+                    }
+                }
+        
+                @media screen and (max-width: 1024px) {
+                    margin-left: 0;
+                    margin-top: 30px;
                 }
             }
         }

@@ -1,10 +1,10 @@
-.dnn-hr-detail {
+.hino-hr-detail {
 	&__left {
 		.block-title {
 			margin-bottom: 20px;
 
 			h1 {
-				font-size: 24px;
+				font-size: 36px;
 				font-family: "Montserrat";
 				color: rgb(51, 51, 51);
 				font-weight: bold;
@@ -13,10 +13,10 @@
 
 		&__timeline {
 			width: 100%;
-			padding: 0 0 10px 0;
+			padding: 0 0 20px 0;
 			display: flex;
 			align-items: center;
-			border-bottom: solid 1px rgb(241, 241, 241);
+
 			.icon-social {
 				ul {
 					padding-left: 0;
@@ -24,29 +24,33 @@
 					display: flex;
 					align-items: center;
 					list-style: none;
-					justify-content: flex-end;
-					margin-left: auto;
 
 					li {
 						padding: 0;
+
 						a {
-							font-weight: 900;
-							font-size: 14px;
+							.fa {
+								font-size: 16px;
+							}
 						}
 
-						padding: 0 15px;
-
 						&:first-child {
-							margin-right: 20px;
-							a{
-								color: #3a5b9e;
+							margin-right: 10px;
+
+							a {
+								.fa {
+									color: #3a5b9e;
+								}
 							}
-							
+
 						}
 
 						&:last-child {
-							a{
-								color: #0099ff;
+							a {
+								.fa {
+									color: #0099ff;
+								}
+
 							}
 						}
 					}
@@ -63,35 +67,70 @@
 		}
 
 		&__content {
-			padding-top: 25px;
+			background-color: #e3eef3;
+			padding: 40px;
+			margin-bottom: 40px;
+			width: 895px;
+
+			h2 {
+				font-size: 18px;
+				font-family: "Montserrat";
+				color: rgb(51, 51, 51);
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-bottom: 30px;
+			}
 
 			table {
-				width: 735px;
+				width: 100%;
 
 				tbody {
 					tr {
 						display: flex;
 
 						td {
-							padding: 15px 0;
 							flex: 1;
+							display: flex;
+							align-items: center;
+							padding: 0;
+
+							.img {
+								width: 19px;
+								display: flex;
+								align-content: center;
+
+								.fa {
+									font-size: 16px;
+									color: #666666;
+								}
+
+								.material-icons {
+									font-size: 18px;
+									color: #666666;
+								}
+							}
+
 							span {
 								font-size: 16px;
+								margin-left: 15px;
 								font-family: "Montserrat";
 								color: rgb(51, 51, 51);
 								font-weight: bold;
 							}
 
-							i {
-								padding-right: 7px;
-								color: $main-color;
-								font-size: 24px;
-							}
-
 							p {
-								font-size: 14px;
+								font-size: 16px;
 								font-family: "Montserrat";
 								color: rgb(51, 51, 51);
+								line-height: 2.25;
+
+								&.color-special {
+									color: #0099ff;
+								}
+
+								&.color-special2 {
+									color: red;
+								}
 							}
 
 							&:nth-child(2) {
@@ -101,91 +140,107 @@
 					}
 				}
 			}
-			&__list{
-				margin-bottom: 50px;
-				p{
-					font-size: 16px;
+
+			&__list {
+				margin-bottom: 35px;
+
+				h2 {
+					font-size: 24px;
 					font-family: "Montserrat";
-					color: rgb(51, 51, 51);
+					color: rgb(51, 97, 174);
 					font-weight: bold;
+					text-transform: uppercase;
 				}
-				ul{
+
+				ul {
 					padding-top: 25px;
 					padding-left: 0;
 					list-style: none;
-					li{
+
+					li {
+						padding-left: 15px;
 						position: relative;
-						padding-bottom: 25px;
-						padding-left: 20px;
-						p{
-							font-size: 16px;
+
+						p {
+							font-size: 18px;
 							font-family: "Montserrat";
 							color: rgb(51, 51, 51);
-							line-height: 1.5;
-							font-weight: 400;
 						}
-						&::before{
-							content: 'navigate_next';
+
+						&::before {
+							content: 'fiber_manual_record';
 							position: absolute;
-							top: 0;
+							top: 50%;
+							transform: translateY(-50%);
 							left: 0;
 							font-family: 'Material Icons';
-							font-size: 16px;
-							color: rgb(51, 51, 51);
+							font-size: 6px;
+							color: rgb(153, 153, 153);
 						}
 					}
 				}
 			}
 		}
 	}
-	&__right{
+
+	&__right {
 		width: 100%;
-		&__btn{
-			.btn__apply{
-				background-color: rgb(233, 0, 6);
-				width: 100%;
+		background-color: #f3f3f3;
+		border: solid 1px #d7d7d7;
+
+		&__btn {
+			display: flex;
+			align-items: center;
+			margin-left: auto;
+
+			.btn__apply {
+				background-color: #0b3155;
+				width: 210px;
 				height: 40px;
-				border-radius: 0;
+				border-radius: 20px;
 				color: #fff;
-				font-size: 16px;
 				font-family: "Montserrat";
-				line-height: 3.125;
-				text-transform: uppercase;
-				margin-bottom: 20px;
+				line-height: 40px;
+				margin-right: 20px;
+				font-size: 15px;
 			}
-			.btn__down{
-				width: 100%;
+
+			.btn__down {
+				background-color: #3361ae;
+				width: 210px;
 				height: 40px;
-				border-radius: 0;
-				color: $main-color;
-				font-size: 16px;
+				border-radius: 20px;
+				color: #fff;
+				font-size: 15px;
 				font-family: "Montserrat";
-				line-height: 3.125;
-				text-transform: uppercase;
+				line-height: 40px;
 				border: solid 1px $main-color
 			}
 		}
-		&__content{
-			padding-top: 60px;
-			.block-title{
+
+		&__content {
+			.block-title {
 				margin-bottom: 0;
-				width: 100px;
-				h1{
-					font-size: 18px;
+
+				h1 {
+					padding: 20px;
+					font-size: 20px;
 					font-family: "Montserrat";
-					color: rgb(51, 51, 51);
+					color: rgb(51, 97, 174);
 					font-weight: bold;
-					padding-bottom: 10px;
-					border-bottom: solid 3px $main-color;
+					text-transform: uppercase;
 				}
 			}
-			&__list{
+
+			&__list {
 				padding-left: 0;
 				list-style: none;
-				&__item{
-					padding: 20px 0;
-					border-bottom: solid 1px #f1f1f1;
-					.date{
+
+				&__item {
+					padding: 20px;
+					border-top: solid 1px #d7d7d7;
+
+					.date {
 						display: flex;
 						align-items: center;
 						font-size: 14px;
@@ -193,20 +248,31 @@
 						color: rgb(153, 153, 153);
 						line-height: 20px;
 						padding-bottom: 15px;
-						.material-icons{
+
+						.material-icons {
 							font-size: 16px;
 							color: rgb(153, 153, 153);
 						}
 					}
-					h2{
+
+					p {
 						font-size: 14px;
 						font-family: "Montserrat";
-						color: rgb(51, 51, 51);
-						font-weight: bold;
+						color: #333333;
+
+						&.color-special2 {
+							color: red;
+						}
 					}
-					&:hover{
-						h2{
-							color: $main-color
+
+					&:hover {
+						p {
+							color: $main-color;
+							text-decoration: underline;
+
+							&:last-child {
+								color: red;
+							}
 						}
 					}
 				}

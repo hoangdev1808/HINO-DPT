@@ -1,6 +1,5 @@
 {
 	"fonts": [
-		"src/fonts/all.min.css",
 		"node_modules/@mdi/font/fonts/**"
 	],
 	"js": [
@@ -10,8 +9,7 @@
 		"bower_components/jquery-nice-select/js/jquery.nice-select.min.js",
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/wow/dist/wow.min.js",
-		"src/fonts/all.min.js"
+		"bower_components/wow/dist/wow.min.js"
 	],
 	"css": [
 		"node_modules/@mdi/font/css/materialdesignicons.mim.css",

@@ -183,7 +183,7 @@ function dnnBannerSlide() {
 
 	var otherphutung = new Swiper('.hino-pt3__slide .hino-pt3__slide__other', {
 		slidesPerView: 4,
-		spaceBetween: 30,
+		spaceBetween: 20,
 		loop: true,
 		speed: 1000,
 		// autoplay: {

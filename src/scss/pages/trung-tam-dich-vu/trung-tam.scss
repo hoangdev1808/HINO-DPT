@@ -2,6 +2,7 @@
 	padding: 0;
 	
 	&__map{
+		position: relative;
 		height: 785px;
 		#map{
 			height: 100%;
