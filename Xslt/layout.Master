@@ -271,7 +271,7 @@
 						</div>
 					</div>
 				</footer>
-				<div id="back-to-top"><img src="./assets/icons/gototop.png" alt="" srcset=""></div>
+				<%-- <div id="back-to-top"><img src="./assets/icons/gototop.png" alt="" srcset=""></div> --%>
 				<div class="searchbox" id="searchfancybox" style="display: none;">
 					<div class="container">
 						<div class="content">

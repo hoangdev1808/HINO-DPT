@@ -37,214 +37,12 @@
             <section class="section hino-service3">
                 <div class="container">
                     <div class="block-title border__bottom">
-                        <h1>hỏi đáp</h1>
+                        <h1>
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        </h1>
                     </div>
                     <div class="hino-service3__content acc">
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hino-service3__content__card acc__card">
-                            <div class="hino-service3__content__card__title acc__title">
-                                <p>01. Hino có bao nhiêu trạm dịch vụ?</p>
-                                <em class="lnr lnr-chevron-down"></em>
-                            </div>
-                            <div class="hino-service3__content__card__body acc__panel">
-                                <ul>
-                                    <li>
-                                        <p>Hiện tại Hino có  4 trạm dịch vụ 3S cùng trung tâm hỗ trợ khách hàng 24/24 tại Hồ Chí Minh.</p>
-                                    </li>
-                                    <li>
-                                        <p>Cần tư vấn thêm? Gọi hotline của Hino Đại Phát Tín: 0919742882 </p>
-                                    </li>
-                                    <li>
-                                        <p>Theo dõi trang Facebook của Hino Đại Phát Tín: https://www.facebook.com/otodaiphattin/</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pages">
-                        <div class="modulepager">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <xsl:apply-templates select="News" mode="Section3"></xsl:apply-templates>
                     </div>
                 </div>
             </section>
@@ -411,6 +209,28 @@
                         </div>
                     </div>
                 </xsl:if>
+            </div>
+        </div>
+    </xsl:template>
+    <xsl:template match="News" mode="Section3">
+        <div class="hino-service3__content__card acc__card">
+            <div class="hino-service3__content__card__title acc__title">
+                <p>
+                    <xsl:if test="position()>=10">
+                        <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+                        <xsl:text>. </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="position() !=10">
+                        <xsl:text>0</xsl:text>
+                        <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+                        <xsl:text>. </xsl:text>
+                    </xsl:if>
+                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                </p>
+                <em class="lnr lnr-chevron-down"></em>
+            </div>
+            <div class="hino-service3__content__card__body acc__panel">
+                <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
             </div>
         </div>
     </xsl:template>
