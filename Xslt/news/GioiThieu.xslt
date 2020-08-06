@@ -22,6 +22,13 @@
                     <xsl:apply-templates select="News" mode="TongQuan"></xsl:apply-templates>
                     <xsl:apply-templates select="News" mode="Hino"></xsl:apply-templates>
                 </div>
+                <div id="hino-cop" style="display: none;">
+                    <div class="container">
+                        <div class="content">
+                            <xsl:apply-templates select="News" mode="Popup"></xsl:apply-templates>
+                        </div>
+                    </div>
+                </div>
             </section>
         </xsl:if>
         <xsl:if test="position()=2">
@@ -134,7 +141,7 @@
                                     <xsl:text>popup</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="Url"></xsl:value-of>
+                                    <xsl:text>#hino-cop</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="title">
                                     <xsl:value-of select="Title"></xsl:value-of>
@@ -159,6 +166,16 @@
                     </div>
                 </div>
             </div>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="News" mode="Popup">
+        <xsl:if test="position()=2">
+            <div class="block-title">
+                <h1>
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </h1>
+            </div>
+            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
         </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="Thumbs">
