@@ -11,43 +11,21 @@
         </div>
     </xsl:template>
     <xsl:template match="Zone">
-	<xsl:choose>
-		<xsl:when test="ZoneId!= 191">
-            <li>
-                <xsl:if test="IsActive='true'">
-                    <xsl:attribute name="class">
-                        <xsl:text>active</xsl:text>
-                    </xsl:attribute>
-                </xsl:if>
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
+        <li>
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
-                </a>
-            </li>
-        </xsl:when>
-        <xsl:when test="ZoneId= 191">
-            <li>
-                <xsl:if test="IsActive='true'">
-                    <xsl:attribute name="class">
-                        <xsl:text>active</xsl:text>
-                    </xsl:attribute>
-                </xsl:if>
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </a>
-            </li>
-        </xsl:when>
-	</xsl:choose>
+                </xsl:attribute>
+                <xsl:value-of select="Title"></xsl:value-of>
+            </a>
+        </li>
     </xsl:template>
 </xsl:stylesheet>

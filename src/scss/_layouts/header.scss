@@ -13,6 +13,9 @@ header {
 	.Module {
 		width: 100%;
 	}
+	.relative{
+		position: static;
+	}
 
 	.main-menu {
 		.toggle-menu {
@@ -356,7 +359,7 @@ header {
 									color: rgb(51, 97, 174);
 									font-weight: bold;
 									text-transform: uppercase;
-									margin-bottom: 30px;
+									margin-bottom: 10px;
 								}
 
 								ul {

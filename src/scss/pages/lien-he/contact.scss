@@ -58,6 +58,7 @@
 		}
 		.form-group {
 			margin-bottom: 30px;
+			padding-right: 0;
 			@media(max-width: 1024px) {
 				margin-bottom: 15px;
 			}
@@ -120,7 +121,7 @@
 
 				input {
 					background-color: $main-color;
-					width: 191px;
+					width: 170px;
 					height: 40px;
 					border-radius: 20px;
 					border: none;

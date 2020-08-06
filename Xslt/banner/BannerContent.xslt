@@ -4,9 +4,9 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes" />
     <xsl:template match="/">
-        <xsl:apply-templates select="/BannerList/Banner" mode="Banner"></xsl:apply-templates>
+        <xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
     </xsl:template>
-    <xsl:template match="Banner" mode="Banner">
+    <xsl:template match="Banner">
         <div class="hino-banner__pages">
             <xsl:attribute name="setBackground">
                 <xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>

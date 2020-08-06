@@ -28,7 +28,14 @@
                         </h1>
                     </div>
                     <div class="row">
-                        <xsl:apply-templates select="News" mode="Section2"></xsl:apply-templates>
+                        <div class="col-xl-6 col-md-12 hino-news2__news__left">
+                            <xsl:apply-templates select="News" mode="Left"></xsl:apply-templates>
+                        </div>
+                        <div class="col-xl-6 col-md-12 hino-news2__news__right">
+                            <div class="row">
+                                <xsl:apply-templates select="News" mode="Right"></xsl:apply-templates>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -176,11 +183,20 @@
             </div>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="News" mode="Section2">
+    <xsl:template match="News" mode="Left">
         <xsl:if test="position()=1">
-            <div class="col-xl-6 col-md-12 hino-news2__news__left">
-                <div class="hino-news2__news__left__img">
-                    <img >
+            <div class="hino-news2__news__left__img">
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="data-fancybox">
+                        <xsl:text>images</xsl:text>
+                    </xsl:attribute>
+                    <img>
                         <xsl:attribute name="src">
                             <xsl:value-of select="ImageUrl"></xsl:value-of>
                         </xsl:attribute>
@@ -188,29 +204,38 @@
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
                     </img>
+                </a>
+            </div>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="News" mode="Right">
+        <xsl:if test="position()>1 and position()&lt;6">
+            <div class="col-xl-6 col-md-6">
+                <div class="hino-news2__news__right__item">
+                    <div class="hino-news2__news__right__item__img">
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="data-fancybox">
+                                <xsl:text>images</xsl:text>
+                            </xsl:attribute>
+                            <img>
+                                <xsl:attribute name="src">
+                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="alt">
+                                    <xsl:value-of select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                            </img>
+                        </a>
+                    </div>
                 </div>
             </div>
         </xsl:if>
-        <div class="col-xl-6 col-md-12 hino-news2__news__right">
-            <div class="row">
-                <xsl:if test="position()>1 and position()&lt;6">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="hino-news2__news__right__item">
-                            <div class="hino-news2__news__right__item__img">
-                                <img >
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="alt">
-                                        <xsl:value-of select="Title"></xsl:value-of>
-                                    </xsl:attribute>
-                                </img>
-                            </div>
-                        </div>
-                    </div>
-                </xsl:if>
-            </div>
-        </div>
     </xsl:template>
     <xsl:template match="News" mode="Section3">
         <div class="hino-service3__content__card acc__card">
