@@ -4,101 +4,103 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <section class="dnn-detail1 section wow fadeInDown" data-wow-delay=".3s">
+        <section class="hino-detail1 section wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
-                <div class="dnn-detail1__content">
+                <div class="hino-detail1__content">
                     <div class="row">
-                        <div class="col-md-7">
-                            <div class="dnn-detail1__content__slide">
-                                <div class="swiper-container dnn-detail1__content__slide__gallery-top">
-                                    <div class="swiper-wrapper">
-                                        <xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
-                                    </div>
+                        <div class="col-xl-6">
+                            <div class="hino-detail1__content__left">
+                                <div class="block-title">
+                                    <h1>
+                                        <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/Title"></xsl:value-of>
+                                    </h1>
                                 </div>
-                            </div>
-                            <div class="thumbs">
-                                <div class="swiper-container-thumbs dnn-detail1__content__slide__gallery-thumbs">
-                                    <div class="swiper-wrapper">
-                                        <xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 dnn-detail1__content__product-detail">
-                            <div class="block-title">
-                                <h1>
-                                    <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/Title"></xsl:value-of>
-                                    <xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
-                                </h1>
-                            </div>
-                            <div class="table-responsive">
-                                <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FullContent"></xsl:value-of>
-                            </div>
-                            <div class="dnn-detail1__content__product-detail__contact">
-                                <a class="btn btn__contact" href="">Liên hệ</a>
                                 <ul>
                                     <li>
-                                        <a>
+                                        <p>Giá</p>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn__new2" href="">
                                             <xsl:attribute name="href">
-                                                <xsl:text>https://twitter.com/home?status=</xsl:text>
-                                                <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
+                                                <xsl:value-of select="Url"></xsl:value-of>
                                             </xsl:attribute>
-                                            <i class="fa fa-twitter"></i>
+                                            <xsl:attribute name="title">
+                                                <xsl:value-of select="Title"></xsl:value-of>
+                                            </xsl:attribute>
+                                            <em class="material-icons">call</em>
+                                            <sapn>
+                                                <xsl:text>Liên hệ</xsl:text>
+                                            </sapn>
                                         </a>
                                     </li>
                                     <li>
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
-                                                <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
-                                            </xsl:attribute>
-                                            <i class="fa fa-facebook"></i>
+                                        <a href="">
+                                            <em class="fa fa-facebook"></em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <em class="fa fa-linkedin"></em>
                                         </a>
                                     </li>
                                 </ul>
+                                <div class="hino-detail1__content__left__desc">
+                                    <p>
+                                        <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BriefContent"></xsl:value-of>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="hino-detail1__content__right">
+                                <xsl:apply-templates select="/ProductDetail/ProductImages" mode="ImageTop"></xsl:apply-templates>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section dnn-detail2 wow fadeInDown" data-wow-delay=".3s">
+        <section class="section hino-detail2 wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
-                <div class="dnn-detail2__desciption">
-                    <div class="tab-panels">
-                        <ul class="tabs">
-                            <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Title"></xsl:apply-templates>
-                        </ul>
-                        <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Content"></xsl:apply-templates>
-                    </div>
+                <div class="block-title">
+                    <h1>Thông tin chi tiết</h1>
+                </div>
+                <div class="tab-panels">
+                    <ul class="tabs">
+                        <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Title"></xsl:apply-templates>
+                    </ul>
+                    <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Content"></xsl:apply-templates>
                 </div>
             </div>
         </section>
-        <section class="section dnn-detail wow fadeInDown" data-wow-delay=".3s">
+        <section class="section hino-detail3 wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
                 <div class="block-title">
-                    <h1>Sản phẩm cùng loại</h1>
+                    <h1>Hình ảnh</h1>
                 </div>
-                <div class="dnn-detail__list">
-                    <div class="swiper-container dnn-detail__list__slide">
+                <div class="hino-detail3__slide">
+                    <div class="swiper-container hino-detail3__slide__top">
                         <div class="swiper-wrapper">
-                            <xsl:apply-templates select="/ProductDetail/ProductRelated"></xsl:apply-templates>
+                            <xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                    <div class="swiper-container-thumbs hino-detail3__slide__thumb">
+                        <div class="swiper-wrapper">
+                            <xsl:apply-templates select="/ProductDetail/ProductImages"></xsl:apply-templates>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section dnn-detail wow fadeInDown" data-wow-delay=".3s">
+        <section class="section hino-detail4 wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
                 <div class="block-title">
-                    <h1>Sản phẩm khác</h1>
+                    <h1>Xe tải Hino khác</h1>
                 </div>
-                <div class="dnn-detail__list__other">
-                    <div class="swiper-container dnn-detail__list__other__slide">
+                <div class="hino-detail4__other">
+                    <div class="swiper-container hino-detail4__other__slide">
                         <div class="swiper-wrapper">
                             <xsl:apply-templates select="/ProductDetail/ProductOther"></xsl:apply-templates>
                         </div>
@@ -109,17 +111,19 @@
             </div>
         </section>
     </xsl:template>
-    <xsl:template match="ProductImages">
-        <div class="swiper-slide">
-            <img>
-                <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="alt">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-            </img>
-        </div>
+    <xsl:template match="ProductImages" mode="ImageTop">
+        <xsl:if test="position()=1">
+            <div class="img">
+                <img >
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                </img>
+            </div>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="Title">
         <li>
@@ -146,71 +150,40 @@
                     <xsl:text disable-output-escaping="yes">panel active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
-            <div class="article">
-                <xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
-                <div class="button-read">
-                    <div id="toggle">Xem thêm</div>
-                    <em class="ri-arrow-down-line"></em>
-                </div>
-            </div>
+            <xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
         </div>
     </xsl:template>
-    <xsl:template match="ProductRelated">
+    <xsl:template match="ProductImages">
         <div class="swiper-slide">
-            <a>
-                <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-                <div class="dnn-detail__list__other__slide__img">
-                    <div class="img">
-                        <img >
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="ImageUrl"></xsl:value-of>
-                            </xsl:attribute>
-                            <xsl:attribute name="alt">
-                                <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
-                        </img>
-                    </div>
-                </div>
-                <div class="dnn-detail__list__other__slide__name">
-                    <p>
-                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                    </p>
-                    <em class="ri-arrow-right-line"></em>
-                </div>
-            </a>
+            <div class="img">
+                <img>
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                </img>
+            </div>
         </div>
     </xsl:template>
     <xsl:template match="ProductOther">
         <div class="swiper-slide">
-            <a>
-                <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-                <div class="dnn-detail__list__other__slide__img">
-                    <div class="img">
-                        <img >
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="ImageUrl"></xsl:value-of>
-                            </xsl:attribute>
-                            <xsl:attribute name="alt">
-                                <xsl:value-of select="Title"></xsl:value-of>
-                            </xsl:attribute>
-                        </img>
-                    </div>
+            <a href="">
+                <div class="hino-detail4__other__slide__img">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
                 </div>
-                <div class="dnn-detail__list__other__slide__name">
+                <div class="hino-detail4__other__slide__name">
                     <p>
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </p>
-                    <em class="ri-arrow-right-line"></em>
                 </div>
             </a>
         </div>

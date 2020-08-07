@@ -17,6 +17,13 @@
                     </div>
                     <xsl:apply-templates select="News" mode="Section1"></xsl:apply-templates>
                 </div>
+                <div id="hino-cop" style="display: none;">
+                    <div class="container">
+                        <div class="content">
+                            <xsl:apply-templates select="News" mode="Popup1"></xsl:apply-templates>
+                        </div>
+                    </div>
+                </div>
             </section>
         </xsl:if>
         <xsl:if test="position()=2">
@@ -38,6 +45,13 @@
                         </div>
                     </div>
                 </div>
+                <div id="hino-cop" style="display: none;">
+                    <div class="container">
+                        <div class="content">
+                            <xsl:apply-templates select="News" mode="Popup2"></xsl:apply-templates>
+                        </div>
+                    </div>
+                </div>
             </section>
         </xsl:if>
         <xsl:if test="position()=3">
@@ -50,6 +64,13 @@
                     </div>
                     <div class="hino-service3__content acc">
                         <xsl:apply-templates select="News" mode="Section3"></xsl:apply-templates>
+                    </div>
+                </div>
+                <div id="hino-cop" style="display: none;">
+                    <div class="container">
+                        <div class="content">
+                            <xsl:apply-templates select="News" mode="Popup3"></xsl:apply-templates>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -86,7 +107,7 @@
                             <a class="btn btn__new2">
                                 <xsl:attribute name="data-fancybox"></xsl:attribute>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="Url"></xsl:value-of>
+                                    <xsl:text>#hino-cop</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="title">
                                     <xsl:value-of select="Title"></xsl:value-of>
@@ -116,7 +137,7 @@
                             <a class="btn btn__new2">
                                 <xsl:attribute name="data-fancybox"></xsl:attribute>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="Url"></xsl:value-of>
+                                    <xsl:text>#hino-cop</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="title">
                                     <xsl:value-of select="Title"></xsl:value-of>
@@ -170,7 +191,7 @@
                             <a class="btn btn__new2">
                                 <xsl:attribute name="data-fancybox"></xsl:attribute>
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="Url"></xsl:value-of>
+                                    <xsl:text>#hino-cop</xsl:text>
                                 </xsl:attribute>
                                 <xsl:attribute name="title">
                                     <xsl:value-of select="Title"></xsl:value-of>
@@ -258,5 +279,35 @@
                 <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
             </div>
         </div>
+    </xsl:template>
+    <xsl:template match="News" mode="Popup1">
+        <xsl:if test="position()=1">
+            <div class="block-title">
+                <h1>
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </h1>
+            </div>
+            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="News" mode="Popup2">
+        <xsl:if test="position()=2">
+            <div class="block-title">
+                <h1>
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </h1>
+            </div>
+            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="News" mode="Popup3">
+        <xsl:if test="position()=3">
+            <div class="block-title">
+                <h1>
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </h1>
+            </div>
+            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

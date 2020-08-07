@@ -76,180 +76,37 @@
 						<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 					</asp:Panel>
 				</main>
-				<section class="section hinohome9">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-3">
-								<div class="item">
-									<div class="item__img"><img src="./assets/icons/communicate.png" alt=""></div>
-									<div class="item__desc">
-										<p>Hỗ trợ khách hàng</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3">
-								<div class="item">
-									<div class="item__img"><img src="./assets/icons/edit-tools.png" alt=""></div>
-									<div class="item__desc">
-										<p>trung tâm dịch vụ</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3">
-								<div class="item">
-									<div class="item__img"><img src="./assets/icons/people.png" alt=""></div>
-									<div class="item__desc">
-										<p>tư vấn viên</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3">
-								<div class="item">
-									<div class="item__img"><img src="./assets/icons/education.png" alt=""></div>
-									<div class="item__desc">
-										<p>đặt câu hỏi</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				<portal:modulewrapper id="mdl309" runat="server" configuremoduleid="309" />
 				<footer>
 					<div class="footer-block">
 						<div class="container">
 							<div class="row">
 								<div class="col-xl-5 footer-card">
-									<div class="row">
-										<div class="col-xl-6">
-											<div class="card__title">
-												<p>showroom tp.hcm</p>
-											</div>
-											<div class="card__body">
-												<ul>
-													<li>
-														<p>1286 QL 1A, Thới An, Quận 12, TP.HCM</p>
-													</li>
-													<li>
-														<p>1800 8043 – 091.143.2772</p>
-													</li>
-													<li>
-														<p>1800 8042</p>
-													</li>
-													<li>
-														<p>Email: info@hinodpt.vn</p>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-xl-6">
-											<div class="card__title">
-												<p>nhà máy đóng thùng</p>
-											</div>
-											<div class="card__body">
-												<ul>
-													<li>
-														<p>171 Quốc lộ 1A, P.Bình Chiểu, Q.Thủ Đức, TP.HCM.</p>
-													</li>
-													<li>
-														<p>1800 8043 – 091.143.2772</p>
-													</li>
-													<li>
-														<p>1800 8042</p>
-													</li>
-													<li>
-														<p>Email: info@hinodpt.vn</p>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+									<portal:modulewrapper id="mdl310" runat="server" configuremoduleid="310" />
 								</div>
 								<div class="col-xl-2 footer-card">
-									<div class="card__title">
-										<p>showroom cà mau</p>
-									</div>
-									<div class="card__body">
-										<ul>
-											<li>
-												<p>333 Lý Thường Kiệt, P.6, Tp.Cà Mau.</p>
-											</li>
-											<li>
-												<p>1800 8043 – 091.143.2772</p>
-											</li>
-											<li>
-												<p>1800 8042</p>
-											</li>
-											<li>
-												<p>Email: info@hinodpt.vn</p>
-											</li>
-										</ul>
-									</div>
+									<portal:modulewrapper id="mdl311" runat="server" configuremoduleid="311" />
 								</div>
 								<div class="col-xl-5 footer-card">
-									<div class="row">
-										<div class="col-xl-6">
-											<div class="card__title">
-												<p>showroom cần thơ</p>
-											</div>
-											<div class="card__body">
-												<ul>
-													<li>
-														<p>QL 91B, Long Tuyển, Bình Thủy, Cần Thơ.</p>
-													</li>
-													<li>
-														<p>1800 8043 – 091.143.2772</p>
-													</li>
-													<li>
-														<p>1800 8042</p>
-													</li>
-													<li>
-														<p>Email: info@hinodpt.vn</p>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col-xl-6">
-											<div class="card__title">
-												<p>chi nhánh lâm đồng</p>
-											</div>
-											<div class="card__body">
-												<ul>
-													<li>
-														<p>215 Quốc lộ 20, Đức Trọng, Lâm Đồng</p>
-													</li>
-													<li>
-														<p>1800 8043 – 091.143.2772</p>
-													</li>
-													<li>
-														<p>1800 8042</p>
-													</li>
-													<li>
-														<p>Email: info@hinodpt.vn</p>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+									<portal:modulewrapper id="mdl312" runat="server" configuremoduleid="312" />
 								</div>
 								<div class="col-xl-6 footer-card">
 									<div class="card__title">
 										<p>đăng ký nhận bản tin</p>
 									</div>
-									<div class="subscribe">
-										<div class="subscribefrm">
-											<input class="subscribeemail" type="text" placeholder="Nhập địa chỉ email của bạn" name="email">
-										</div>
-									</div>
+									<portal:modulewrapper id="mdl313" runat="server" configuremoduleid="313" />
 								</div>
 								<div class="col-xl-6 footer-card">
 									<div class="card__title">
 										<p>kết nối với chúng tôi</p>
 									</div>
-									<ul>
-										<li><a href=""><i class="fa fa-facebook"></i></a></li>
-										<li><a href=""><i class="fa fa-youtube"></i></a></li>
-										<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-									</ul>
+									<div class="card__media">
+										<ul>
+											<li><a href=""><i class="fa fa-facebook"></i></a></li>
+											<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+											<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -258,7 +115,8 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-6 d-flex align-items-center">
-									<p>2020 © Hino Đại Phát Tín. Thiết kế website bởi Cánh Cam.</p>
+									<portal:modulewrapper id="mdl314" runat="server" configuremoduleid="314" />
+									
 								</div>
 								<div class="col-md-6">
 									<ul>
@@ -278,17 +136,15 @@
 					<li class="main-tool__item"><a href=""><em class="material-icons">phone_enabled</em></a></li>
 				</ul>
 			</div>
-				<%-- <div id="back-to-top"><img src="./assets/icons/gototop.png" alt="" srcset=""></div> --%>
-				<div class="searchbox" id="searchfancybox" style="display: none;">
-					<div class="container">
-						<div class="content">
-							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Tìm sản phẩm...">
-								<button class="searchbutton btn btn__search"><em class="material-icons">search</em></button>
-							</div>
+			<div id="searchfancybox" style="display: none;">
+				<div class="container">
+					<div class="content">
+						<div class="form-group">
+							<portal:modulewrapper id="mdl315" runat="server" configuremoduleid="315" />
 						</div>
 					</div>
 				</div>
+			</div>
 				<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 					<div class="row">
 						<div class="col-lg-12">

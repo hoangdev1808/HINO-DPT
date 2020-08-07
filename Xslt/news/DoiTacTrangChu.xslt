@@ -4,25 +4,28 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <!-- Đối tác khách hàng -->
-        <div class="row">
-            <div class="col-xl-3 col-md-4">
-                <div class="block-title">
+        <section class="section hinohome8">
+            <div class="container">
+                <div class="block-title border__bottom">
                     <h1>
-                        <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
+                        <xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
                     </h1>
                 </div>
-            </div>
-            <div class="col-xl-9 col-md-8">
-                <div class="row">
-                    <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+                <div class="hinohome8__slide relative">
+                    <div class="swiper-container hinohome8__slide__partner">
+                        <div class="swiper-wrapper">
+                            <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-        </div>
+        </section>
     </xsl:template>
     <xsl:template match="News">
-        <div class="col-xl-3 col-md-6 col-sm-6">
-            <div class="dnn-home7__item">
+        <div class="swiper-slide">
+            <div class="img">
                 <img >
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>

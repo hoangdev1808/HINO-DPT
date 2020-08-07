@@ -550,9 +550,9 @@ function aboutMenu(){
 	}
 }
 
-function tabsNews() {
-	$('.tabs-news > li').on('click', function() {
-		var $panel = $(this).closest('.hino-news2');
+function tabsProdductHome() {
+	$('.tabs > li').on('click', function() {
+		var $panel = $(this).closest('.hinohome1__product');
 		$panel.find('li.active').removeClass('active');
 		$(this).addClass('active');
 		var panelToShow = $(this).attr('rel');
@@ -597,11 +597,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkLayoutBanner();
 	readMore();
 	detailProjectThumbs();
-	showBackToTop();
+	// showBackToTop();
 	productListSort();
 	history();
 	aboutMenu();
-	tabsNews();
+	tabsProdductHome();
 	megaMenu();
 	phutungThumbs();
 	Showmap();

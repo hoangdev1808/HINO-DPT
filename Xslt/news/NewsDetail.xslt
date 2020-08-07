@@ -4,7 +4,7 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <section class="section dnn-news-detail wow fadeInDown" data-wow-delay=".3s">
+        <section class="section hino-news-detail wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9">
@@ -14,14 +14,14 @@
                                 <xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </h1>
                         </div>
-                        <div class="dnn-news-detail__timeline">
-                            <div class="dnn-news-detail__timeline__time">
-                                <span class="material-icons">event_note</span>
+                        <div class="hino-news-detail__timeline">
+                            <div class="hino-news-detail__timeline__time">
+                                <span class="lnr lnr-calendar-full"></span>
                                 <div class="date">
                                     <xsl:value-of select="/NewsDetail/CreatedDate" disable-output-escaping="yes"></xsl:value-of>
                                 </div>
                             </div>
-                            <div class="dnn-news-detail__timeline__icon-social">
+                            <div class="hino-news-detail__timeline__icon-social">
                                 <ul>
                                     <li>
                                         <a>
@@ -38,22 +38,22 @@
                                                 <xsl:text>https://twitter.com/home?status=</xsl:text>
                                                 <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
                                             </xsl:attribute>
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="dnn-news-detail__content">
+                        <div class="hino-news-detail__content">
                             <xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                     </div>
                     <div class="col-xl-3">
-                        <div class="dnn-news-detail__other">
+                        <div class="hino-news-detail__other">
                             <div class="block-title">
                                 <h1>Tin tức khác</h1>
                             </div>
-                            <ul class="dnn-news-detail__other__list">
+                            <ul class="hino-news-detail__other__list">
                                 <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
                             </ul>
                         </div>
@@ -65,7 +65,7 @@
     <xsl:template match="NewsOther">
         <xsl:if test="position()&lt;6">
             <xsl:if test="position()&lt;6">
-                <li class="dnn-news-detail__other__list__item">
+                <li class="hino-news-detail__other__list__item">
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="Url"></xsl:value-of>
@@ -73,7 +73,7 @@
                         <xsl:attribute name="title">
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
-                        <div class="dnn-news-detail__other__list__item__img">
+                        <div class="hino-news-detail__other__list__item__img">
                             <img >
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -83,9 +83,9 @@
                                 </xsl:attribute>
                             </img>
                         </div>
-                        <div class="dnn-news-detail__other__list__item__desc">
+                        <div class="hino-news-detail__other__list__item__desc">
                             <div class="date">
-                                <span class="material-icons">event_note</span>
+                                <span class="lnr lnr-calendar-full"></span>
                                 <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
                             </div>
                             <p>

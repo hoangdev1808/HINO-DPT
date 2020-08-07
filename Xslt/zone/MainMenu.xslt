@@ -138,7 +138,7 @@
         </li>
     </xsl:template>
     <xsl:template match="Zone" mode="Sup2">
-        <div class="mega-right panel" id="mega-1">
+        <div class="mega-right panel">
             <xsl:attribute name="class">
                 <xsl:text>mega-right panel active</xsl:text>
             </xsl:attribute>

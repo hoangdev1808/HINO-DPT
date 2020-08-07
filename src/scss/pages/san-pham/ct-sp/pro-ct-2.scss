@@ -93,6 +93,9 @@
 										color: rgb(51, 51, 51);
 									}
 								}
+								.btn-popup{
+									padding-top: 30px;
+								}
 							}
 
 							img {
@@ -106,6 +109,30 @@
 
 			&.active {
 				display: block;
+			}
+		}
+
+		#panel-2,
+		#panel-3,
+		#panel-4 {
+			table {
+				tbody {
+					tr {
+						td {
+							width: auto;
+							text-align: left !important;
+							&:last-child {
+								overflow-y: auto;
+								background: none;
+								max-height: unset;
+							}
+
+							&:first-child{
+								font-weight: 700;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -173,6 +200,7 @@
 
 .hino-detail4 {
 	padding-top: 0;
+
 	.block-title {
 		text-align: center;
 	}

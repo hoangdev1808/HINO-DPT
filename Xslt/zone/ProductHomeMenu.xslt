@@ -4,22 +4,14 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="block-title border__bottom">
-            <h1>
-                <xsl:value-of disable-output-escaping="yes" select="/ZoneList/Title"></xsl:value-of>
-            </h1>
-            <ul class="tabs-news">
-                <xsl:apply-templates select="/ZoneList/Zone/Zone"></xsl:apply-templates>
+        <div class="hinohome1__product__sidebar">
+            <ul>
+                <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
             </ul>
         </div>
     </xsl:template>
     <xsl:template match="Zone">
         <li>
-            <xsl:if test="IsActive='true'">
-                <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
-                </xsl:attribute>
-            </xsl:if>
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>

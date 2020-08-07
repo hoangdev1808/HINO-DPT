@@ -662,19 +662,35 @@ textarea {
 			font-family: "Montserrat";
 			color: rgb(51, 51, 51);
 			padding-bottom: 30px;
+		}
 
-			&:last-child {
-				font-weight: bold;
-			}
+		h2 {
+			font-size: 24px;
+			font-family: "Montserrat";
+			color: rgb(51, 97, 174);
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.btn__new2{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			justify-items: center;
+			color: #fff;
+		}
+		ul {
+			padding-left: 20;
 		}
 	}
-	.fancybox-close-small{
+
+	.fancybox-close-small {
 		top: 43px;
 		right: 58px;
 		background-color: #3361ae;
 		padding: 5px;
 		color: currentColor;
-		svg{
+
+		svg {
 			color: #fff;
 		}
 	}

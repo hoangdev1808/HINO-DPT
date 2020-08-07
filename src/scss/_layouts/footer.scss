@@ -83,26 +83,27 @@ footer{
 					position: relative;
 					display: flex;
 					align-items: center;
-					.subscribeemail{
+					input{
 						outline: none;
 						border-radius: 0;
-						width: 285px;
+						width: 550px;
 						height: 50px;
-						background-color: $color-while;
+						background: none;
 						border: none;
-						color: $color-gray;
+						border-bottom: solid 2px rgba($color: #fff, $alpha: .3);
+						color: #fff;
 						padding-left: 15px;
 						&::placeholder{
 							font-size: 14px;
 							font-family: "Montserrat";
-							color: rgb(102, 102, 102);
-							line-height: 1.429;
+							color: rgba($color: #fff, $alpha: .3);
 						}
 						@media screen and ( max-width: 575px){
 							width: 100%;
 						}
 					}
 					.subscribebutton{
+						display: none;
 						border-radius: 0;
 						margin-left: 10px;
 						color: #fff;
@@ -131,10 +132,6 @@ footer{
 					padding: 0;
 					list-style: none;
 					li{
-						min-width: 40px;
-						min-height: 40px;
-						border-radius: 50%;
-						border: solid 1px #a9a9a9;
 						margin-left: 30px;
 						position: relative;
 						display: flex;
