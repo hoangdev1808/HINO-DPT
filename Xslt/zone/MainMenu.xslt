@@ -9,84 +9,63 @@
         </ul>
     </xsl:template>
     <xsl:template match="Zone">
-        <xsl:if test="ZoneId=171">
-            <li class="nav-item drop-mega">
-                <xsl:if test="IsActive='true'">
-                    <xsl:attribute name="class">
-                        <xsl:text>nav-item drop-mega active</xsl:text>
-                    </xsl:attribute>
-                </xsl:if>
-                <a class="nav-link">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
+        <li class="nav-item">
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>nav-item active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="ZoneId=171">
+                <xsl:attribute name="class">
+                    <xsl:text>nav-item drop-mega</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <a class="nav-link">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
-                    <xsl:if test="count(Zone)>0">
-                        <span class="submenu-toggle mobile">
-                            <i class="fa fa-angle-down"></i>
-                        </span>
-                    </xsl:if>
-                </a>
+                </xsl:attribute>
+                <xsl:value-of select="Title"></xsl:value-of>
                 <xsl:if test="count(Zone)>0">
-                    <div class="drop-mega-menu">
-                        <div class="row">
-                            <div class="col-xl-2">
-                                <div class="mega-left">
-                                    <ul class="tab-mega">
-                                        <xsl:apply-templates select="Zone" mode="Sup1"></xsl:apply-templates>
-                                    </ul>
+                    <span class="submenu-toggle mobile">
+                        <i class="fa fa-angle-down"></i>
+                    </span>
+                </xsl:if>
+            </a>
+            <xsl:if test="count(Zone)>0">
+                <xsl:choose>
+                    <xsl:when test="ZoneId!=171 and ZoneId!=173">
+                        <ul class="dropdown-menu">
+                            <xsl:apply-templates select="Zone" mode="Dropdown"></xsl:apply-templates>
+                        </ul>
+                    </xsl:when>
+                    <xsl:when test="ZoneId=173">
+                        <ul class="dropdown-menu">
+                            <xsl:apply-templates select="Zone" mode="DropdownIcon"></xsl:apply-templates>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <div class="drop-mega-menu">
+                            <div class="row">
+                                <div class="col-xl-2">
+                                    <div class="mega-left">
+                                        <ul class="tab-mega">
+                                            <xsl:apply-templates select="Zone" mode="Sup1"></xsl:apply-templates>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-10">
+                                    <xsl:apply-templates select="Zone" mode="Sup2"></xsl:apply-templates>
                                 </div>
                             </div>
-                            <div class="col-xl-10">
-                                <xsl:apply-templates select="Zone" mode="Sup2"></xsl:apply-templates>
-                            </div>
                         </div>
-                    </div>
-                </xsl:if>
-            </li>
-        </xsl:if>
-        <xsl:if test="ZoneId!=171">
-            <li class="nav-item">
-                <xsl:if test="IsActive='true'">
-                    <xsl:attribute name="class">
-                        <xsl:text>nav-item active</xsl:text>
-                    </xsl:attribute>
-                </xsl:if>
-                <a class="nav-link">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:value-of select="Title"></xsl:value-of>
-                    <xsl:if test="count(Zone)>0">
-                        <span class="submenu-toggle mobile">
-                            <i class="fa fa-angle-down"></i>
-                        </span>
-                    </xsl:if>
-                </a>
-                <xsl:if test="count(Zone)>0">
-                    <xsl:choose>
-                        <xsl:when test="ZoneId!=173">
-                            <ul class="dropdown-menu">
-                                <xsl:apply-templates select="Zone" mode="Dropdown"></xsl:apply-templates>
-                            </ul>
-                        </xsl:when>
-                        <xsl:when test="ZoneId=173">
-                            <ul class="dropdown-menu">
-                                <xsl:apply-templates select="Zone" mode="DropdownIcon"></xsl:apply-templates>
-                            </ul>
-                        </xsl:when>
-                    </xsl:choose>
-                </xsl:if>
-            </li>
-        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
+        </li>
     </xsl:template>
-    <!-- Danh sách Dropdown -->
     <xsl:template match="Zone" mode="Dropdown">
         <li class="dropdown-item">
             <xsl:if test="IsActive='true'">
