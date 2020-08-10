@@ -8,7 +8,11 @@
             <h1>
                 <xsl:value-of disable-output-escaping="yes" select="/ZoneList/Title"></xsl:value-of>
             </h1>
-            <ul class="tabs-news">
+            <div class="category-nav">
+                <p>Danh mục</p>
+                <em class="material-icons">keyboard_arrow_down</em>
+            </div>
+            <ul class="tabs-news nav-menu-about">
                 <xsl:apply-templates select="/ZoneList/Zone/Zone"></xsl:apply-templates>
             </ul>
         </div>

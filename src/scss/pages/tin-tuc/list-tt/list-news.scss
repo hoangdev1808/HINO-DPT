@@ -44,6 +44,21 @@
 					}
 				}
 			}
+			
+		}
+		@media screen and (max-width: 576px){
+
+			.nav-menu-about{
+				width: 100%;
+				display: none;
+				li {
+					width: 100%;
+					margin: 0 !important;
+					+ li{
+						border-top: none;
+					}
+				}
+			}
 		}
 	}
 	&__news {
@@ -84,7 +99,10 @@
 					max-height: 80px;
 					overflow: hidden;
 					padding-right: 45px;
-
+					@media screen and (max-width: 576px){
+						padding-right: 0;
+						max-height: 74px;
+					}
 					p {
 						font-size: 16px;
 						font-family: "Montserrat";
@@ -96,6 +114,9 @@
 
 		&__right {
 			&__item {
+				@media screen and (max-width: 576px){
+					margin-top: 30px;
+				}
 				&__img {
 					cursor: pointer;
 					width: 100%;

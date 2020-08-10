@@ -1,6 +1,33 @@
 .hino-about-menu{
 	width: 100%;
 	background-color: #0b3155;
+	.category-nav{
+		display: none;
+	}
+	@media screen and (max-width: 576px){
+		.category-nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 30px;
+			font-size: 18px;
+			font-weight: 700;
+			color: #ffffff;
+			text-transform: uppercase;
+			border-bottom: 1px solid #ffffff;
+			em {
+				transition: .2s ease-in-out all;
+			}
+			&.active{
+				em{
+					transform: rotate(180deg);
+				}
+			}
+		}
+		.nav-menu-about{
+			display: none;
+		}
+	}
 	ul{
 		display: flex;
 		align-items: center;

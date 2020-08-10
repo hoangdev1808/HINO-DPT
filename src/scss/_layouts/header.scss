@@ -8,7 +8,7 @@ header {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
-
+	background-color: #fff;
 	.relative,
 	.Module {
 		width: 100%;
@@ -577,7 +577,7 @@ header {
 
 
 	@media screen and (max-width: 1024px) {
-		padding: 8px 0;
+		padding: 12px 0;
 		position: fixed;
 		background-color: #fff;
 
@@ -589,7 +589,7 @@ header {
 			}
 			.logo {
 				margin-right: 15px;
-				width: 110px;
+				width: 100px;
 				height: auto;
 			}
 			.main-nav{

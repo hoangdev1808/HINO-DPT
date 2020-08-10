@@ -476,9 +476,14 @@ const checkLayoutBanner = () => {
 	const breadcrumb = $('.global-breadcrumb');
 	const heightHeader = $("header").outerHeight();
 	const mainBanner = $("#home-banner");
+	let mobileWrap = $("header .mobile-wrap ");
+	
 	if ((mainBanner.length < 1) || (pagesBanner.length < 1)) {
 		$('main').css('padding-top', heightHeader)
 	}$('main').css('padding-top', heightHeader)
+	mobileWrap.css('top', heightHeader)
+	mobileWrap.css('height', 'calc(100vh - ' + heightHeader + 'px)')
+
 };
 
 function listFilter() {
@@ -648,4 +653,11 @@ function toggleCategory(){
 		$(this).toggleClass('active')
 		$('.hinohome1__product__sidebar .tabs').slideToggle()
 	})
+	$('.category-nav').on('click', function(){
+		$(this).toggleClass('active')
+		$('.nav-menu-about').slideToggle()
+	})
 }
+$(document).on('scroll', function(){
+	checkLayoutBanner()
+})
