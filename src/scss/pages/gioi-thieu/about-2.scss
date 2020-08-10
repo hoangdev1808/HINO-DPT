@@ -120,6 +120,12 @@
 			.swiper-button-prev {
 				left: 93%;
 			}
+			@media screen and (max-width: 576px) {
+				margin-bottom: 0;
+				.swiper-button-prev {
+					left: 75%;
+				}
+			}
 		}
 
 		&__content {
@@ -142,7 +148,7 @@
 				height: 440px;
 				display: flex;
 				align-items: center;
-
+				
 				.desc {
 					width: 100%;
 					padding-left: 60px;
@@ -187,6 +193,15 @@
 								box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
 								background-color: #fff;
 							}
+						}
+					}
+				}
+				@media screen and (max-width: 576px) {
+					height: auto ;
+					.desc{
+						padding: 20px 15px;
+						.title{
+							margin-bottom: 20px;
 						}
 					}
 				}

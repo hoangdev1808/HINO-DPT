@@ -5,6 +5,7 @@
 
 	&__left {
 		width: 285px;
+		
 		ul{
 			padding-left: 0;
 			li {
@@ -46,5 +47,42 @@
 				}
 			}
 		}
+		@media screen and (max-width: 576px) {
+			width: 100%;
+			.nav-menu-about{
+				display: none;
+			}
+		}
+	}
+	.category-nav{
+		display: none;
+	}
+	@media screen and (max-width: 576px) {
+		margin-bottom: 20px;
+		flex-wrap: wrap ;
+		.category-nav{
+			display: flex;
+			margin-top: 20px;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 30px;
+			font-size: 18px;
+			font-weight: 700;
+			color: #ffffff;
+			text-transform: uppercase;
+			border-bottom: 1px solid #ffffff;
+			background-color: #3361ae;
+			width: 100%;
+			em {
+				transition: .2s ease-in-out all;
+			}
+			&.active{
+				em{
+					transform: rotate(180deg);
+				}
+			}
+			
+		}
+		
 	}
 }

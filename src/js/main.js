@@ -266,8 +266,9 @@ function history() {
 		slideToClickedSlide: true,
 		breakpoints: {
 			480: {
-				slidesPerView: 4,
+				slidesPerView: 3,
 				spaceBetween: 0,
+				
 			}
 		},
 		navigation: {
@@ -281,7 +282,13 @@ function history() {
 		thumbs: {
 			swiper: galleryThumbs,
 		},
-
+		breakpoints: {
+			480: {
+				autoHeight: true,
+				
+			}
+		},
+		
 
 	});
 	galleryTop.params.control = galleryThumbs
@@ -326,6 +333,12 @@ function phutungThumbs() {
 			nextEl: '.hino-pt1__slide .swiper-button-next',
 			prevEl: '.hino-pt1__slide .swiper-button-prev',
 		},
+		breakpoints: {
+			576: {
+				direction: 'horizontal',
+				slidesPerView: 3,
+			}
+		},
 	});
 	var galleryTop = new Swiper('.hino-pt1__slide .hino-pt1__slide__top', {
 		spaceBetween: 10,
@@ -344,7 +357,13 @@ function detailProjectThumbs() {
 		spaceBetween: 10,
 		slidesPerView: 6,
 		loop: true,
-		slideToClickedSlide: true
+		slideToClickedSlide: true,
+		breakpoints: {
+			576: {
+				// direction: 'horizontal',
+				slidesPerView: 4,
+			}
+		},
 	});
 	var galleryTop = new Swiper('.hino-detail3__slide .hino-detail3__slide__top', {
 		spaceBetween: 10,

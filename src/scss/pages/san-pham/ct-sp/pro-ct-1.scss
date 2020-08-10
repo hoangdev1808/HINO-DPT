@@ -2,7 +2,7 @@
 	&__content {
 		&__left {
 			width: 495px;
-
+			
 			.block-title {
 				margin-bottom: 20px;
 
@@ -74,7 +74,7 @@
 					}
 				}
 			}
-
+			
 			&__desc {
 				max-height: 135px;
 				overflow: hidden;
@@ -82,6 +82,12 @@
 					font-size: 18px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
+				}
+			}
+			@media screen and (max-width: 576px) {
+				width: 100%;
+				ul{
+					flex-wrap: wrap ;
 				}
 			}
 		}

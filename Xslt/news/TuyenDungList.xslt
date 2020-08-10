@@ -11,6 +11,8 @@
                         <xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
                     </h1>
                 </div>
+                <div class="table-scroll">
+                
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
@@ -25,6 +27,7 @@
                         <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
     </xsl:template>

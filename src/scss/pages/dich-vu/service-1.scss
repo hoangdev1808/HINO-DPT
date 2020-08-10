@@ -25,6 +25,9 @@
 				color: rgb(51, 51, 51);
 				font-weight: bold;
 			}
+			@media screen and (max-width: 576px) {
+				padding-top: 0;
+			}
 		}
 		&__desc{
 			padding-top: 40px;
@@ -61,6 +64,13 @@
 			.content{
 				padding-left: 30px;
 				padding-right: 60px;
+			}
+		}
+		@media screen and (max-width: 576px) {
+			&:nth-child(2), &:nth-child(3), &:last-child{
+				.content{
+					padding: 15px;
+				}
 			}
 		}
 	}

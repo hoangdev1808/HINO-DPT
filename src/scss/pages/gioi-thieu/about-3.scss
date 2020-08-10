@@ -61,5 +61,10 @@
 				padding-bottom: 30px;
 			}
 		}
+		@media screen and (max-width: 576px) {
+			&:first-child, &:last-child  {
+				padding: 0 15px;
+			}
+		}
 	}
 }

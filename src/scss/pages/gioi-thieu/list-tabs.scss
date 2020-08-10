@@ -54,11 +54,17 @@
 					color: #fff;
 				}
 			}
+			@media screen and (max-width: 576px){
+				padding: 0 30px;
+			}
 		}
 	}
 	&.active-menu{
 		position: fixed;
-		z-index: 9;
+		top: 57.5px;
+		left: 0;
+		width: 100%;
 		transition: all ease-in-out .3s;
+		z-index: 500;
 	}
 }

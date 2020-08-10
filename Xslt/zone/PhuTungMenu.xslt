@@ -5,7 +5,11 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <div class="hino-accessary__left">
-            <ul>
+            <div class="category-nav">
+                <p>Danh mục</p>
+                <em class="material-icons">keyboard_arrow_down</em>
+            </div>
+            <ul class="nav-menu-about">
                 <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
             </ul>
         </div>
