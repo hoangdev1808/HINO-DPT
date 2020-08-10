@@ -7,6 +7,10 @@
         <div class="row">
             <div class="col-xl-3">
                 <div class="hinohome1__product__sidebar">
+                    <div class="category">
+                        <p>Danh mục</p>
+                        <em class="material-icons">keyboard_arrow_down</em>
+                    </div>
                     <ul class="tabs">
                         <xsl:apply-templates select="/ZoneList/Zone" mode="List"></xsl:apply-templates>
                     </ul>

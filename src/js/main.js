@@ -250,10 +250,10 @@ function dnnBannerSlide() {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			375: {
-				slidesPerView: 1,
-				spaceBetween: 20,
-			},
+			// 375: {
+			// 	slidesPerView: 1,
+			// 	spaceBetween: 20,
+			// },
 		},
 	});
 }
@@ -421,10 +421,16 @@ function tabsDescription() {
 
 function hideTool() {
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 50) {
-			$("#block__tool").addClass("active");
-		} else {
+		if($(window).width()<576){
 			$("#block__tool").removeClass("active");
+		}
+		else {
+
+			if ($(this).scrollTop() > 50) {
+				$("#block__tool").addClass("active");
+			} else {
+				$("#block__tool").removeClass("active");
+			}
 		}
 	});
 }
@@ -610,6 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	megaMenu();
 	phutungThumbs();
 	Showmap();
+	toggleCategory();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {
@@ -634,5 +641,11 @@ function menuMobile() {
 	$('header .button-hambuger').on('click', function () {
 		$(this).toggleClass('close')
 		$('header .mobile-wrap').toggleClass('active')
+	})
+}
+function toggleCategory(){
+	$('.hinohome1__product__sidebar .category').on('click', function(){
+		$(this).toggleClass('active')
+		$('.hinohome1__product__sidebar .tabs').slideToggle()
 	})
 }

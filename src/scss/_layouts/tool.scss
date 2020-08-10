@@ -5,12 +5,23 @@
 	z-index: 99;
 	opacity: 1;
 	transition: ease-in-out all .3s;
-
+	@media screen and (max-width: 576px){
+		left: 0;
+		bottom: 0;
+		top: auto;
+		right: auto;
+		width: 100%;
+		padding: 0 15px;
+	}	
 	.main-tool {
 		position: relative;
 		padding: 0;
 		list-style: none;
-
+		@media screen and (max-width: 576px){
+			display: flex;
+			align-items: center;
+			// justify-content: space-between;
+		}
 		&__item {
 			position: relative;
 			width: 60px;
@@ -26,6 +37,14 @@
 				.material-icons{
 					color: #fff;
 					font-size: 24px;
+				}
+			}
+		}
+		@media screen and (max-width: 576px){
+			.main-tool__item{
+				margin-bottom: 0;
+				+ .main-tool__item{
+					margin-left: 20px;
 				}
 			}
 		}
