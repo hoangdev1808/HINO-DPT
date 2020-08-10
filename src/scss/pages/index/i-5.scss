@@ -8,6 +8,10 @@
 	display: flex;
 	align-items: center;
 	background-color: #0072bc;
+	@media screen and (max-width: 576px) {
+		height: auto ;
+		padding: 30px 0;
+	}
 	&__content{
 		.block-title {
 			z-index: 9;
@@ -28,9 +32,11 @@
 		}
 	
 		&__desc {
-			width: 525px;
+			max-width: 525px;
 			margin-bottom: 35px;
-	
+			@media screen and (max-width: 576px) {
+				max-width: 525px;
+			}
 			p {
 				font-size: 18px;
 				font-family: "Montserrat";

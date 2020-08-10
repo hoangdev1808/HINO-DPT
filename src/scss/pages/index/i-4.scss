@@ -1,9 +1,15 @@
 .hinohome4 {
 	padding-top: 0;
-
+	@media screen and (max-width: 576px) {
+		padding: 30px 0;
+	}
 	&-item {
 		width: 100%;
-
+		@media screen and (max-width: 576px) {
+			margin-top: 20px;
+			// + &-item{
+			// }
+		}
 		&__img {
 			width: 64px;
 			height: 100%;
@@ -20,6 +26,9 @@
 			float: left;
 
 			&__title {
+				@media screen and (max-width: 576px) {
+					margin-top: 5px;
+				}
 				p {
 					font-size: 20px;
 					font-family: "Montserrat";

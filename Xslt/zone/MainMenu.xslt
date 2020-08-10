@@ -28,12 +28,12 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:value-of select="Title"></xsl:value-of>
-                <xsl:if test="count(Zone)>0">
-                    <span class="submenu-toggle mobile">
-                        <i class="fa fa-angle-down"></i>
-                    </span>
-                </xsl:if>
             </a>
+            <xsl:if test="count(Zone)>0">
+                <span class="submenu-toggle mobile">
+                    <i class="fa fa-angle-down"></i>
+                </span>
+            </xsl:if>
             <xsl:if test="count(Zone)>0">
                 <xsl:choose>
                     <xsl:when test="ZoneId!=171 and ZoneId!=173">

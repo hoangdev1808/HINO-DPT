@@ -39,12 +39,12 @@ function megaMenu() {
 		$panel.find('li.active').removeClass('active');
 		$(this).addClass('active');
 		var panelToShow = $(this).attr('rel');
-		$panel.find('.panel.active').fadeOut(500, showNextPanel);
+		$panel.find('.panel.active').fadeOut(200, showNextPanel);
 
 		function showNextPanel() {
 			$(this).removeClass('active');
-			$('#' + panelToShow).fadeIn(500, function() {
-				$(this).addClass('active').fadeIn(500);
+			$('#' + panelToShow).fadeIn(200, function() {
+				$(this).addClass('active').fadeIn(200);
 			});
 		};
 
@@ -122,7 +122,7 @@ function dnnBannerSlide() {
 			},
 			480: {
 				slidesPerView: 1,
-				spaceBetween: 0,
+				spaceBetween: 15,
 			}
 		},
 	});
@@ -294,8 +294,8 @@ function detailThumbs() {
 		slideToClickedSlide: true,
 		breakpoints: {
 			480: {
-				slidesPerView: 4,
-				spaceBetween: 0,
+				slidesPerView: 3,
+				spaceBetween: 5,
 			}
 		},
 	});
@@ -581,6 +581,8 @@ function Showmap(){
 
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
+	initMapping();
+	menuMobile();
 	dnnBannerSlide();
 	activeHeaderWhenScroll();
 	bannerCrollDown()
@@ -616,3 +618,18 @@ $(window).resize(function() {
 	}
 
 })
+function initMapping(){
+	$('header .main-menu .main-nav').mapping({
+		mobileWrapper: 'header .mobile-wrap',
+		mobileMethod: 'appendTo',
+		desktopWrapper: 'header .main-menu .top',
+		desktopMethod: 'insertAfter',
+		breakpoint: 1200
+	})
+}
+function menuMobile() {
+	$('header .button-hambuger').on('click', function () {
+		$(this).toggleClass('close')
+		$('header .mobile-wrap').toggleClass('active')
+	})
+}

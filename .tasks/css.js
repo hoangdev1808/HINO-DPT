@@ -6,6 +6,7 @@ import sass from 'gulp-sass';
 import rename from 'gulp-rename';
 import wait from "gulp-wait";
 import Fiber from "fibers";
+import concat from "gulp-concat";
 import postcss from 'gulp-postcss';
 import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'autoprefixer';

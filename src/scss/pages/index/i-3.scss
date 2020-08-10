@@ -1,5 +1,8 @@
 .hinohome3{
 	width: 100%;
+	@media screen and (max-width: 576px) {
+		padding: 0;
+	}
 	&__content{
 		background-image: url('../assets/images/home/bg-home-3.png');
 		background-size: cover;
@@ -10,6 +13,10 @@
 		min-height: 600px;
 		display: flex;
 		align-items: center;
+		@media screen and (max-width: 576px) {
+			padding: 30px 105px;
+			min-height: 100%;
+		}
 		.block-title{
 			margin-bottom: 30px;
 			p{

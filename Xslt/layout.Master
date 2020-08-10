@@ -38,7 +38,7 @@
 							<div class="logo-scroll">
 								<portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
 							</div><!-- Language mobile -->
-							<div id="div-mobile"></div>
+							<div class="mobile-wrap" id="div-mobile"></div>
 							<!--Top Menu-->
 							<div class="top">
 								<div class="hotline">
@@ -51,6 +51,12 @@
 							</div><!-- Main menu -->
 							<div class="main-nav">
 								<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
+							</div>
+							<div class="button-hambuger">
+								<div class="burger-bt-inner">
+
+									<span></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -177,7 +183,7 @@
 				</portal:AutoHidePanel>
 				<portal:Woopra ID="woopra11" runat="server" />
 		</form>
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer=""></script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer=""></script> -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>

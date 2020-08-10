@@ -8,7 +8,7 @@
 			"type": ["javascript", "json", "typescript"],
 			"ext": ["js", "json", "ts"]
 		},
-		"css": ["css", "scss", "less"],
+		"css": ["css", "scss", "less", "sass"],
 		"html": ["htm", "html", "xml", "xsl"]
 	}
 }
