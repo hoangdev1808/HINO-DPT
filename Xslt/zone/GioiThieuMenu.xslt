@@ -6,7 +6,11 @@
     <xsl:template match="/">
         <section class="hino-about-menu">
             <div class="container">
-                <ul>
+                <div class="category-nav">
+                        <p>Danh mục</p>
+                        <em class="material-icons">keyboard_arrow_down</em>
+                    </div>
+                <ul class="nav-menu-about"> 
                     <xsl:apply-templates select="/ZoneList/Zone/Zone"></xsl:apply-templates>
                 </ul>
             </div>
