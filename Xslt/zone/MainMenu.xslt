@@ -106,7 +106,9 @@
     <xsl:template match="Zone" mode="Sup1">
         <li>
             <xsl:if test="IsActive='true'">
-                <xsl:text>active</xsl:text>
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
             </xsl:if>
             <xsl:attribute name="rel">
                 <xsl:text>mega-</xsl:text>
@@ -118,12 +120,12 @@
     </xsl:template>
     <xsl:template match="Zone" mode="Sup2">
         <div class="mega-right panel">
-            <xsl:attribute name="class">
-                <xsl:text>mega-right panel active</xsl:text>
-            </xsl:attribute>
             <xsl:attribute name="id">
                 <xsl:text>mega-</xsl:text>
                 <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:text>mega-right panel active</xsl:text>
             </xsl:attribute>
             <div class="row">
                 <xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>

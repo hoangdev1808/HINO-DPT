@@ -23,12 +23,15 @@ function moveNav() {
 //Header when scroll
 const activeHeaderWhenScroll = () => {
 	window.addEventListener("scroll", function() {
-		if (window.pageYOffset > 0) {
+		if (window.pageYOffset > 0 && $(window).width() >= 1024) {
 			document.querySelector("header").classList.add("header-croll-down");
 			$('header').find('.logo').addClass('active')
+			$('header').find('.hotline, #search__desktop, #language-desktop').appendTo('#scrolled');
+
 		} else {
 			document.querySelector("header").classList.remove("header-croll-down");
-			$('header').find('.logo').removeClass('active')
+			$('header').find('.logo').removeClass('active');
+			$('header').find('.hotline, #search__desktop, #language-desktop').appendTo('.top');
 		}
 	});
 }

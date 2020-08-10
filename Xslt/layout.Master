@@ -51,6 +51,7 @@
 							</div><!-- Main menu -->
 							<div class="main-nav">
 								<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
+								<div class="active" id="scrolled"></div>
 							</div>
 						</div>
 					</div>

@@ -217,7 +217,9 @@ footer{
 					font-family: "Montserrat";
 					color: rgba(255, 255, 255, 0.502);
 					line-height: 2;
-					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 			}
 		}

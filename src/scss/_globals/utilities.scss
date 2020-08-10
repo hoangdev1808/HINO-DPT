@@ -508,18 +508,6 @@ textarea {
 						color: $color-while;
 					}
 				}
-
-				.searchbutton {
-					position: absolute;
-					right: 0;
-					top: 50%;
-					transform: translateY(-50%);
-
-					.material-icons {
-						font-size: 50px;
-						color: $color-while;
-					}
-				}
 			}
 		}
 
@@ -549,6 +537,14 @@ textarea {
 			transform: translateY(0);
 			opacity: 1;
 			transition-delay: .3s;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border: none;
+			.material-icons{
+				font-size: 50px;
+				color: #fff;
+			}
 		}
 	}
 }
