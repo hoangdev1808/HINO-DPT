@@ -476,10 +476,10 @@ const checkLayoutBanner = () => {
 	const breadcrumb = $('.global-breadcrumb');
 	const heightHeader = $("header").outerHeight();
 	const mainBanner = $("#home-banner");
-	if ((mainBanner.length < 1) || (pagesBanner.length < 1)) {
+	if ($(window).width() >=1025 && (mainBanner.length < 1) || (pagesBanner.length < 1)) {
 		$('main').css('padding-top', heightHeader)
-	}$('main').css('padding-top', heightHeader)
-};
+	} $('main').css('padding-top', heightHeader)
+}
 
 function listFilter() {
 	$('.acc').find('.acc__panel:first').addClass('show');
