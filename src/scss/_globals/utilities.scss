@@ -564,6 +564,9 @@ textarea {
 			&::placeholder {
 				color: $color-while;
 			}
+			@media screen and ( max-width: 1024px){
+				font-size: 18px;
+			}
 		}
 
 		button {
@@ -577,6 +580,9 @@ textarea {
 			.material-icons{
 				font-size: 50px;
 				color: #fff;
+				@media screen and ( max-width: 1024px){
+					font-size: 20px;
+				}
 			}
 		}
 	}
@@ -727,6 +733,29 @@ textarea {
 
 		svg {
 			color: #fff;
+		}
+	}
+	@media screen and ( max-width: 1024px){
+		padding: 0;
+		.content{
+			padding: 15px;
+			.block-title{
+				h1{
+					font-size: 16px;
+				}
+			}
+			h2{
+				font-size: 16px;
+			}
+			p{
+				padding-bottom: 15px;
+			}
+		}
+		.fancybox-close-small{
+			width: 30px;
+			height: 30px;
+			top: 0;
+			right: 0;
 		}
 	}
 }

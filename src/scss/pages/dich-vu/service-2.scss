@@ -1,0 +1,9 @@
+.hino-service2{
+	.hino-news2__news__right{
+		.hino-news2__news__right__item{
+			@media screen and ( max-width: 576px){
+				margin-bottom: 0;
+			}
+		}
+	}
+}

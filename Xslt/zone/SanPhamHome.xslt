@@ -6,15 +6,21 @@
     <xsl:template match="/">
         <div class="swiper-container hinohome1__slide__product">
             <div class="swiper-wrapper">
-                <xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+                <xsl:apply-templates select="/ZoneList/Zone/Zone/Zone"></xsl:apply-templates>
             </div>
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </xsl:template>
-    <xsl:template match="Product">
+    <xsl:template match="Zone">
         <div class="swiper-slide">
-            <a href="">
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
                 <div class="hinohome1__slide__product__img">
                     <img >
                         <xsl:attribute name="src">

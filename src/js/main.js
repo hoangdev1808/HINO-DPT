@@ -12,11 +12,11 @@ const toggleMenuMobile = () => {
 //Move nav-item
 function moveNav() {
 	if ($(window).width() <= 1024.98) {
-		$('.language').appendTo('.header-container #div-mobile');
-		$('.search').appendTo('.header-container #div-mobile')
+		$('.language').appendTo('.main-menu #div-mobile');
+		$('.search').appendTo('.main-menu #div-mobile')
 	} else {
-		$('.language').appendTo('.nav-item #language-desktop');
-		$('.search').appendTo('.nav-item #search-desktop');
+		$('.language').appendTo('.top #language-desktop');
+		$('.search').appendTo('.top #search-desktop');
 	}
 }
 
@@ -361,7 +361,7 @@ function detailProjectThumbs() {
 		breakpoints: {
 			576: {
 				// direction: 'horizontal',
-				slidesPerView: 4,
+				slidesPerView: 3,
 			}
 		},
 	});
@@ -642,16 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	Showmap();
 	toggleCategory();
 });
-$(window).resize(function() {
-	if ($(window).width() <= 1024) {
-		$('.language').appendTo('.header-container #div-mobile');
-		$('.search').appendTo('.header-container #div-mobile')
-	} else {
-		$('.language').appendTo('.nav-item #language-desktop');
-		$('.search').appendTo('.nav-item #search-desktop');
-	}
 
-})
 function initMapping(){
 	$('header .main-menu .main-nav').mapping({
 		mobileWrapper: 'header .mobile-wrap',
