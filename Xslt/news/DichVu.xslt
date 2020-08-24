@@ -80,7 +80,7 @@
         <xsl:if test="position()=1">
             <div class="hino-service1__content">
                 <div class="row">
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="hino-service1__content__img">
                             <img >
                                 <xsl:attribute name="src">
@@ -92,7 +92,7 @@
                             </img>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="content">
                             <div class="hino-service1__content__title">
                                 <h2>
@@ -122,7 +122,7 @@
         <xsl:if test="position()=2">
             <div class="hino-service1__content">
                 <div class="row">
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="content">
                             <div class="hino-service1__content__title">
                                 <h2>
@@ -146,7 +146,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="hino-service1__content__img">
                             <img >
                                 <xsl:attribute name="src">
@@ -164,7 +164,7 @@
         <xsl:if test="position()=3">
             <div class="hino-service1__content">
                 <div class="row">
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="hino-service1__content__img">
                             <img >
                                 <xsl:attribute name="src">
@@ -176,7 +176,7 @@
                             </img>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-md-12">
+                    <div class="col-xl-6 col-md-6">
                         <div class="content">
                             <div class="hino-service1__content__title">
                                 <h2>

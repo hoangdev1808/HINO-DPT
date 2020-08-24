@@ -32,7 +32,6 @@
 					}
 					@media screen and (max-width: 576px) {
 						width: 100%;
-						height: auto;
 					}
 				}
 			}
@@ -45,7 +44,7 @@
 			float: left;
 
 			.swiper-slide {
-				height: 100px;
+				height: 100px !important;
 				cursor: pointer;
 			}
 
@@ -68,10 +67,10 @@
 				height: auto ;
 				.swiper-slide {
 					border: solid 1px #e1e1e1;
-					height: auto;
+					height: 75px !important;
 				}
 				.img {
-					width: 100%;
+					height: 75px !important;
 					padding: 5px;
 					border: none
 				}
@@ -163,9 +162,6 @@
 						}
 					}
 				}
-				@media screen and ( max-width: 768px){
-					margin-bottom: 15px;
-				}
 			}
 
 			.table td,
@@ -212,9 +208,6 @@
 							font-family: "Montserrat";
 							color: rgb(255, 255, 255);
 						}
-						@media screen and (max-width: 576px){
-							width: 130px;
-						}
 					}
 
 					&:nth-child(3),
@@ -256,9 +249,6 @@
 				margin-top: 10px;
 				ul{
 					margin-bottom: 0;
-					li{
-						margin-right: 6px;
-					}
 				}
 			}
 		}

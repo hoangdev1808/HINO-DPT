@@ -1,6 +1,10 @@
 .hinohome7{
 	width: 100%;
 	background-color: #f5f5f5;
+	padding-top: 0;
+	.block-title{
+		padding-top: 50px;
+	}
 	&__slide{
 		&__news{
 			&__left{
@@ -12,9 +16,6 @@
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
-					}
-					@media screen and ( max-width: 1024px){
-						height: auto;
 					}
 				}
 				&__content{
@@ -40,9 +41,6 @@
 							font-size: 16px;
 							font-family: "Montserrat";
 							color: rgb(51, 51, 51);
-						}
-						@media screen and ( max-width: 1024px){
-							padding: 15px 0;
 						}
 					}
 				}

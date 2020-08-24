@@ -35,7 +35,7 @@
                                     <li>
                                         <a>
                                             <xsl:attribute name="href">
-                                                <xsl:text>https://www.linkedin.com/shareArticle?mini=</xsl:text>
+                                                <xsl:text>https://twitter.com/home?status=</xsl:text>
                                                 <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
                                             </xsl:attribute>
                                             <i class="fa fa-linkedin"></i>

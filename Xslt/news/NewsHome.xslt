@@ -45,7 +45,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
                     </div>
                 </div>
-                <div class="hinohome7__slide__news__left__content__title">
+                <div class="hinohome7__slide__news__left__content__title lcl lcl-1">
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="Url"></xsl:value-of>

@@ -40,7 +40,7 @@
 
 				li {
 					margin-left: 15px;
-					font-size: 12px;
+					font-size: 13px;
 				}
 			}
 		}
@@ -138,20 +138,20 @@
 								overflow-y: auto;
 								background: none;
 								max-height: unset;
-								padding: 0;
 							}
 
 							&:first-child{
 								font-weight: 700;
-							}
-							&:nth-child(2){
-								padding: 0 10px;
 							}
 						}
 					}
 				}
 			}
 		}
+	}
+
+	@media screen and (max-width: 767px) {
+		padding: 15px;
 	}
 }
 

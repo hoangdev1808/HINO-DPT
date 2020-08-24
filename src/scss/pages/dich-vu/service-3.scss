@@ -38,13 +38,6 @@
 						color: $color-while;
 					}
 				}
-				@media screen and ( max-width: 1024px){
-					line-height: unset;
-					display: flex;
-					align-items: center;
-					height: auto;
-					padding: 15px 15px;
-				}
 			}
 
 			&__body {
