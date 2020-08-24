@@ -24,7 +24,7 @@
                     <xsl:text>active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
-            <a>
+            <a class="nav-link">
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>
                 </xsl:attribute>

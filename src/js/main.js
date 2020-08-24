@@ -12,11 +12,11 @@ const toggleMenuMobile = () => {
 //Move nav-item
 function moveNav() {
 	if ($(window).width() <= 1024.98) {
-		$('.language').appendTo('.header-container #div-mobile');
-		$('.search').appendTo('.header-container #div-mobile')
+		$('.language').appendTo('.main-menu #div-mobile');
+		$('.search').appendTo('.main-menu #div-mobile')
 	} else {
-		$('.language').appendTo('.nav-item #language-desktop');
-		$('.search').appendTo('.nav-item #search-desktop');
+		$('.language').appendTo('.top #language-desktop');
+		$('.search').appendTo('.top #search-desktop');
 	}
 }
 
@@ -268,7 +268,7 @@ function history() {
 			480: {
 				slidesPerView: 3,
 				spaceBetween: 0,
-				
+
 			}
 		},
 		navigation: {
@@ -285,10 +285,10 @@ function history() {
 		breakpoints: {
 			480: {
 				autoHeight: true,
-				
+
 			}
 		},
-		
+
 
 	});
 	galleryTop.params.control = galleryThumbs
@@ -296,8 +296,8 @@ function history() {
 }
 
 //Slide prodcut detail
-function detailThumbs() {
-	var galleryThumbs = new Swiper('.hinohome2__slide__thumbs .hinohome2__slide__thumbs__video', {
+function nangLuc(){
+	var galleryThumbs = new Swiper('.hinohome2__slide .hinohome2__slide__thumbs', {
 		spaceBetween: 10,
 		slidesPerView: 5,
 		loop: true,
@@ -315,13 +315,38 @@ function detailThumbs() {
 		thumbs: {
 			swiper: galleryThumbs,
 		},
-
-
 	});
 	galleryTop.params.control = galleryThumbs
 	galleryThumbs.params.control = galleryTop
 }
+function nangLucimage(){
+	var imageThumbs = new Swiper('.hinohome2__img .hinohome2__img__thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 5,
+		loop: true,
+		slideToClickedSlide: true,
+		observer: true,
+		observeParents: true,
+		breakpoints: {
+			480: {
+				slidesPerView: 3,
+				spaceBetween: 5,
+			}
+		},
 
+	});
+	var imageTop = new Swiper('.hinohome2__img .hinohome2__img__top', {
+		spaceBetween: 10,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		thumbs: {
+			swiper: imageThumbs,
+		},
+	});
+	imageTop.params.control = imageThumbs
+	imageThumbs.params.control = imageTop
+}
 function phutungThumbs() {
 	var galleryThumbs = new Swiper('.hino-pt1__slide .hino-pt1__slide__thumb', {
 		direction: 'vertical',
@@ -361,7 +386,7 @@ function detailProjectThumbs() {
 		breakpoints: {
 			576: {
 				// direction: 'horizontal',
-				slidesPerView: 4,
+				slidesPerView: 3,
 			}
 		},
 	});
@@ -478,17 +503,6 @@ function setBackground() {
 	});
 }
 
-//Move select fillter product
-function moveSelect() {
-	$('.fillter').appendTo('ul.nav #div');
-	$('.fillter').each(function() {
-		if (!$(this).text().match(/^\s*$/)) {
-			$(this).insertBefore($(this).prev('.nav-item'));
-		}
-	});
-	$('.wrap').appendTo('.content__sidebar #range');
-}
-
 //Check banner
 const checkLayoutBanner = () => {
 	const pagesBanner = $("#page-banner");
@@ -496,10 +510,10 @@ const checkLayoutBanner = () => {
 	const heightHeader = $("header").outerHeight();
 	const mainBanner = $("#home-banner");
 	let mobileWrap = $("header .mobile-wrap ");
-	
+
 	if ((mainBanner.length < 1) || (pagesBanner.length < 1)) {
 		$('main').css('padding-top', heightHeader)
-	}$('main').css('padding-top', heightHeader)
+	}$('main').css('padding-top', 0)
 	mobileWrap.css('top', heightHeader)
 	mobileWrap.css('height', 'calc(100vh - ' + heightHeader + 'px)')
 
@@ -611,7 +625,22 @@ function Showmap(){
 		$('.hino-helper2__left__content').not(this).removeClass('active')
 	});
 }
+function tabs() {
+	$('.tabs > li').on('click', function() {
+		var $panel = $(this).closest('.hinohome2');
+		$panel.find('li.active').removeClass('active');
+		$(this).addClass('active');
+		var panelToShow = $(this).attr('rel');
+		$panel.find('.panel.active').fadeOut(1000, showNextPanel);
 
+		function showNextPanel() {
+			$(this).removeClass('active');
+			$('#' + panelToShow).fadeIn(1000, function() {
+				$(this).addClass('active').fadeIn(1000);
+			});
+		};
+	});
+}
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
 	initMapping();
@@ -622,13 +651,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	coutingNumber();
 	toggleMenuMobile();
 	tabsDescription();
-	listFilter();
 	hideTool();
 	DataBG();
 	setBackground();
-	moveSelect();
-	moveNav();
-	detailThumbs();
+	// moveNav();
+	nangLuc();
 	checkLayoutBanner();
 	readMore();
 	detailProjectThumbs();
@@ -641,17 +668,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	phutungThumbs();
 	Showmap();
 	toggleCategory();
+	nangLucimage();
+	tabs();
 });
-$(window).resize(function() {
-	if ($(window).width() <= 1024) {
-		$('.language').appendTo('.header-container #div-mobile');
-		$('.search').appendTo('.header-container #div-mobile')
-	} else {
-		$('.language').appendTo('.nav-item #language-desktop');
-		$('.search').appendTo('.nav-item #search-desktop');
-	}
 
-})
 function initMapping(){
 	$('header .main-menu .main-nav').mapping({
 		mobileWrapper: 'header .mobile-wrap',
@@ -677,6 +697,4 @@ function toggleCategory(){
 		$('.nav-menu-about').slideToggle()
 	})
 }
-$(document).on('scroll', function(){
-	checkLayoutBanner()
-})
+

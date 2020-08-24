@@ -1,25 +1,42 @@
 <!-- Giới thiệu -->
 section.hinohome2.section
 	.container
+		ul.tabs
+			li.active(rel="panel-1") Video
+			li(rel="panel-2") Hình ảnh
 		.row
 			.col-xl-6
-				.hinohome2__slide
-					ul
-						li.active
-							a(href="") Video
-						li
-							a(href="") Hình ảnh
-					.swiper-container.hinohome2__slide__top
-						.swiper-wrapper
-							-for(i=1; i<7; i++)
-								.swiper-slide
-									.img
-										img(src="./assets/images/home/nl-"+i+".png" alt="")
-										.icon-control
-											a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+				.panel.active#panel-1
+					.hinohome2__slide
+						.swiper-container.hinohome2__slide__top
+							.swiper-wrapper
+								-for(i=1; i<7; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/images/home/nl-"+i+".png" alt="")
+											.icon-control
+												a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
 												img(src="./assets/icons/play-button.png", alt="")
-					.hinohome2__slide__thumbs
-						.swiper-container-thumbs.hinohome2__slide__thumbs__video
+						.swiper-container-thumbs.hinohome2__slide__thumbs
+							.swiper-wrapper
+								-for(i=1; i<7; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/images/home/nl-"+i+".png" alt="")
+											.icon-control
+												img(src="./assets/icons/play-button.png", alt="")
+				.panel#panel-2
+					.hinohome2__img
+						.swiper-container.hinohome2__img__top
+							.swiper-wrapper
+								-for(i=1; i<7; i++)
+									.swiper-slide
+										.img
+											img(src="./assets/images/home/nl-"+i+".png" alt="")
+											.icon-control
+												a(href="https://www.youtube.com/watch?v=09iHunBivys" data-fancybox)
+													img(src="./assets/icons/play-button.png", alt="")
+						.swiper-container-thumbs.hinohome2__img__thumbs
 							.swiper-wrapper
 								-for(i=1; i<7; i++)
 									.swiper-slide

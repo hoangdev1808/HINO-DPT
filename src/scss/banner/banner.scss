@@ -20,19 +20,15 @@
 				width: 100%;
 				height: 100%;
 				display: block;
-				background-size: cover;
-				background-position: center;
-
 				img {
 					width: 100%;
 					height: 100%;
-					opacity: 0;
 				}
 			}
 
 			.content {
 				position: absolute;
-				bottom: 220px;
+				bottom: 17%;
 				left: 50%;
 				transform: translateX(-50%);
 				width: fit-content;
@@ -79,8 +75,8 @@
 
 		.crolldown {
 			position: absolute;
-			left: 50%;
-			bottom: 15%;
+			left: 49%;
+			bottom: 12%;
 			width: 24px;
 			height: 24px;
 			z-index: 9;
@@ -96,8 +92,8 @@
 				animation: sdb07 2s infinite;
 				opacity: 0;
 				box-sizing: border-box;
-				width: 30px;
-				height: 30px;
+				width: 13px;
+				height: 13px;
 
 				&:nth-of-type(1) {
 					-webkit-animation-delay: 0s;

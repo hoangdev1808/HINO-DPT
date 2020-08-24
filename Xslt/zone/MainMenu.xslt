@@ -99,8 +99,8 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:value-of select="Title"></xsl:value-of>
+                 <em class="lnr lnr-chevron-right"></em>
             </a>
-            <em class="lnr lnr-chevron-right"></em>
         </li>
     </xsl:template>
     <xsl:template match="Zone" mode="Sup1">

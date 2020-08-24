@@ -18,14 +18,14 @@
     <xsl:template match="Product">
         <xsl:if test="position()&lt;10">
             <div class="col-xl-4 col-md-6 col-sm-6">
-                <div class="hino-pro2__right__item">
-                    <a>
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="Url"></xsl:value-of>
-                        </xsl:attribute>
-                        <xsl:attribute name="title">
-                            <xsl:value-of select="Title"></xsl:value-of>
-                        </xsl:attribute>
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="Url"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                    <div class="hino-pro2__right__item">
                         <div class="hino-pro2__right__item__img">
                             <div class="img">
                                 <img >
@@ -43,8 +43,8 @@
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </p>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </xsl:if>
     </xsl:template>

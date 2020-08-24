@@ -137,13 +137,13 @@
 					</div>
 				</footer>
 				<div id="block__tool">
-				<ul class="main-tool">
-					<li class="main-tool__item"><a href=""><em class="fa fa-map-marker"></em></a></li>
-					<li class="main-tool__item"><a href=""><em class="ri-messenger-fill"></em></a></li>
-					<li class="main-tool__item"><a href=""><em class="material-icons">phone_enabled</em></a></li>
-				</ul>
-			</div>
-			<div id="searchfancybox" style="display: none;">
+					<ul class="main-tool">
+						<li class="main-tool__item"><a href=""><em class="fa fa-map-marker"></em></a></li>
+						<li class="main-tool__item"><a href=""><em class="ri-messenger-fill"></em></a></li>
+						<li class="main-tool__item"><a href=""><em class="material-icons">phone_enabled</em></a></li>
+					</ul>
+				</div>
+				<div id="searchfancybox" style="display: none;">
 				<div class="container">
 					<div class="content">
 						<div class="form-group">

@@ -40,5 +40,10 @@
 				text-align: left;
 			}
 		}
+		.btn__new{
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 }

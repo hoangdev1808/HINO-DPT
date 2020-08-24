@@ -187,8 +187,9 @@
 				margin-bottom: 30px;
 				display: flex;
 				justify-content: center;
-				border: solid 1px transparent;
+				border: solid 2px transparent;
 				transition: all ease-in-out .2s;
+				align-items: center;
 				@media screen and (max-width: 576px) {
 					margin-top: 30px;
 					margin-left: auto ;
@@ -219,7 +220,7 @@
 					}
 				}
 				&:hover{
-					border: solid 1px $main-color;
+					border: solid 2px $main-color;
 					transition: all ease-in-out .2s;
 					.hinohome1__product__list__item__name{
 						p{

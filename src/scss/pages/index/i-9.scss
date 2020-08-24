@@ -19,11 +19,13 @@
 		}
 		&__desc{
 			p{
-				font-size: 16px;
-				font-family: "Montserrat";
-				color: rgb(51, 97, 174);
-				font-weight: bold;
-				text-transform: uppercase;
+				a{
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: rgb(51, 97, 174);
+					font-weight: bold;
+					text-transform: uppercase;
+				}
 			}
 		}
 	}

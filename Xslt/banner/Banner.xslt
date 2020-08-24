@@ -21,9 +21,6 @@
         <xsl:if test="position()=1">
             <div class="swiper-slide">
                 <a class="swiper-inner">
-                    <xsl:attribute name="setBackground">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>
@@ -44,9 +41,6 @@
         <xsl:if test="position()>1">
             <div class="swiper-slide">
                 <a class="swiper-inner">
-                    <xsl:attribute name="setBackground">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>

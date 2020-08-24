@@ -5,15 +5,15 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <div class="row">
-            <xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+            <xsl:apply-templates select="/ZoneList/Zone/Zone/Zone"></xsl:apply-templates>
         </div>
     </xsl:template>
-    <xsl:template match="Product">
+    <xsl:template match="Zone">
         <div class="col-xl-6 d-flex align-items-center">
             <div class="hinohome5__content">
                 <div class="block-title">
                     <p>
-                        <xsl:value-of disable-output-escaping="yes" select="/ProductList/ModuleTitle"></xsl:value-of>
+                        <xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of>
                     </p>
                     <h1>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="hinohome5__content__desc">
                     <p>
-                        <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+                        <xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
                     </p>
                 </div>
 				<a class="btn btn__new">

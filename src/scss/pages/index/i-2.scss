@@ -1,111 +1,195 @@
-.hinohome2{
+.hinohome2 {
 	margin-left: auto;
 	background-image: url('../assets/images/home/bg-home-2.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	&__slide{
-		width: 100%;
-		ul{
-			padding-left: 0;
-			list-style: none;
-			display: flex;
-			align-items: center;
-			margin-bottom: 30px;
-			li{
-				width: 200px;
-				min-height: 40px;
-				line-height: 40px;
-				border: solid 1px #fff;
-				text-align: center;
+
+	.panel {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.tabs {
+		padding-left: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		li {
+			width: 200px;
+			min-height: 40px;
+			line-height: 40px;
+			border: solid 1px #fff;
+			text-align: center;
+			transition: all ease-in-out .2s;
+			font-size: 16px;
+			font-family: "Montserrat";
+			color: rgb(255, 255, 255);
+			line-height: 3;
+			cursor: pointer;
+
+			&:nth-child(2) {
+				margin-left: 20px;
+			}
+
+			a {
+				font-size: 16px;
+				font-family: "Montserrat";
+				color: rgb(255, 255, 255);
+				line-height: 3;
+			}
+
+			&:hover {
 				transition: all ease-in-out .2s;
-				cursor: pointer;
-				&:nth-child(2){
-					margin-left: 20px;
-				}
-				a{
-					font-size: 16px;
-					font-family: "Montserrat";
-					color: rgb(255, 255, 255);
-					line-height: 3;
-				}
-				&:hover{
-					transition: all ease-in-out .2s;
-					background-color: #fff;
-					a{
-						color: #333333;
-					}
-				}
-				&.active{
-					transition: all ease-in-out .2s;
-					background-color: #fff;
-					a{
-						color: #333333;
-					}
-				}
+				background-color: #fff;
+				color: #333333;
+			}
+
+			&.active {
+				transition: all ease-in-out .2s;
+				background-color: #fff;
+				color: #333333;
 			}
 		}
-		&__top{
+	}
+
+	&__slide {
+		width: 100%;
+		overflow: hidden;
+
+		&__top {
 			position: relative;
 			width: 100%;
 			margin-bottom: 10px;
-			.img{
+
+			.img {
 				cursor: pointer;
 				position: relative;
 				width: 100%;
 				height: 400px;
-				img{
+
+				img {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 				}
+
 				@media screen and (max-width: 576px) {
 					height: 250px;
 				}
+
 			}
 		}
-		&__thumbs{
+
+		&__thumbs {
 			overflow: hidden;
-			&__video{
-				.img{
-					cursor: pointer;
-					position: relative;
-					height: 75px;
-					img{
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
-					.icon-control{
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-						width: 38px;
-						height: 38px;
-					}
+
+			.img {
+				cursor: pointer;
+				position: relative;
+				height: 75px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				.icon-control {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 38px;
+					height: 38px;
 				}
 			}
 		}
 	}
-	&__content{
+
+	&__img {
+		width: 100%;
+		overflow: hidden;
+
+		&__top {
+			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+
+			.img {
+				cursor: pointer;
+				position: relative;
+				width: 100%;
+				height: 400px;
+				margin-left: -15px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				@media screen and (max-width: 576px) {
+					height: 250px;
+				}
+
+			}
+		}
+
+		&__thumbs {
+			overflow: hidden;
+
+			.img {
+				cursor: pointer;
+				position: relative;
+				height: 75px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				.icon-control {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 38px;
+					height: 38px;
+				}
+			}
+		}
+	}
+
+	&__content {
 		padding-top: 80px;
 		padding-left: 75px;
+
 		@media screen and (max-width: 576px) {
 			padding: 30px 0 0 0;
 		}
-		.block-title{
-			h1{
+
+		.block-title {
+			h1 {
 				color: #fff;
 			}
 		}
-		ul{
+
+		ul {
 			max-width: 462px;
 			padding-left: 0;
 			list-style: none;
-			li{
+
+			li {
 				position: relative;
 				padding-bottom: 30px;
-				p{
+
+				p {
 					font-size: 16px;
 					font-family: "Montserrat";
 					color: rgb(255, 255, 255);
@@ -113,12 +197,21 @@
 					text-align: left;
 					padding-left: 40px;
 				}
-				&::before{
+
+				&::before {
 					position: absolute;
 					content: url('../assets/icons/check-list.png');
 					top: 0;
 					left: 0;
 				}
+			}
+		}
+
+		.btn__new {
+			text-decoration: underline;
+
+			&:hover {
+				color: #fff;
 			}
 		}
 	}

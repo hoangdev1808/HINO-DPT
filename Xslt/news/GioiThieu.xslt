@@ -197,7 +197,7 @@
     <xsl:template match="News" mode="Slider">
         <div class="swiper-slide">
             <div class="row">
-                <div class="col-xl-6 img">
+                <div class="col-xl-6 col-md-6 col-sm-6 img">
                     <img >
                         <xsl:attribute name="src">
                             <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -207,16 +207,14 @@
                         </xsl:attribute>
                     </img>
                 </div>
-                <div class="col-xl-6 content">
+                <div class="col-xl-6 col-md-6 col-sm-6 content">
                     <div class="desc">
                         <div class="title">
                             <p>
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                             </p>
                         </div>
-                        <p class="limit-text">
                             <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -224,7 +222,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Tamnhin">
         <xsl:if test="position()=1">
-            <div class="col-xl-6 hino-about3__content">
+            <div class="col-xl-6 col-md-6 col-sm-6 hino-about3__content">
                 <div class="hino-about3__content__img">
                     <img >
                         <xsl:attribute name="src">
@@ -250,7 +248,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Sumenh">
         <xsl:if test="position()=2">
-            <div class="col-xl-6 hino-about3__content">
+            <div class="col-xl-6 col-dm-6 col-sm-6 hino-about3__content">
                 <div class="hino-about3__content__img">
                     <img >
                         <xsl:attribute name="src">
