@@ -4,29 +4,34 @@
 
 		&__thumbs {
 			position: relative;
-			overflow: hidden;
 			margin-bottom: 30px;
-			padding-top: 40px;
-
+			height: 230px;
+			&::before{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background: #aaaaaa;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
 			.swiper-slide {
 				cursor: pointer;
-
-				.dot {
-					width: 20px;
-					height: 20px;
-					border-radius: 50%;
-					background-color: #999999;
-
-					&.active {
-						background-color: #3361ae;
-					}
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.time{
+					margin-bottom: -50px;
 				}
-
 				.box-content {
-					position: relative;
+					position: absolute;
+					top: 0;
 					cursor: pointer;
 					background-color: rgb(51, 97, 174);
 					width: 100%;
+					height: 90px;
 					padding: 15px;
 
 					p {
@@ -40,67 +45,49 @@
 							overflow: hidden;
 						}
 					}
-				}
-
-				&:nth-child(1n) {
-					border-bottom: solid 2px #aaaaaa;
-					padding-bottom: 30px;
-
-					.dot {
+					&::before{
 						position: absolute;
-						bottom: -10px;
+						content: '';
+						width: 20px;
+						height: 20px;
+						bottom: -50%;
 						left: 50%;
-						transform: translateX(-50%);
-
-						.time {
-							margin-top: 25px;
-							margin-left: -10px;
-						}
+						transform: translate(-50%, -50%);
+						border-radius: 50%;
+						background-color: #999999;
 					}
-
-					.box-content {
-						position: relative;
-
-						&::after {
-							position: absolute;
-							bottom: -19%;
-							left: 50%;
-							content: url('../assets/icons/gioithieu.png');
-							width: 23px;
-							height: 23px;
-							transform: rotate(180deg) translateX(50%);
-						}
+					&::after {
+						position: absolute;
+						bottom: -19%;
+						left: 50%;
+						content: url('../assets/icons/gioithieu.png');
+						width: 23px;
+						height: 23px;
+						transform: rotate(180deg) translateX(50%);
 					}
 				}
 
 				&:nth-child(2n) {
-					border-top: solid 2px #aaaaaa;
-					border-bottom: none;
-					margin-top: 100px;
-					padding-top: 30px;
-
-					.dot {
-						position: absolute;
-						top: -10px;
-						left: 50%;
-						transform: translateX(-50%);
-
-						.time {
-							margin-top: -25px;
-							margin-left: -10px;
-						}
+					.time{
+						margin-bottom: 50px;
 					}
-
-					.box-content {
-						position: relative;
-
-						&::after {
+					.box-content{
+						top: unset;
+						bottom: 0;
+						&::before{
 							position: absolute;
-							top: -19%;
+							content: '';
+							width: 20px;
+							height: 20px;
+							top: -30%;
 							left: 50%;
-							content: url('../assets/icons/gioithieu.png');
-							width: 23px;
-							height: 23px;
+							transform: translate(-50%, -50%);
+							border-radius: 50%;
+							background-color: #999999;
+						}
+						&::after{
+							top: -18%;
+							left: 50%;
 							transform: rotate(0deg) translateX(-50%);
 						}
 					}

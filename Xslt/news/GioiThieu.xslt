@@ -180,12 +180,10 @@
     </xsl:template>
     <xsl:template match="News" mode="Thumbs">
         <div class="swiper-slide">
-            <div class="dot">
-                <div class="time">
-                    <span>
-                        <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                    </span>
-                </div>
+            <div class="time">
+                <span>
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </span>
             </div>
             <div class="box-content">
                 <p class="limit-text">
@@ -214,7 +212,7 @@
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                             </p>
                         </div>
-                            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+                        <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
                     </div>
                 </div>
             </div>
