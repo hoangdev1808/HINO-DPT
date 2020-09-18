@@ -280,3 +280,159 @@
 		}
 	}
 }
+.apply-frm {
+	padding: 60px 90px;
+	margin: 0 auto;
+
+	div {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	h4 {
+		font-size: 16px;
+		font-weight: 600;
+		color: $main-color;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	.col-left {
+		.form-group {
+			width: 50%;
+			padding: 0 10px;
+
+			.label {
+				font-size: 14px;
+				font-weight: 400;
+				color: #999;
+				margin-bottom: 4px;
+			}
+
+			.fa-exclamation-triangle {
+				top: 50%;
+				transform: translateY(-50%);
+				right: 15px;
+				color: red;
+			}
+
+			.form-control {
+				border-radius: 0;
+				width: 100%;
+				width: 100%;
+				border: 1px solid #e5e5e5;
+				color: #333;
+				font-size: 13px;
+				padding: 7px 15px;
+			}
+		}
+	}
+
+	.col-right {
+		flex: 0 0 100%;
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		textarea {
+			height: 200px;
+			width: 100%;
+			border: 1px solid #e5e5e5;
+			color: #333;
+			font-size: 13px;
+			padding: 7px 15px;
+			border-radius: 0;
+		}
+
+		.form-group {
+			margin-bottom: 10px;
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0 10px;
+
+			label {
+				.required {
+					color: red;
+				}
+			}
+		}
+	}
+
+	.RadUpload {
+		width: auto !important;
+
+		.ruFileWrap {
+			position: relative;
+			display: block;
+			height: 50px;
+
+			.ruBrowse,
+			.ruFileInput {
+				width: 120px;
+				height: 50px;
+				background: #e5e5e5;
+				text-transform: uppercase;
+				font-size: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 0;
+			}
+		}
+
+		.ruDropZone {
+			display: none;
+		}
+	}
+	.frm-btnwrap {
+		padding: 0 10px;
+		.frm-btn {
+			margin-top: 20px;
+			text-align: left;
+
+			input[type=submit] {
+				height: 40px;
+				width: 100%;
+				max-width: 180px;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0;
+				background: 0 0;
+				border: 2px solid #3361ae;
+				color: #3361ae;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+@media screen and ( max-width: 1024px){
+	.fancybox-slide{
+		padding: 15px;
+	}
+	.apply-frm{
+		padding: 30px 0;
+	}
+}
+@media screen and ( max-width: 576px){
+	.apply-frm{
+		h4{
+			font-size: 14px;
+		}
+		.col-left {
+			.form-group{
+				width: 100%;
+			}
+		}
+		.col-right{
+			label {
+				font-size: 14px;
+				.required {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}

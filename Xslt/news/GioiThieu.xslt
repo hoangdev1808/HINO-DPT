@@ -44,12 +44,12 @@
                         </h1>
                     </div>
                     <div class="hino-about2__slide relative">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                         <div class="swiper-container hino-about2__slide__thumbs">
                             <div class="swiper-wrapper">
                                 <xsl:apply-templates select="News" mode="Thumbs"></xsl:apply-templates>
                             </div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
                         </div>
                         <div class="swiper-container hino-about2__slide__content">
                             <div class="swiper-wrapper">
@@ -212,7 +212,9 @@
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                             </p>
                         </div>
-                        <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+                        <div class="limit-text">
+                            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+                        </div>
                     </div>
                 </div>
             </div>

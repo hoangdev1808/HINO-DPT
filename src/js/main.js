@@ -272,8 +272,8 @@ function history() {
 			}
 		},
 		navigation: {
-			nextEl: '.hino-about2__slide__thumbs .swiper-button-next',
-			prevEl: '.hino-about2__slide__thumbs .swiper-button-prev',
+			nextEl: '.hino-about2__slide .swiper-button-next',
+			prevEl: '.hino-about2__slide .swiper-button-prev',
 		},
 	});
 	var galleryTop = new Swiper('.hino-about2__slide .hino-about2__slide__content', {
@@ -511,9 +511,9 @@ const checkLayoutBanner = () => {
 	const mainBanner = $("#home-banner");
 	let mobileWrap = $("header .mobile-wrap ");
 
-	if ((mainBanner.length < 1) || (pagesBanner.length < 1)) {
+	if ((mainBanner.length >= 1) && (pagesBanner.length >= 1)) {
 		$('main').css('padding-top', heightHeader)
-	}$('main').css('padding-top', 0)
+	}$('main').css('padding-top', heightHeader)
 	mobileWrap.css('top', heightHeader)
 	mobileWrap.css('height', 'calc(100vh - ' + heightHeader + 'px)')
 

@@ -730,3 +730,122 @@ textarea {
 .hidden{
 	display: none;
 }
+.search-page {
+	padding: 100px 0;
+
+	.search-page-top {
+		.page-header {
+			h1 {
+				font-size: 36px;
+				font-family: "Montserrat";
+				font-weight: bold;
+				color: #333333;
+
+				@media(max-width: 1025px) {
+					font-size: 26px;
+				}
+			}
+		}
+
+		.searchcontrols {
+			padding: 30px 0;
+
+			.form-inline {
+				.form-group {
+					.form-control {
+						height: 40px;
+						border-radius: 0;
+						input {
+							border: solid 1px #f5f5f5;
+						}
+						&:focus{
+							outline: none;
+							box-shadow: none;
+						}
+							
+					}
+
+					.seachpage-btn {
+						width: 120px;
+						height: 40px;
+						background-color: $main-color;
+						color: #fff;
+						padding: 0 15px;
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.searchresults {
+		.modulepager {
+			display: flex;
+			align-items: center;
+			padding-bottom: 30px;
+
+			.pagination {
+				padding: 0;
+				list-style: none;
+
+				li {
+					background-color: rgb(255, 255, 255);
+					width: 38px;
+					height: 38px;
+					margin-right: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+					transition: ease-in-out all .3s;
+
+					a {
+						font-size: 18px;
+						color: $main-color;
+						text-decoration: none;
+						font-family: 'Montserrat';
+						width: 100%;
+						height: 100%;
+						text-align: center;
+						line-height: 38px;
+					}
+
+					&:hover {
+						background-color: $main-color;
+
+						a {
+							color: #fff;
+						}
+					}
+
+					&.active {
+						span {
+							color: #fff;
+							width: 100%;
+							height: 100%;
+							text-align: center;
+							line-height: 38px;
+						}
+
+						background-color: $main-color
+					}
+				}
+
+			}
+		}
+	}
+	.searchresultlist{
+		.searchresult{
+			.NeatHtml{
+				h3{
+					font-size: 25px;
+					a{
+						font-size: 25px;
+						font-weight: 700;
+						color: #333333;
+					}
+				}
+			}
+		}
+	}
+}

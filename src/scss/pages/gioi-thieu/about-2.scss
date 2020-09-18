@@ -1,10 +1,28 @@
 .hino-about2 {
 	&__slide {
 		width: 100%;
+		.swiper-button-prev,
+		.swiper-button-next {
+				position: absolute;
+				top: -20px;
 
+				&::after {
+					font-size: 20px;
+				}
+			}
+
+		.swiper-button-prev {
+			left: 93%;
+		}
+		@media screen and (max-width: 576px) {
+			margin-bottom: 0;
+			.swiper-button-prev {
+				left: 75%;
+			}
+		}
 		&__thumbs {
 			position: relative;
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			height: 230px;
 			&::before{
 				content: '';
@@ -93,32 +111,12 @@
 					}
 				}
 			}
-
-			.swiper-button-prev,
-			.swiper-button-next {
-				position: absolute;
-				top: 10px;
-
-				&::after {
-					font-size: 20px;
-				}
-			}
-
-			.swiper-button-prev {
-				left: 93%;
-			}
-			@media screen and (max-width: 576px) {
-				margin-bottom: 0;
-				.swiper-button-prev {
-					left: 75%;
-				}
-			}
 		}
 
 		&__content {
 			.img {
 				width: 600px;
-				height: 100%;
+				height: 440px;
 				margin-right: -15px;
 
 				img {
@@ -132,7 +130,6 @@
 				background-color: rgb(255, 255, 255);
 				box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
 				width: 100%;
-				height: 440px;
 				display: flex;
 				align-items: center;
 				
@@ -154,32 +151,31 @@
 							text-align: center;
 						}
 					}
+					.limit-text {
+						padding-right: 20px;
+						max-height: 225px;
+						overflow-y: auto;
 
-					p {
-						font-size: 18px;
-						font-family: "Montserrat";
-						color: rgb(51, 51, 51);
+						&::-webkit-scrollbar-track {
+							box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+							background-color: rgb(29, 175, 240);
+						}
 
-						&.limit-text {
-							max-height: 225px;
-							overflow-y: auto;
+						&::-webkit-scrollbar {
+							width: 5px;
+							height: 5px;
+							background-color: rgb(29, 175, 240);
+						}
 
-							&::-webkit-scrollbar-track {
-								box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
-								background-color: rgb(29, 175, 240);
-							}
-
-							&::-webkit-scrollbar {
-								width: 5px;
-								height: 5px;
-								background-color: rgb(29, 175, 240);
-							}
-
-							&::-webkit-scrollbar-thumb {
-								border-radius: 2.5px;
-								box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
-								background-color: #fff;
-							}
+						&::-webkit-scrollbar-thumb {
+							border-radius: 2.5px;
+							box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+							background-color: #fff;
+						}
+						p {
+							font-size: 18px;
+							font-family: "Montserrat";
+							color: rgb(51, 51, 51);
 						}
 					}
 				}
