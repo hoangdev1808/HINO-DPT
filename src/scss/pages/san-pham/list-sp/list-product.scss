@@ -39,7 +39,6 @@
 				display: none;
 			}
 		}
-
 		ul {
 			list-style: none;
 			padding-left: 20px;
@@ -50,15 +49,46 @@
 				min-height: 50px;
 				line-height: 50px;
 				border-bottom: solid 1px #e1e1e1;
+				.sub-lv2{
+					list-style: none;
+					padding-left: 20px;
+					padding-right: 0;
+					li {
+						cursor: pointer;
+						border-bottom: solid 1px #e1e1e1;
+						min-height: unset;
+						line-height: unset;
+						padding: 10px 0;
+						a {
+							font-size: 12px;
+							font-family: "Montserrat";
+							color: rgb(51, 51, 51);
+							font-weight: bold;
+						}
+						&:last-child{
+							border-bottom: none;
+						}
+						&.active {
+							a {
+								font-weight: 700;
+								color: #3361ae;
+							}
+						}
+						&:hover{
+							a{
+								color: #3361ae;
+							}
+						}
+					}
+				}
 
-				a {
+				.acc__title {
 					font-size: 16px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
 					font-weight: bold;
 					line-height: 3.313;
 				}
-
 				&.active {
 					a {
 						font-weight: 700;

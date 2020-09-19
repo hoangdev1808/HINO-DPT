@@ -4,20 +4,24 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="hino-pro2__right">
-            <div class="hino-pro2__right__title">
-                <h1>
-                    <xsl:value-of disable-output-escaping="yes" select="/ProductList/ZoneTitle"></xsl:value-of>
-                </h1>
+        <section class="hino-accessary section">
+            <div class="container">
+                <div class="hino-pro2__right">
+                    <div class="hino-pro2__right__title">
+                        <h1>
+                            <xsl:value-of disable-output-escaping="yes" select="/ProductList/ZoneTitle"></xsl:value-of>
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
-            </div>
-        </div>
+        </section>
     </xsl:template>
     <xsl:template match="Product">
         <xsl:if test="position()&lt;10">
-            <div class="col-xl-4 col-md-6 col-sm-6">
+            <div class="col-xl-3 col-md-4 col-sm-6">
                 <a>
                     <xsl:attribute name="href">
                         <xsl:value-of select="Url"></xsl:value-of>

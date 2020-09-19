@@ -73,6 +73,40 @@
                     <xsl:text>dropdown-item active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
+            <xsl:if test="ZoneId=193">
+                <xsl:if test="IsActive='true'">
+                    <xsl:attribute name="class">
+                        <xsl:text>dropdown-item has-sub active</xsl:text>
+                    </xsl:attribute>
+                </xsl:if>
+            </xsl:if>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:value-of select="Title"></xsl:value-of>
+            </a>
+            <xsl:if test="count(Zone)>0">
+                <xsl:choose>
+                    <xsl:when test="ZoneId=193">
+                        <ul class="sub-menu">
+                            <xsl:apply-templates select="Zone" mode="DropdownSub"></xsl:apply-templates>
+                        </ul>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:if>
+        </li>
+    </xsl:template>
+    <xsl:template match="Zone" mode="DropdownSub">
+        <li>
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>
@@ -99,7 +133,7 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:value-of select="Title"></xsl:value-of>
-                 <em class="lnr lnr-chevron-right"></em>
+                <em class="lnr lnr-chevron-right"></em>
             </a>
         </li>
     </xsl:template>

@@ -4,31 +4,36 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes" />
     <xsl:template match="/">
-        <xsl:apply-templates select="/ProductFilter/Group"></xsl:apply-templates>
+        <div class="hino-pro2__left__title">
+            <h2>
+                <em class="material-icons">keyboard_arrow_down</em>bộ lọc
+                
+                
+                
+                
+                
+            </h2>
+        </div>
+        <ul class="filter">
+            <xsl:apply-templates select="/ProductFilter/Group"></xsl:apply-templates>
+        </ul>
     </xsl:template>
     <xsl:template match="Group">
-        <div class="form-group nice-select" tabindex="0">
-            <span>
-                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                <xsl:text disable-output-escaping="yes">: </xsl:text>
-            </span>
-            <span class="current">Tất cả</span>
-            <ul class="list">
-                <xsl:apply-templates select="Option"></xsl:apply-templates>
-            </ul>
-        </div>
+        <xsl:apply-templates select="Option"></xsl:apply-templates>
     </xsl:template>
     <xsl:template match="Option">
-        <li class="option">
-            <xsl:attribute name="data-value">
-                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-            </xsl:attribute>
+        <li>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text>option selected</xsl:text>
+                    <xsl:text>
+                        active
+                    </xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <a>
+                <xsl:attribute name="class">
+                    <xsl:text>ajaxlink active</xsl:text>
+                </xsl:attribute>
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>
                 </xsl:attribute>

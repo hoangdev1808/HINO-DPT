@@ -641,6 +641,27 @@ function tabs() {
 		};
 	});
 }
+
+function moveFilter(){
+	$('.pro-filter').appendTo('.hino-pro2__left .nav-menu-about')
+}
+
+function leftProductNav(){
+	$('.acc__title').click(function(j) {
+		var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+		$(this).closest('.acc').find('.acc__panel').not(dropDown).slideUp();
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$('.acc__title').removeClass('active');
+		} else {
+			$('.acc__title.active').removeClass('active');
+			$(this).addClass('active');
+			$(this).closest('.acc__card').find('.acc__title').addClass('active');
+		}
+		dropDown.stop(false, true).slideToggle();
+		j.preventDefault();
+	});
+}
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
 	initMapping();
@@ -670,6 +691,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	toggleCategory();
 	nangLucimage();
 	tabs();
+	moveFilter();
+	leftProductNav();
 });
 
 function initMapping(){

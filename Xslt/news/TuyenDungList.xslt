@@ -42,7 +42,6 @@
                     <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
                     <xsl:text>. </xsl:text>
                 </xsl:if>
-                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
             </th>
             <td>
                 <a>
