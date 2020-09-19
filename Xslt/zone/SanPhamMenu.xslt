@@ -27,19 +27,18 @@
         <li class="acc__card">
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
+                    <xsl:text>acc__card active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <div class="acc__title">
                 <xsl:value-of select="Title"></xsl:value-of>
                 <span class="material-icons">keyboard_arrow_down</span>
             </div>
-			<xsl:if test="count(Zone)>0">
-            	<ul class="sub-lv2 acc__panel">
-					<xsl:apply-templates select="Zone" mode="Child2"></xsl:apply-templates>
-				</ul>
+            <xsl:if test="count(Zone)>0">
+                <ul class="sub-lv2 acc__panel">
+                    <xsl:apply-templates select="Zone" mode="Child2"></xsl:apply-templates>
+                </ul>
             </xsl:if>
-			
         </li>
     </xsl:template>
     <xsl:template match="Zone" mode="Child2">

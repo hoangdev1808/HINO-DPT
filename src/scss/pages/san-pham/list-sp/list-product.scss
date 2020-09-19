@@ -47,7 +47,6 @@
 			li {
 				cursor: pointer;
 				min-height: 50px;
-				line-height: 50px;
 				border-bottom: solid 1px #e1e1e1;
 				.sub-lv2{
 					list-style: none;
@@ -87,7 +86,7 @@
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
 					font-weight: bold;
-					line-height: 3.313;
+					padding: 15px 0;
 				}
 				&.active {
 					a {
