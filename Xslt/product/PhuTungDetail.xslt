@@ -47,14 +47,14 @@
                                     <li>
                                         <a class="btn btn__new2">
                                             <xsl:attribute name="href">
-                                                <xsl:value-of select="Url"></xsl:value-of>
+                                                <xsl:value-of select="/ProductDetail/SubTitle"></xsl:value-of>
                                             </xsl:attribute>
                                             <xsl:attribute name="title">
-                                                <xsl:value-of select="Title"></xsl:value-of>
+                                                <xsl:value-of select="/ProductDetail/SubTitle"></xsl:value-of>
                                             </xsl:attribute>
                                             <em class="material-icons">call</em>
                                             <sapn>
-                                                <xsl:text>Liên hệ</xsl:text>
+                                                <xsl:text>Nhận báo giá</xsl:text>
                                             </sapn>
                                         </a>
                                     </li>

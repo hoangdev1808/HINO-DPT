@@ -48,16 +48,9 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <div class="drop-mega-menu">
-                            <div class="row">
-                                <div class="col-xl-2">
-                                    <div class="mega-left">
-                                        <ul class="tab-mega">
-                                            <xsl:apply-templates select="Zone" mode="Sup1"></xsl:apply-templates>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-xl-10">
-                                    <xsl:apply-templates select="Zone" mode="Sup2"></xsl:apply-templates>
+                            <div class="mega-right">
+                                <div class="row">
+                                    <xsl:apply-templates select="/ZoneList/Zone/Zone" mode="SupMega"></xsl:apply-templates>
                                 </div>
                             </div>
                         </div>
@@ -137,36 +130,14 @@
             </a>
         </li>
     </xsl:template>
-    <xsl:template match="Zone" mode="Sup1">
-        <li>
-            <xsl:if test="IsActive='true'">
-                <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
-                </xsl:attribute>
-            </xsl:if>
-            <xsl:attribute name="rel">
-                <xsl:text>mega-</xsl:text>
-                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-            <em class="lnr lnr-chevron-right"></em>
-        </li>
+    <xsl:template match="Zone" mode="SupMega">
+        <xsl:choose>
+            <xsl:when test="ZoneId=194">
+                <xsl:apply-templates select="Zone" mode="Mega"></xsl:apply-templates>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
-    <xsl:template match="Zone" mode="Sup2">
-        <div class="mega-right panel">
-            <xsl:attribute name="id">
-                <xsl:text>mega-</xsl:text>
-                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="class">
-                <xsl:text>mega-right panel active</xsl:text>
-            </xsl:attribute>
-            <div class="row">
-                <xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
-            </div>
-        </div>
-    </xsl:template>
-    <xsl:template match="Zone" mode="Child">
+    <xsl:template match="Zone" mode="Mega">
         <div class="col-xl-3">
             <a>
                 <xsl:attribute name="href">

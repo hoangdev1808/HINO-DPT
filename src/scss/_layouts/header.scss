@@ -125,7 +125,8 @@ header {
 				span {
 					color: $color-while;
 					padding-left: 10px;
-					font-size: 13px;
+					font-size: 15px;
+					font-weight: 700;
 				}
 
 				width: 175px;
@@ -462,10 +463,6 @@ header {
 											font-size: 14px;
 										}
 									}
-								}
-
-								&:last-child {
-									display: none;
 								}
 							}
 						}

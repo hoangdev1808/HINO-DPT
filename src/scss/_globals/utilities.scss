@@ -942,7 +942,12 @@ textarea {
 #formbaogia {
 	.modal-dialog {
 		.modal-content {
+			height: 470px;
 			.modal-header{
+				h2{
+					font-size: 25px;
+					color: #3361ae;
+				}
 				border: none;
 				span{
 					font-size: 30px;
@@ -962,6 +967,14 @@ textarea {
 						height: 50px;
 						border: 1px solid #3361ae;
 					}
+					
+					span{
+						color: red;
+						font-family: 'Montserrat';
+						&::before{
+							font-family: 'Font Awesome 5 Free';
+						}
+					}
 				}
 				.frm-btnwrap{
 					width: 190px;
@@ -975,11 +988,15 @@ textarea {
 							-moz-border-radius: 0;
 							-ms-border-radius: 0;
 							-o-border-radius: 0;
-							color: #3361ae;
+							color: #ffffff;
+							background-color: #3361ae;
 							&:hover{
-								background-color: #3361ae;
-								color: #fff;
+								background-color: #ffffff;
+								color: #3361ae;
 							}
+						}
+						.frm-btn-reset{
+							display: none;
 						}
 					}
 				}

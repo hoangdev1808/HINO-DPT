@@ -21,15 +21,15 @@
                                     </li>
                                     <li>
                                         <a class="btn btn__new2" href="">
-                                            <xsl:attribute name="href">
-                                                <xsl:value-of select="Url"></xsl:value-of>
+                                            <xsl:attribute name="data-toggle">
+                                                <xsl:text>modal</xsl:text>
                                             </xsl:attribute>
-                                            <xsl:attribute name="title">
-                                                <xsl:value-of select="Title"></xsl:value-of>
+                                            <xsl:attribute name="data-target">
+                                                <xsl:text>#formbaogia</xsl:text>
                                             </xsl:attribute>
                                             <em class="material-icons">call</em>
                                             <sapn>
-                                                <xsl:text>Liên hệ</xsl:text>
+                                                <xsl:text>Nhận báo giá</xsl:text>
                                             </sapn>
                                         </a>
                                     </li>

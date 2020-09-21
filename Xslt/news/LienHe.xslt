@@ -26,6 +26,11 @@
     </xsl:template>
     <xsl:template match="News">
         <div class="hino-helper2__left__content">
+            <xsl:if test="position()=1">
+                <xsl:attribute name="class">
+                    <xsl:text>hino-helper2__left__content active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
                     <xsl:text>hino-helper2__left__content active</xsl:text>
