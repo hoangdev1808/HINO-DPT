@@ -122,18 +122,18 @@
 				list-style: none;
 				width: 100%;
 				li{
-					padding-left: 30px;
+					padding-left: 10px;
 					min-height: 55px;
 					line-height: 55px;
 					position: relative;
 					cursor: pointer;
 					a{
-						font-size: 16px;
+						font-size: 15px;
 						font-family: "Montserrat";
 						color: rgb(255, 255, 255);
 						font-weight: bold;
-						line-height: 3.438;
 						text-align: left;
+						text-transform: uppercase;
 					}
 					&:hover{
 						width: 265px;

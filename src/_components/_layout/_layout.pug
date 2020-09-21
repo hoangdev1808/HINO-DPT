@@ -47,8 +47,32 @@ html(lang="en")
 							input.form-control(type="text" placeholder="Tìm sản phẩm...")
 							button.searchbutton.btn.btn__search
 								em.material-icons search
+			// Modal
+			#formbaogia.modal.fade(tabindex='-1', role='dialog')
+				.modal-dialog.modal-dialog-centered.container(role='document')
+					.modal-content
+						.modal-header
+							button.close(type='button', data-dismiss='modal', aria-label='Close')
+								span(aria-hidden='true') ×
+						.modal-body.box-form.form-row
+							.form-group.col-xl-6
+								label(for="") Họ và tên
+								input(type='text')
+							.form-group.col-xl-6
+								label(for="") Tỉnh/Thành phố
+								select(type='text')
+							.form-group.col-xl-6
+								label(for="") Số điện thoại
+								input(type='text')
+							.form-group.frm-btnwrap
+								.frm-btn
+									label(for="")
+									input.btn.btn-default.frm-btn-submit(type='submit' name="" value='Gửi')
+
 		script(src='https://polyfill.io/v3/polyfill.min.js?features=default')
 		script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly' defer='')
 		script(type="text/javascript" src="./js/core.min.js")
 		script(type="text/javascript" src="./js/main.min.js")
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=592601277979782&autoLogAppEvents=1" nonce="hGcrl3bP"></script>
 		block scripts

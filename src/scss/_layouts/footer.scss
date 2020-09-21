@@ -130,6 +130,9 @@ footer{
 			
 			.card__media{
 				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
 				ul{
 					display: flex;
 					align-items: center;
@@ -165,6 +168,9 @@ footer{
 					@media(max-width: 768px){
 						justify-content: flex-start;
 					}
+				}
+				.iframe{
+					min-width: 400px;
 				}
 				@media screen and ( max-width: 576px){
 					margin-bottom: 30px;
