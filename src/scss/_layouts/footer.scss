@@ -127,7 +127,18 @@ footer{
 					}
 				}
 			}
-			
+			.iframe{
+				div{
+					div{
+						text-align: right;
+						iframe{
+							width: 100%;
+						}
+					}
+						
+				}
+					
+			}
 			.card__media{
 				width: 100%;
 				ul{
@@ -165,9 +176,6 @@ footer{
 					@media(max-width: 768px){
 						justify-content: flex-start;
 					}
-				}
-				.iframe{
-					min-width: 400px;
 				}
 				@media screen and ( max-width: 576px){
 					margin-bottom: 30px;
