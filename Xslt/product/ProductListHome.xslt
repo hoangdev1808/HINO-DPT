@@ -24,7 +24,14 @@
     <xsl:template match="Zone" mode="List">
         <li>
             <xsl:if test="IsActive='true'">
-                <xsl:text>active</xsl:text>
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="position()=1">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
             </xsl:if>
             <xsl:attribute name="rel">
                 <xsl:text>list-</xsl:text>
@@ -32,7 +39,7 @@
             </xsl:attribute>
             <a>
                 <xsl:attribute name="href">
-                    <xsl:value-of select="Url"></xsl:value-of>
+                    <xsl:text disable-output-escaping="yes">javascript:;</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="title">
                     <xsl:value-of select="Title"></xsl:value-of>
@@ -43,9 +50,9 @@
     </xsl:template>
     <xsl:template match="Zone" mode="Product">
         <div class="hinohome1__product__list panel">
-			<xsl:attribute name="class">
-				<xsl:text>hinohome1__product__list panel active</xsl:text>
-			</xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:text disable-output-escaping="yes">hinohome1__product__list panel active</xsl:text>
+            </xsl:attribute>
             <xsl:attribute name="id">
                 <xsl:text>list-</xsl:text>
                 <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
@@ -56,7 +63,7 @@
         </div>
     </xsl:template>
     <xsl:template match="Product" mode="ListPro">
-        <div class="col-xl-4">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
             <div class="hinohome1__product__list__item box-shadow">
                 <a>
                     <xsl:attribute name="href">
@@ -78,6 +85,7 @@
                     <div class="hinohome1__product__list__item__name">
                         <p>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </p>
                     </div>
                 </a>

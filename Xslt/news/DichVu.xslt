@@ -13,6 +13,7 @@
                     <div class="block-title border__bottom">
                         <h1>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </h1>
                     </div>
                     <xsl:apply-templates select="News" mode="Section1"></xsl:apply-templates>
@@ -32,6 +33,7 @@
                     <div class="block-title border__bottom">
                         <h1>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </h1>
                     </div>
                     <div class="row">
@@ -60,6 +62,7 @@
                     <div class="block-title border__bottom">
                         <h1>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </h1>
                     </div>
                     <div class="hino-service3__content acc">
@@ -97,6 +100,7 @@
                             <div class="hino-service1__content__title">
                                 <h2>
                                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                                 </h2>
                             </div>
                             <div class="hino-service1__content__desc">
@@ -127,6 +131,7 @@
                             <div class="hino-service1__content__title">
                                 <h2>
                                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                                 </h2>
                             </div>
                             <div class="hino-service1__content__desc">
@@ -181,6 +186,7 @@
                             <div class="hino-service1__content__title">
                                 <h2>
                                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                                 </h2>
                             </div>
                             <div class="hino-service1__content__desc">
@@ -272,6 +278,7 @@
                         <xsl:text>. </xsl:text>
                     </xsl:if>
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </p>
                 <em class="lnr lnr-chevron-down"></em>
             </div>
@@ -285,6 +292,7 @@
             <div class="block-title">
                 <h1>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </h1>
             </div>
             <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
@@ -295,6 +303,7 @@
             <div class="block-title">
                 <h1>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </h1>
             </div>
             <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
@@ -305,6 +314,7 @@
             <div class="block-title">
                 <h1>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </h1>
             </div>
             <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>

@@ -30,6 +30,7 @@
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </p>
                 </div>
+                
             </a>
         </div>
     </xsl:template>

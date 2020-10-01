@@ -19,7 +19,6 @@ footer{
 				}
 				p{
 					font-size: 16px;
-					font-family: "Montserrat";
 					color: rgb(255, 255, 255);
 					font-weight: 600;
 					text-transform: uppercase;
@@ -34,7 +33,6 @@ footer{
 			.card__body{
 				p{
 					font-size: 14px;
-					font-family: "Montserrat";
 					color: rgba(255, 255, 255, 0.702);
 					@media screen and ( max-width: 768px){
 						font-size: 11px !important;
@@ -57,12 +55,10 @@ footer{
 							font-size: 14px;
 							line-height: 30px;
 							font-weight: 400;
-							font-family: "Montserrat";
 							color: rgba(255, 255, 255, 0.702);
 						}
 						p{
 							font-size: 13px;
-							font-family: "Montserrat";
 							color: rgba(255, 255, 255, 0.702);
 							text-decoration: none;
 							font-weight: 400;
@@ -99,7 +95,6 @@ footer{
 						padding-left: 15px;
 						&::placeholder{
 							font-size: 14px;
-							font-family: "Montserrat";
 							color: rgba($color: #fff, $alpha: .3);
 						}
 						@media screen and ( max-width: 575px){
@@ -202,7 +197,6 @@ footer{
 		background-color: #264780;
 		p{
 			font-size: 12px;
-			font-family: "Montserrat";
 			color: rgba(255, 255, 255, 0.502);
 			line-height: 2.5;
 			@media screen and ( max-width: 768px){
@@ -236,7 +230,6 @@ footer{
 				}
 				a{
 					font-size: 12px;
-					font-family: "Montserrat";
 					color: rgba(255, 255, 255, 0.502);
 					line-height: 2;
 					&:hover{

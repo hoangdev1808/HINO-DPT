@@ -17,6 +17,7 @@
                     <div class="block-title border__bottom">
                         <h1>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </h1>
                     </div>
                     <xsl:apply-templates select="News" mode="TongQuan"></xsl:apply-templates>
@@ -131,6 +132,7 @@
                             <div class="block-title">
                                 <h1>
                                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                                 </h1>
                             </div>
                             <div class="hino-about1__left__content__desc">
@@ -173,6 +175,7 @@
             <div class="block-title">
                 <h1>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </h1>
             </div>
             <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
@@ -183,6 +186,7 @@
             <div class="time">
                 <span>
                     <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </span>
             </div>
             <div class="box-content">
@@ -210,6 +214,7 @@
                         <div class="title">
                             <p>
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </p>
                         </div>
                         <div class="limit-text">
@@ -236,6 +241,7 @@
                 <div class="hino-about3__content__title">
                     <h2>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </h2>
                 </div>
                 <div class="hino-about3__content__desc">
@@ -262,6 +268,7 @@
                 <div class="hino-about3__content__title">
                     <h2>
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </h2>
                 </div>
                 <div class="hino-about3__content__desc">
@@ -286,6 +293,7 @@
                 <div class="hino-about4__item__content__title">
                     <h2>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </h2>
                 </div>
                 <div class="hino-about4__item__content__desc">

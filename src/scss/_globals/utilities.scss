@@ -171,7 +171,6 @@ textarea {
 
 	h1 {
 		font-size: 36px;
-		font-family: "Montserrat";
 		font-weight: bold;
 		color: #333333;
 
@@ -254,7 +253,6 @@ textarea {
 					font-size: 18px;
 					color: $main-color;
 					text-decoration: none;
-					font-family: 'Montserrat';
 				}
 
 				&:hover {
@@ -288,7 +286,6 @@ textarea {
 				cursor: pointer;
 				display: inline-block;
 				font-size: 16px;
-				font-family: "Montserrat";
 				color: rgb(153, 153, 153);
 				text-transform: uppercase;
 				text-align: left;
@@ -302,7 +299,6 @@ textarea {
 
 		&.active {
 			font-size: 16px;
-			font-family: "Montserrat";
 			color: rgb(51, 51, 51);
 			text-transform: uppercase;
 			text-align: left;
@@ -682,7 +678,6 @@ textarea {
 
 	.date {
 		font-size: 14px;
-		font-family: "Montserrat";
 		color: rgb(51, 51, 51);
 	}
 
@@ -710,14 +705,12 @@ textarea {
 
 		p {
 			font-size: 18px;
-			font-family: "Montserrat";
 			color: rgb(51, 51, 51);
 			padding-bottom: 30px;
 		}
 
 		h2 {
 			font-size: 24px;
-			font-family: "Montserrat";
 			color: rgb(51, 97, 174);
 			font-weight: bold;
 			text-transform: uppercase;
@@ -760,7 +753,6 @@ textarea {
 		.page-header {
 			h1 {
 				font-size: 36px;
-				font-family: "Montserrat";
 				font-weight: bold;
 				color: #333333;
 
@@ -828,7 +820,6 @@ textarea {
 						font-size: 18px;
 						color: $main-color;
 						text-decoration: none;
-						font-family: 'Montserrat';
 						width: 100%;
 						height: 100%;
 						text-align: center;
@@ -908,7 +899,6 @@ textarea {
 
 			a {
 				font-size: 16px;
-				font-family: "Montserrat";
 				color: rgb(51, 51, 51);
 				font-weight: bold;
 				line-height: 3.313;
@@ -970,7 +960,6 @@ textarea {
 					
 					span{
 						color: red;
-						font-family: 'Montserrat';
 						&::before{
 							font-family: 'Font Awesome 5 Free';
 						}
@@ -1002,5 +991,10 @@ textarea {
 				}
 			}
 		}
+	}
+}
+.hinohome7__slide__news__left__img{
+	@media screen and ( max-width: 1024px){
+		height: auto;
 	}
 }

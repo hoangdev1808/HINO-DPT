@@ -94,9 +94,13 @@ function dnnBannerSlide() {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			600: {
-				slidesPerView: 2,
+			768: {
+				slidesPerView: 3,
 				spaceBetween: 20,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 0,
 			},
 			375: {
 				slidesPerView: 1,
@@ -603,12 +607,12 @@ function tabsProdductHome() {
 		$panel.find('li.active').removeClass('active');
 		$(this).addClass('active');
 		var panelToShow = $(this).attr('rel');
-		$panel.find('.panel.active').fadeOut(1000, showNextPanel);
+		$panel.find('.panel.active').fadeOut(300, showNextPanel);
 
 		function showNextPanel() {
 			$(this).removeClass('active');
-			$('#' + panelToShow).fadeIn(1000, function() {
-				$(this).addClass('active').fadeIn(1000);
+			$('#' + panelToShow).fadeIn(300, function() {
+				$(this).addClass('active').fadeIn(300);
 			});
 		};
 	});
@@ -631,12 +635,12 @@ function tabs() {
 		$panel.find('li.active').removeClass('active');
 		$(this).addClass('active');
 		var panelToShow = $(this).attr('rel');
-		$panel.find('.panel.active').fadeOut(1000, showNextPanel);
+		$panel.find('.panel.active').fadeOut(500, showNextPanel);
 
 		function showNextPanel() {
 			$(this).removeClass('active');
-			$('#' + panelToShow).fadeIn(1000, function() {
-				$(this).addClass('active').fadeIn(1000);
+			$('#' + panelToShow).fadeIn(500, function() {
+				$(this).addClass('active').fadeIn(500);
 			});
 		};
 	});
@@ -644,6 +648,21 @@ function tabs() {
 
 function moveFilter(){
 	$('.pro-filter').appendTo('.hino-pro2__left .nav-menu-about');
+}
+
+function Accordiion() {
+	$('.acc__title').click(function (j) {
+		var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+		$(this).closest('.acc__card').find('.acc__panel').not(dropDown).slideUp();
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).closest('.acc__card').find('.acc__title.active').removeClass('active');
+			$(this).addClass('active');
+		}
+		dropDown.stop(false, true).slideToggle();
+		j.preventDefault();
+	});
 }
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW().init();
@@ -675,6 +694,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	nangLucimage();
 	tabs();
 	moveFilter();
+	Accordiion();
 });
 
 function initMapping(){

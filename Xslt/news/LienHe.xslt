@@ -42,6 +42,7 @@
             <div class="hino-helper2__left__content__title">
                 <h2>
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </h2>
             </div>
             <div class="hino-helper2__left__content__desc">

@@ -7,11 +7,6 @@
         <div class="hino-pro2__left__title">
             <h2>
                 <em class="material-icons">keyboard_arrow_down</em>bộ lọc
-                
-                
-                
-                
-                
             </h2>
         </div>
         <ul class="filter">

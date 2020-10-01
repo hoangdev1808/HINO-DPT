@@ -5,7 +5,7 @@
 		margin-bottom: 20px;
 		line-height: 44px;
 		h1 {
-			font-family: "Montserrat";
+			
 			color: rgb(51, 51, 51);
 			font-weight: bold;
 			text-align: left;
@@ -34,7 +34,7 @@
 
 			.date {
 				font-size: 12px;
-				font-family: "Montserrat";
+				
 				color: #333333;
 			}
 		}
@@ -76,7 +76,7 @@
 
 		p {
 			font-size: 16px;
-			font-family: "Montserrat";
+			
 			color: rgb(51, 51, 51);
 			padding-bottom: 30px;
 		}
@@ -84,7 +84,7 @@
 
 		strong {
 			font-size: 16px;
-			font-family: "Montserrat";
+			
 			color: rgb(51, 51, 51);
 			font-weight: bold;
 		}
@@ -99,7 +99,7 @@
 				position: relative;
 				padding-left: 15px;
 				font-size: 16px;
-				font-family: "Montserrat";
+				
 				color: rgb(51, 51, 51);
 
 				&::before {
@@ -147,7 +147,6 @@
 				width: 100%;
 				display: flex;
 				margin-bottom: 20px;
-				padding-bottom: 20px;
 				&::after{
 					content: '';
 					position: absolute;
@@ -176,7 +175,7 @@
 						display: flex;
 						align-items: center;
 						font-size: 12px;
-						font-family: "Montserrat";
+						
 						color: #333333;
 						.lnr{
 							font-size: 12px;
@@ -187,7 +186,7 @@
 					}
 					p{
 						font-size: 14px;
-						font-family: "Montserrat";
+						
 						color: rgb(51, 51, 51);
 						font-weight: 400;
 					}

@@ -14,8 +14,6 @@
                         <xsl:apply-templates select="NewsList/News" mode="SmallNews"></xsl:apply-templates>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <xsl:apply-templates select="NewsList/News" mode="NewsBot"></xsl:apply-templates>
             </div>
         </div>
@@ -56,6 +54,7 @@
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
                         <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </a>
                 </div>
                 <div class="hino-news2__news__left__content__desc">
@@ -102,6 +101,7 @@
                                     <xsl:value-of select="Title"></xsl:value-of>
                                 </xsl:attribute>
                                 <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </a>
                         </div>
                     </div>
@@ -147,6 +147,7 @@
                                     <xsl:value-of select="Title"></xsl:value-of>
                                 </xsl:attribute>
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </a>
                         </div>
                     </div>

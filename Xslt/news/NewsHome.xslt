@@ -9,13 +9,13 @@
                 <div class="block-title border__bottom">
                     <h1><xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of></h1>
                 </div>
-                <div class="hinohome7__slide relative">
-                    <div class="hinohome7__slide__news">
+                <div class="slide relative">
+                    <div class="news">
                         <div class="row">
-                            <div class="col-xl-6 col-md-12 hinohome7__slide__news__left">
+                            <div class="col-xl-6 col-md-12 left">
                                 <xsl:apply-templates select="/NewsList/News" mode="BigNews"></xsl:apply-templates>
                             </div>
-                            <div class="col-xl-6 col-md-12 hinohome7__slide__news__right">
+                            <div class="col-xl-6 col-md-12 right">
                                 <div class="row">
                                     <xsl:apply-templates select="/NewsList/News" mode="SmallNews"></xsl:apply-templates>
                                 </div>
@@ -28,7 +28,7 @@
     </xsl:template>
     <xsl:template match="News" mode="BigNews">
         <xsl:if test="position()=1">
-            <div class="hinohome7__slide__news__left__img">
+            <div class="img">
                 <img >
                     <xsl:attribute name="src">
                         <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -38,14 +38,14 @@
                     </xsl:attribute>
                 </img>
             </div>
-            <div class="hinohome7__slide__news__left__content">
+            <div class="content">
                 <div class="item__date">
                     <span class="lnr lnr-calendar-full"></span>
                     <div class="date">
                         <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
                     </div>
                 </div>
-                <div class="hinohome7__slide__news__left__content__title">
+                <div class="title">
                     <a>
                         <xsl:attribute name="href">
                             <xsl:value-of select="Url"></xsl:value-of>
@@ -54,9 +54,10 @@
                             <xsl:value-of select="Title"></xsl:value-of>
                         </xsl:attribute>
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </a>
                 </div>
-                <div class="hinohome7__slide__news__left__content__desc">
+                <div class="desc">
                     <p>
                         <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
                     </p>
@@ -66,9 +67,9 @@
     </xsl:template>
     <xsl:template match="News" mode="SmallNews">
         <xsl:if test="position()>1 and position()&lt;6">
-            <div class="col-xl-6 col-md-6">
-                <div class="hinohome7__slide__news__right__item">
-                    <div class="hinohome7__slide__news__right__item__img">
+            <div class="col-xl-6 col-lg-6">
+                <div class="item">
+                    <div class="img">
                         <img >
                             <xsl:attribute name="src">
                                 <xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -78,14 +79,14 @@
                             </xsl:attribute>
                         </img>
                     </div>
-                    <div class="hinohome7__slide__news__right__item__content">
+                    <div class="content">
                         <div class="item__date">
                             <span class="lnr lnr-calendar-full"></span>
                             <div class="date">
                                 <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
                             </div>
                         </div>
-                        <div class="hinohome7__slide__news__right__item__content__title">
+                        <div class="title">
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of select="Url"></xsl:value-of>
@@ -94,6 +95,7 @@
                                     <xsl:value-of select="Title"></xsl:value-of>
                                 </xsl:attribute>
                                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </a>
                         </div>
                     </div>

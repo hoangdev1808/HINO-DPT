@@ -40,7 +40,8 @@
                         </div>
                         <div class="hino-pro2__right__item__desc">
                             <p>
-                                <xsl:value-of select="Title"></xsl:value-of>
+                               <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                               <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </p>
                         </div>
                     </a>
