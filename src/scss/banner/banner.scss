@@ -9,20 +9,17 @@
 
 	&__slide {
 		position: relative;
-		height: 100vh;
-
 		.swiper-slide {
+			width: 100%;
 			height: 100%;
 			position: relative;
 			overflow: hidden;
 
 			.swiper-inner {
 				width: 100%;
-				height: 100%;
 				display: block;
 				img {
 					width: 100%;
-					height: 100%;
 				}
 			}
 
@@ -76,7 +73,7 @@
 		.crolldown {
 			position: absolute;
 			left: 49%;
-			bottom: 12%;
+			bottom: 15%;
 			width: 24px;
 			height: 24px;
 			z-index: 9;

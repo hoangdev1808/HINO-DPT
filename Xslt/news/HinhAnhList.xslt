@@ -47,6 +47,7 @@
                         </xsl:attribute>
                     </img>
                 </a>
+                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </xsl:if>
     </xsl:template>
@@ -75,6 +76,7 @@
                             </img>
                         </a>
                     </div>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </xsl:if>
@@ -104,6 +106,7 @@
                             </img>
                         </a>
                     </div>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </xsl:if>
@@ -130,6 +133,7 @@
                         </xsl:attribute>
                     </img>
                 </a>
+                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </xsl:if>
     </xsl:template>

@@ -42,6 +42,7 @@
                         <img src="/Data/Sites/1/skins/default/assets/icons/play-button.png" alt=""/>
                     </a>
                 </div>
+                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </xsl:if>
     </xsl:template>
@@ -73,6 +74,7 @@
                             </a>
                         </div>
                     </div>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </div>
             </div>
         </xsl:if>

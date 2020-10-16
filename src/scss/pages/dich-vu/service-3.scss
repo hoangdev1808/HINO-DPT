@@ -14,7 +14,7 @@
 				padding-right: 20px;
 				cursor: pointer;
 				display: flex;
-				.lnr{
+				em{
 					line-height: 60px;
 					margin-left: auto;
 					color: #999999;
@@ -29,7 +29,7 @@
 
 				&.active {
 					background-color: $main-color;
-					.lnr{
+					em{
 						color: #fff;
 						transform: rotate(180deg);
 						transition: all ease-in-out .3s;
@@ -41,7 +41,7 @@
 			}
 
 			&__body {
-				padding: 20px 0;
+				padding: 20px;
 
 				ul {
 					list-style: none;

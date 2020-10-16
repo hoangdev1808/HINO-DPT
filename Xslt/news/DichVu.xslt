@@ -18,13 +18,6 @@
                     </div>
                     <xsl:apply-templates select="News" mode="Section1"></xsl:apply-templates>
                 </div>
-                <div id="hino-cop" style="display: none;">
-                    <div class="container">
-                        <div class="content">
-                            <xsl:apply-templates select="News" mode="Popup1"></xsl:apply-templates>
-                        </div>
-                    </div>
-                </div>
             </section>
         </xsl:if>
         <xsl:if test="position()=2">
@@ -80,135 +73,65 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="Section1">
-        <xsl:if test="position()=1">
-            <div class="hino-service1__content">
-                <div class="row">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="hino-service1__content__img">
-                            <img >
-                                <xsl:attribute name="src">
-                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:attribute name="alt">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                            </img>
-                        </div>
+        <div class="hino-service1__content">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 left">
+                    <div class="hino-service1__content__img">
+                        <img >
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="ImageUrl"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                        </img>
                     </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="content">
-                            <div class="hino-service1__content__title">
-                                <h2>
-                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                                </h2>
-                            </div>
-                            <div class="hino-service1__content__desc">
-                                <p>
-                                    <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-                                </p>
-                            </div>
-                            <a class="btn btn__new2">
-                                <xsl:attribute name="data-fancybox"></xsl:attribute>
-                                <xsl:attribute name="href">
-                                    <xsl:text>#hino-cop</xsl:text>
-                                </xsl:attribute>
-                                <xsl:attribute name="title">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:text>Xem thêm</xsl:text>
-                            </a>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 right">
+                    <div class="content">
+                        <div class="hino-service1__content__title">
+                            <h2>
+                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+                            </h2>
                         </div>
+                        <div class="hino-service1__content__desc">
+                            <p>
+                                <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+                            </p>
+                        </div>
+                        <a class="btn btn__new2">
+                            <xsl:attribute name="data-fancybox"></xsl:attribute>
+                            <xsl:attribute name="href">
+                                <xsl:text disable-output-escaping="yes">#hino-cop-</xsl:text>
+                                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:text>Xem thêm</xsl:text>
+                        </a>
                     </div>
                 </div>
             </div>
-        </xsl:if>
-        <xsl:if test="position()=2">
-            <div class="hino-service1__content">
-                <div class="row">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="content">
-                            <div class="hino-service1__content__title">
-                                <h2>
-                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                                </h2>
-                            </div>
-                            <div class="hino-service1__content__desc">
-                                <p>
-                                    <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-                                </p>
-                            </div>
-                            <a class="btn btn__new2">
-                                <xsl:attribute name="data-fancybox"></xsl:attribute>
-                                <xsl:attribute name="href">
-                                    <xsl:text>#hino-cop</xsl:text>
-                                </xsl:attribute>
-                                <xsl:attribute name="title">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:text>Xem thêm</xsl:text>
-                            </a>
+            <div style="display: none;">
+                <xsl:attribute name="id">
+                    <xsl:text disable-output-escaping="yes">hino-cop-</xsl:text>
+                    <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+                </xsl:attribute>
+                <div class="container">
+                    <div class="content">
+                        <div class="block-title">
+                            <h1>
+                                <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+                            </h1>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="hino-service1__content__img">
-                            <img >
-                                <xsl:attribute name="src">
-                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:attribute name="alt">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                            </img>
-                        </div>
+                        <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
                     </div>
                 </div>
             </div>
-        </xsl:if>
-        <xsl:if test="position()=3">
-            <div class="hino-service1__content">
-                <div class="row">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="hino-service1__content__img">
-                            <img >
-                                <xsl:attribute name="src">
-                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:attribute name="alt">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                            </img>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-12">
-                        <div class="content">
-                            <div class="hino-service1__content__title">
-                                <h2>
-                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                                </h2>
-                            </div>
-                            <div class="hino-service1__content__desc">
-                                <p>
-                                    <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-                                </p>
-                            </div>
-                            <a class="btn btn__new2">
-                                <xsl:attribute name="data-fancybox"></xsl:attribute>
-                                <xsl:attribute name="href">
-                                    <xsl:text>#hino-cop</xsl:text>
-                                </xsl:attribute>
-                                <xsl:attribute name="title">
-                                    <xsl:value-of select="Title"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:text>Xem thêm</xsl:text>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </xsl:if>
+        </div>
     </xsl:template>
     <xsl:template match="News" mode="Left">
         <xsl:if test="position()=1">
@@ -232,6 +155,7 @@
                         </xsl:attribute>
                     </img>
                 </a>
+                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
             </div>
         </xsl:if>
     </xsl:template>
@@ -259,6 +183,7 @@
                                 </xsl:attribute>
                             </img>
                         </a>
+                        <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </div>
                 </div>
             </div>
@@ -266,7 +191,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Section3">
         <div class="hino-service3__content__card acc__card">
-            <div class="hino-service3__content__card__title acc__title">
+            <div class="hino-service3__content__card__title acc__title title">
                 <p>
                     <xsl:if test="position()>=10">
                         <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
@@ -286,38 +211,5 @@
                 <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
             </div>
         </div>
-    </xsl:template>
-    <xsl:template match="News" mode="Popup1">
-        <xsl:if test="position()=1">
-            <div class="block-title">
-                <h1>
-                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                </h1>
-            </div>
-            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="News" mode="Popup2">
-        <xsl:if test="position()=2">
-            <div class="block-title">
-                <h1>
-                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                </h1>
-            </div>
-            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-        </xsl:if>
-    </xsl:template>
-    <xsl:template match="News" mode="Popup3">
-        <xsl:if test="position()=3">
-            <div class="block-title">
-                <h1>
-                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-                </h1>
-            </div>
-            <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

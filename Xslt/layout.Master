@@ -17,7 +17,24 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-
+		<!-- Google Tag Manager -->
+		<script>
+(function(w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src =
+		'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-KD3RQBG');
+		</script>
+		<!-- End Google Tag Manager -->
 	</head>
 
 	<body id="Body" runat="server" class="canhcam">
@@ -29,132 +46,110 @@
 			<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
 			<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
 			<div class="ov-h" id="wrapper">
-			<header>
-				<div class="container">
-					<div class="main-menu">
-						<div class="toggle-menu"></div>
-						<div class="logo">
-							<portal:modulewrapper id="mdl206" runat="server" configuremoduleid="206" />
-						</div>
-						<div class="logo-scroll">
-							<portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
-						</div><!-- Language mobile -->
-						<div class="mobile-wrap" id="div-mobile"></div>
-						<!--Top Menu-->
-						<div class="top">
-							<div class="hotline">
-								<portal:modulewrapper id="mdl208" runat="server" configuremoduleid="208" />
+				<header>
+					<div class="container">
+						<div class="main-menu">
+							<div class="toggle-menu"></div>
+							<div class="logo">
+								<portal:modulewrapper id="mdl206" runat="server" configuremoduleid="206" />
 							</div>
-							<div id="search__desktop"><a class="search btn btn__search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a></div>
-							<div id="language-desktop">
-								<portal:modulewrapper id="mdl209" runat="server" configuremoduleid="209" />
+							<div class="logo-scroll">
+								<portal:modulewrapper id="mdl207" runat="server" configuremoduleid="207" />
+							</div><!-- Language mobile -->
+							<div class="mobile-wrap" id="div-mobile"></div>
+							<!--Top Menu-->
+							<div class="top">
+								<div class="hotline">
+									<portal:modulewrapper id="mdl208" runat="server" configuremoduleid="208" />
+								</div>
+								<div id="search__desktop"><a class="search btn btn__search" data-fancybox data-animation-duration="700" data-src="#searchfancybox" href="javascript:;"><em class="material-icons">search</em></a></div>
+								<div id="language-desktop">
+									<portal:modulewrapper id="mdl209" runat="server" configuremoduleid="209" />
+								</div>
+							</div><!-- Main menu -->
+							<div class="main-nav">
+								<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
+								<div class="active" id="scrolled"></div>
 							</div>
-						</div><!-- Main menu -->
-						<div class="main-nav">
-							<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
-							<div class="active" id="scrolled"></div>
-						</div>
-						<div class="button-hambuger">
-							<div class="burger-bt-inner">
+							<div class="button-hambuger">
+								<div class="burger-bt-inner">
 
-								<span></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<main class="main">
-				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
-					<asp:ContentPlaceHolder ID="altContent1" runat="server">
-					</asp:ContentPlaceHolder>
-				</asp:Panel>
-				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
-					<asp:ContentPlaceHolder ID="leftContent" runat="server">
-					</asp:ContentPlaceHolder>
-				</asp:Panel>
-				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins" SkinID="pnlPlain">
-					<asp:ContentPlaceHolder ID="mainContent" runat="server">
-					</asp:ContentPlaceHolder>
-				</asp:Panel>
-				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
-					<asp:ContentPlaceHolder ID="rightContent" runat="server">
-					</asp:ContentPlaceHolder>
-				</asp:Panel>
-				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
-					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
-				</asp:Panel>
-			</main>
-			<portal:modulewrapper id="mdl309" runat="server" configuremoduleid="309" />
-			<footer>
-				<div class="footer-block">
-					<div class="container">
-						<div class="row">
-							<div class="col-xl-5 footer-card">
-								<portal:modulewrapper id="mdl310" runat="server" configuremoduleid="310" />
-							</div>
-							<div class="col-xl-2 footer-card">
-								<portal:modulewrapper id="mdl311" runat="server" configuremoduleid="311" />
-							</div>
-							<div class="col-xl-5 footer-card">
-								<div class="iframe">
-									<portal:modulewrapper id="mdl339" runat="server" configuremoduleid="339" />
-								</div>
-							</div>
-							<div class="col-xl-6 footer-card">
-								<div class="card__title">
-									<p>đăng ký nhận bản tin</p>
-								</div>
-								<portal:modulewrapper id="mdl313" runat="server" configuremoduleid="313" />
-							</div>
-							<div class="col-xl-6 footer-card">
-								<div class="card__title">
-									<p>kết nối với chúng tôi</p>
-								</div>
-								<div class="card__media">
-									<ul>
-										<li><a href=""><i class="fa fa-facebook"></i></a></li>
-										<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-										<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-									</ul>
+									<span></span>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="copyright">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 d-flex align-items-center">
-								<portal:modulewrapper id="mdl314" runat="server" configuremoduleid="314" />
-								
-							</div>
-							<div class="col-md-6">
-								<ul>
-									<li><a href="">Điều khoản sử dụng</a></li>
-									<li><a href="">Chính sách bảo mật</a></li>
-									<li><a href="">Sitemap</a></li>
-								</ul>
+				</header>
+				<main class="main">
+					<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+						<asp:ContentPlaceHolder ID="altContent1" runat="server">
+						</asp:ContentPlaceHolder>
+					</asp:Panel>
+					<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+						<asp:ContentPlaceHolder ID="leftContent" runat="server">
+						</asp:ContentPlaceHolder>
+					</asp:Panel>
+					<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins" SkinID="pnlPlain">
+						<asp:ContentPlaceHolder ID="mainContent" runat="server">
+						</asp:ContentPlaceHolder>
+					</asp:Panel>
+					<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+						<asp:ContentPlaceHolder ID="rightContent" runat="server">
+						</asp:ContentPlaceHolder>
+					</asp:Panel>
+					<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
+						<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
+					</asp:Panel>
+				</main>
+				<portal:modulewrapper id="mdl309" runat="server" configuremoduleid="309" />
+				<footer>
+					<div class="footer-block">
+						<div class="container">
+							<portal:modulewrapper id="mdl310" runat="server" configuremoduleid="310" />
+							<div class="row">
+								<div class="col-xl-6 footer-card">
+									<div class="card__title">
+										<p>đăng ký nhận bản tin</p>
+									</div>
+									<portal:modulewrapper id="mdl313" runat="server" configuremoduleid="313" />
+								</div>
+								<div class="col-xl-6 footer-card">
+									<div class="card__title">
+										<p>kết nối với chúng tôi</p>
+									</div>
+									<div class="card__media">
+										<portal:modulewrapper id="mdl342" runat="server" configuremoduleid="342" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+					<div class="copyright">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6 d-flex align-items-center">
+									<portal:modulewrapper id="mdl314" runat="server" configuremoduleid="314" />
+								</div>
+								<div class="col-md-6">
+									<portal:modulewrapper id="mdl343" runat="server" configuremoduleid="343" />
+									
+								</div>
+							</div>
+						</div>
+					</div>
 			</footer>
 			<div id="block__tool">
-				<ul class="main-tool">
-					<li class="main-tool__item"><a href=""><em class="fa fa-map-marker"></em></a></li>
-					<li class="main-tool__item"><a href=""><em class="ri-messenger-fill"></em></a></li>
-					<li class="main-tool__item"><a href=""><em class="material-icons">phone_enabled</em></a></li>
-				</ul>
+				<portal:modulewrapper id="mdl341" runat="server" configuremoduleid="341" />
 			</div>
 			<div id="searchfancybox" style="display: none;">
-			<div class="container">
-				<div class="content">
-					<div class="form-group">
-						<portal:modulewrapper id="mdl315" runat="server" configuremoduleid="315" />
+				<div class="container">
+					<div class="content">
+						<div class="form-group">
+							<portal:modulewrapper id="mdl315" runat="server" configuremoduleid="315" />
+						</div>
 					</div>
 				</div>
-			</div>
-				
+
 			</div>
 			<div class="modal fade" id="formbaogia" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-dialog-centered" role="document">
@@ -168,7 +163,7 @@
 						<portal:modulewrapper id="mdl340" runat="server" configuremoduleid="340" />
 					</div>
 				</div>
-            </div>
+			</div>
 			<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 				<div class="row">
 					<div class="col-lg-12">
@@ -198,19 +193,39 @@
 						</nav>
 					</div>
 				</div>
-				 <script type="text/javascript">
-                $(document).ready(function () {
-                    $("#pullmenucms").click(function (e) {
-                        e.preventDefault();
-                        if ($(this).parents('.cmsadminpanel').hasClass('toggled')) { ShowToolbar(); Set_Cookie('toolbarOpenState', 'open'); }
-                        else { HideToolbar(); Set_Cookie('toolbarOpenState', 'closed'); }
-                    });
-                    var openState = Get_Cookie('toolbarOpenState');
-                    if (openState != null) { if (openState == 'closed') { HideToolbar(); } if (openState == 'open') { ShowToolbar(); } }
-                });
-                function HideToolbar() { $('.cmsadminpanel').addClass("toggled"); $('.fa-chevron-circle-right').addClass('fa-rotate-180'); }
-                function ShowToolbar() { $('.cmsadminpanel').removeClass("toggled"); $('.fa-chevron-circle-right').removeClass('fa-rotate-180'); }
-            </script>
+				<script type="text/javascript">
+$(document).ready(function() {
+	$("#pullmenucms").click(function(e) {
+		e.preventDefault();
+		if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+			ShowToolbar();
+			Set_Cookie('toolbarOpenState', 'open');
+		} else {
+			HideToolbar();
+			Set_Cookie('toolbarOpenState', 'closed');
+		}
+	});
+	var openState = Get_Cookie('toolbarOpenState');
+	if (openState != null) {
+		if (openState == 'closed') {
+			HideToolbar();
+		}
+		if (openState == 'open') {
+			ShowToolbar();
+		}
+	}
+});
+
+function HideToolbar() {
+	$('.cmsadminpanel').addClass("toggled");
+	$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+}
+
+function ShowToolbar() {
+	$('.cmsadminpanel').removeClass("toggled");
+	$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+}
+				</script>
 			</portal:AutoHidePanel>
 			<portal:Woopra ID="woopra11" runat="server" />
 		</form>
@@ -219,6 +234,10 @@
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
 		<div id="fb-root"></div>
 		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=592601277979782&autoLogAppEvents=1" nonce="hGcrl3bP"></script>
+		<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD3RQBG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 	</body>
 
 </html>

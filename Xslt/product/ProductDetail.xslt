@@ -34,12 +34,20 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
+                                                <xsl:value-of select="/ProductDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
+                                            </xsl:attribute>
                                             <em class="fa fa-facebook"></em>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>https://www.linkedin.com/shareArticle?url=</xsl:text>
+                                                <xsl:value-of select="/ProductDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
+                                            </xsl:attribute>
                                             <em class="fa fa-linkedin"></em>
                                         </a>
                                     </li>
@@ -112,7 +120,7 @@
         </section>
     </xsl:template>
     <xsl:template match="ProductImages" mode="ImageTop">
-        <xsl:if test="position()=1">
+        <xsl:if test="position()=2">
             <div class="img">
                 <img >
                     <xsl:attribute name="src">
@@ -169,7 +177,13 @@
     </xsl:template>
     <xsl:template match="ProductOther">
         <div class="swiper-slide">
-            <a href="">
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url" disable-output-escaping="yes"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="Title">
+                    <xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+                </xsl:attribute>
                 <div class="hino-detail4__other__slide__img">
                     <img >
                         <xsl:attribute name="src">

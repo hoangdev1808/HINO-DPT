@@ -1,5 +1,5 @@
 .hinohome1 {
-	background-image: url('../assets/images/banner/bg-home-1.png');
+	background-image: url('../assets/images/home/bg.png');
 
 	.block-title {
 		max-width: 810px;
@@ -116,36 +116,33 @@
 		}
 		&__sidebar{
 			width: 100%;
-			min-height: 670px;
-			background-color: #0b3155;
-			padding: 51px 0 22px 30px;
+			background-color: $main-color;
 			box-shadow: 0px 5px 32px 0px rgba(0, 0, 0, 0.2);
 			ul{
 				padding-left: 0;
 				list-style: none;
 				width: 100%;
 				li{
-					padding-left: 10px;
+					padding-left: 30px;
 					min-height: 55px;
 					line-height: 55px;
 					position: relative;
 					cursor: pointer;
 					a{
-						font-size: 15px;
-						
+						font-size: 14px;
 						color: rgb(255, 255, 255);
 						font-weight: bold;
 						text-align: left;
 						text-transform: uppercase;
 					}
 					&:hover{
-						width: 265px;
-						background-color: #3361ae;
+						width: 100%;
+						background-color: $main-color;
 						box-shadow: 0px 5px 32px 0px rgba(0, 0, 0, 0.2);
 					}
 					&.active{
-						width: 265px;
-						background-color: #3361ae;
+						width: 100%;
+						background-color: $main-color;
 						box-shadow: 0px 5px 32px 0px rgba(0, 0, 0, 0.2);
 					}
 				}
@@ -184,15 +181,15 @@
 			}
 		}
 		&__list{
+			display: none;
 			&__item{
-				width: 285px;
-				min-height: 320px;
+				width: 100%;
+				height: 300px;
 				background-color: $color-while;
 				margin-bottom: 30px;
 				display: flex;
 				flex-direction: column;
-				justify-content: center;
-				border: solid 2px transparent;
+				border: solid 1px transparent;
 				transition: all ease-in-out .2s;
 				align-items: center;
 				@media screen and ( max-width: 1024px){
@@ -204,22 +201,24 @@
 					margin-bottom: 30px;
 					min-height: unset;
 					height: 200px;
-					padding: 15px;
+					padding: 0;
 				}
 				&__img{
-					width: 205px;
+					width: 100%;
+					height: 190px;
 					img{
 						width: 100%;
-						object-fit: cover;
+						height: 100%;
 					}
 					@media screen and ( max-width: 575px){
 						width: 100%;
+						height: auto;
 					}
 				}
 				&__name{
 					width: 100%;
 					text-align: center;
-					padding-top: 55px;
+					padding-top: 20px;
 					p{
 						font-size: 16px;
 						color: rgb(51, 51, 51);
@@ -228,11 +227,14 @@
 						line-height: 1.875;
 					}
 					@media screen and ( max-width: 575px){
-						padding-top: 30px;
+						padding: 15px 7px;
+						p{
+							font-size: 10px;
+						}
 					}
 				}
 				&:hover{
-					border: solid 2px $main-color;
+					border: solid 1px $main-color;
 					transition: all ease-in-out .2s;
 					.hinohome1__product__list__item__name{
 						p{
@@ -241,7 +243,9 @@
 					}
 				}
 			}
-
+			&.active{
+				display: block;
+			}
 		}
 	}
 }

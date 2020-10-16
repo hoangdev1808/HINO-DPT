@@ -13,9 +13,9 @@
                 <span></span>
                 <span></span>
             </a>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
     </xsl:template>
     <xsl:template match="Banner" mode="Slider">
         <xsl:if test="position()=1">

@@ -72,7 +72,8 @@ function dnnBannerSlide() {
 		},
 		navigation: {
 			nextEl: ".hinohome-banner__slide .swiper-button-next",
-			prevEl: ".hinohome-banner__slide .swiper-button-prev"
+			prevEl: ".hinohome-banner__slide .swiper-button-prev",
+			clickable: true,
 		}
 
 	});
@@ -515,9 +516,13 @@ const checkLayoutBanner = () => {
 	const mainBanner = $("#home-banner");
 	let mobileWrap = $("header .mobile-wrap ");
 
-	if ((mainBanner.length >= 1) && (pagesBanner.length >= 1)) {
-		$('main').css('padding-top', heightHeader)
-	}$('main').css('padding-top', heightHeader)
+	if (mainBanner.length >= 1) {
+        $('main').css('padding-top', heightHeader)
+    } else if (pagesBanner.length >= 1) {
+        $('main').css('padding-top', heightHeader)
+    } else {
+        $('main').css('padding-top', heightHeader);
+    }
 	mobileWrap.css('top', heightHeader)
 	mobileWrap.css('height', 'calc(100vh - ' + heightHeader + 'px)')
 
@@ -651,7 +656,21 @@ function moveFilter(){
 }
 
 function Accordiion() {
-	$('.acc__title').click(function (j) {
+	$('.acc__title #SideBar').click(function (n) {
+		var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+		$(this).closest('.acc__card').find('.acc__panel').not(dropDown).slideUp();
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).closest('.acc__card').find('.acc__title.active').removeClass('active');
+			$(this).addClass('active');
+		}
+		dropDown.stop(false, true).slideToggle();
+		j.preventDefault();
+	});
+}
+function CNSX() {
+	$('.acc__title').click(function (n) {
 		var dropDown = $(this).closest('.acc__card').find('.acc__panel');
 		$(this).closest('.acc__card').find('.acc__panel').not(dropDown).slideUp();
 		if ($(this).hasClass('active')) {
@@ -674,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	coutingNumber();
 	toggleMenuMobile();
 	tabsDescription();
-	hideTool();
+	// hideTool();
 	DataBG();
 	setBackground();
 	// moveNav();
@@ -695,6 +714,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	tabs();
 	moveFilter();
 	Accordiion();
+	CNSX();
 });
 
 function initMapping(){

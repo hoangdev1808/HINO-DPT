@@ -21,36 +21,54 @@
     </xsl:template>
     <xsl:template match="News" mode="top">
         <div class="swiper-slide">
-            <div class="img">
-                <img >
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                </img>
-                <div class="icon-control">
-                    <img src="/Data/Sites/1/skins/default/assets/icons/play-button.png" alt=""/>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="BriefContent"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="data-fancybox"></xsl:attribute>
+                <div class="img">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
+                    <div class="icon-control">
+                        <img src="/Data/Sites/1/skins/default/assets/icons/play-button.png" alt=""/>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </xsl:template>
     <xsl:template match="News" mode="thumbs">
         <div class="swiper-slide">
-            <div class="img">
-                <img >
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="ThumbnailUrl"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                </img>
-                <div class="icon-control">
-                    <img src="/Data/Sites/1/skins/default/assets/icons/play-button.png" alt=""/>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="BriefContent"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="data-fancybox"></xsl:attribute>
+                <div class="img">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
+                    <div class="icon-control">
+                        <img src="/Data/Sites/1/skins/default/assets/icons/play-button.png" alt=""/>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </xsl:template>
 </xsl:stylesheet>

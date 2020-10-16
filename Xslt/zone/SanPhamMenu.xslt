@@ -15,7 +15,6 @@
     <xsl:template match="Zone">
         <div class="hino-pro2__left__title">
             <h2>
-                <em class="material-icons">keyboard_arrow_down</em>
                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
             </h2>
         </div>
@@ -31,8 +30,16 @@
                 </xsl:attribute>
             </xsl:if>
             <div class="acc__title">
-                <xsl:value-of select="Title"></xsl:value-of>
-                <span class="material-icons">keyboard_arrow_down</span>
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="Url"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </a>
+                <span class="material-icons" id="SideBar">keyboard_arrow_down</span>
             </div>
             <xsl:if test="count(Zone)>0">
                 <ul class="sub-lv2 acc__panel">

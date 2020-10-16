@@ -23,20 +23,20 @@
     </xsl:template>
     <xsl:template match="Zone" mode="List">
         <li>
+            <xsl:attribute name="rel">
+                <xsl:text>list-</xsl:text>
+                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:if test="position()=1">
+                    <xsl:attribute name="class">
+                        <xsl:text>active</xsl:text>
+                    </xsl:attribute>
+            </xsl:if>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
                     <xsl:text>active</xsl:text>
                 </xsl:attribute>
             </xsl:if>
-            <xsl:if test="position()=1">
-                <xsl:attribute name="class">
-                    <xsl:text>active</xsl:text>
-                </xsl:attribute>
-            </xsl:if>
-            <xsl:attribute name="rel">
-                <xsl:text>list-</xsl:text>
-                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-            </xsl:attribute>
             <a>
                 <xsl:attribute name="href">
                     <xsl:text disable-output-escaping="yes">javascript:;</xsl:text>
@@ -50,9 +50,11 @@
     </xsl:template>
     <xsl:template match="Zone" mode="Product">
         <div class="hinohome1__product__list panel">
-            <xsl:attribute name="class">
-                <xsl:text disable-output-escaping="yes">hinohome1__product__list panel active</xsl:text>
-            </xsl:attribute>
+            <xsl:if test="position()=1">
+                <xsl:attribute name="class">
+                    <xsl:text disable-output-escaping="yes">hinohome1__product__list panel active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:attribute name="id">
                 <xsl:text>list-</xsl:text>
                 <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
