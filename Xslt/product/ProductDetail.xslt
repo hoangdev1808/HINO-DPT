@@ -28,9 +28,9 @@
                                                 <xsl:text>#formbaogia</xsl:text>
                                             </xsl:attribute>
                                             <em class="material-icons">call</em>
-                                            <sapn>
+                                            <span>
                                                 <xsl:text>Nhận báo giá</xsl:text>
-                                            </sapn>
+                                            </span>
                                         </a>
                                     </li>
                                     <li>
